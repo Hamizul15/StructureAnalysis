@@ -1,0 +1,15 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles//StructureAnalysis.dir//managers//input_manager.f90.obj | input_manager.mod: dyndep
+  restat = 1
+
+build CMakeFiles//StructureAnalysis.dir//services//input_service.f90.obj | input_service.mod: dyndep
+  restat = 1
+
+build CMakeFiles//StructureAnalysis.dir//services//utils.f90.obj | utils.mod: dyndep
+  restat = 1
+
+build CMakeFiles//StructureAnalysis.dir//models//load_module.f90.obj | loads_module.mod: dyndep
+  restat = 1
+
+build CMakeFiles//StructureAnalysis.dir//main.f90.obj: dyndep | input_manager.mod
+

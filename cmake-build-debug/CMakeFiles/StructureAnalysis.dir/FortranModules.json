@@ -1,0 +1,27 @@
+{
+	"modules" : 
+	{
+		"input_manager.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/input_manager.mod",
+			"is-private" : false
+		},
+		"input_service.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/input_service.mod",
+			"is-private" : false
+		},
+		"loads_module.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/loads_module.mod",
+			"is-private" : false
+		},
+		"utils.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/utils.mod",
+			"is-private" : false
+		}
+	},
+	"references" : {},
+	"usages" : {}
+}

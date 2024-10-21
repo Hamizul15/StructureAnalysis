@@ -1,0 +1,20 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\managers\\\\input_manager.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "input_manager.mod",
+					"is-interface" : true,
+					"logical-name" : "input_manager.mod"
+				}
+			],
+			"requires" : []
+		}
+	],
+	"version" : 0
+}
