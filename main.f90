@@ -1,13 +1,14 @@
 program structure_analysis
-    use input_manager
+    use supports_module
     implicit none
 
     real :: test
-    type(Input) :: input_
+    class(Support), allocatable :: pin_, roller_
 
-    call input_%set_length(10.0)
+    allocate(Pin :: pin_)
+    allocate(Roller :: roller_)
 
-    test = input_%get_length();
 
-    print *, test
+
+    print *, roller_%get_number_of_reaction()
 end program
