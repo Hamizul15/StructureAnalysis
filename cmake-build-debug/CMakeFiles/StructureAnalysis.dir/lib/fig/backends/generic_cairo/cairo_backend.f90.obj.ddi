@@ -1,0 +1,82 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\fig\\\\backends\\\\generic_cairo\\\\cairo_backend.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "fig_cairo.mod",
+					"is-interface" : true,
+					"logical-name" : "fig_cairo.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "cairo.mod"
+				},
+				{
+					"logical-name" : "cairo_enums.mod"
+				},
+				{
+					"logical-name" : "cairo_extra.mod"
+				},
+				{
+					"logical-name" : "cairo_types.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_arc.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_circle.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_ellipse.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_line.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_path.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_poly.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_rect.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_text.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_triangle.mod"
+				},
+				{
+					"logical-name" : "fig_cairo_utils.mod"
+				},
+				{
+					"logical-name" : "fig_canvas.mod"
+				},
+				{
+					"logical-name" : "fig_config.mod"
+				},
+				{
+					"logical-name" : "fig_drawing.mod"
+				},
+				{
+					"logical-name" : "fig_path.mod"
+				},
+				{
+					"logical-name" : "fig_rgb.mod"
+				},
+				{
+					"logical-name" : "fig_shapes.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

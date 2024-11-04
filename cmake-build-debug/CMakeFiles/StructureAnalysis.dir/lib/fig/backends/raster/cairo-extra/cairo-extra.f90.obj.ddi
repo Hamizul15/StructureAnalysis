@@ -1,0 +1,20 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\fig\\\\backends\\\\raster\\\\cairo-extra\\\\cairo-extra.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "cairo_extra.mod",
+					"is-interface" : true,
+					"logical-name" : "cairo_extra.mod"
+				}
+			],
+			"requires" : []
+		}
+	],
+	"version" : 0
+}

@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_codata.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_codata.mod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_codata.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_codata_type.mod"
+				},
+				{
+					"logical-name" : "stdlib_kinds.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

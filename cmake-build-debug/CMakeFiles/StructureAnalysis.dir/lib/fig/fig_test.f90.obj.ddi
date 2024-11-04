@@ -1,0 +1,37 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\fig\\\\fig_test.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "fig_test.mod",
+					"is-interface" : true,
+					"logical-name" : "fig_test.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "cairo_extra.mod"
+				},
+				{
+					"logical-name" : "fig_bitmap.mod"
+				},
+				{
+					"logical-name" : "fig_config.mod"
+				},
+				{
+					"logical-name" : "fig_rgb.mod"
+				},
+				{
+					"logical-name" : "fig_rgb_color_constants.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

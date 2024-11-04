@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_ansi_to_string.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_ansi@stdlib_ansi_to_string.smod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_ansi@stdlib_ansi_to_string.smod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_ansi.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

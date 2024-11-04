@@ -1,0 +1,46 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\fig\\\\fig.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "fig.mod",
+					"is-interface" : true,
+					"logical-name" : "fig.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "fig_bitmap.mod"
+				},
+				{
+					"logical-name" : "fig_config.mod"
+				},
+				{
+					"logical-name" : "fig_drawing.mod"
+				},
+				{
+					"logical-name" : "fig_path.mod"
+				},
+				{
+					"logical-name" : "fig_rgb.mod"
+				},
+				{
+					"logical-name" : "fig_rgb_color_constants.mod"
+				},
+				{
+					"logical-name" : "fig_shapes.mod"
+				},
+				{
+					"logical-name" : "fig_svg.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

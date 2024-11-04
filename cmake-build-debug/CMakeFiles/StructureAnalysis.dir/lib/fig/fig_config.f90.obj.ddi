@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\fig\\\\fig_config.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "fig_config.mod",
+					"is-interface" : true,
+					"logical-name" : "fig_config.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "iso_fortran_env.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

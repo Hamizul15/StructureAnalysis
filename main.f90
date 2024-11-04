@@ -1,14 +1,12 @@
 program structure_analysis
-    use supports_module
+    use loads_module
     implicit none
 
-    real :: test
-    class(Support), allocatable :: pin_, roller_
+    class(Load), allocatable :: point1
 
-    allocate(Pin :: pin_)
-    allocate(Roller :: roller_)
+    allocate(Point::point1)
 
+    call point1%set_start_location(5.0)
 
-
-    print *, roller_%get_number_of_reaction()
+    print *, point1%get_start_location()
 end program

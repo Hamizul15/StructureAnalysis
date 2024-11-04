@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_quadrature_gauss.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_quadrature@stdlib_quadrature_gauss.smod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_quadrature@stdlib_quadrature_gauss.smod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_quadrature.mod"
+				},
+				{
+					"logical-name" : "stdlib_specialfunctions.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

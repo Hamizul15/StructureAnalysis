@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_ansi.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_ansi.mod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_ansi.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_kinds.mod"
+				},
+				{
+					"logical-name" : "stdlib_string_type.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

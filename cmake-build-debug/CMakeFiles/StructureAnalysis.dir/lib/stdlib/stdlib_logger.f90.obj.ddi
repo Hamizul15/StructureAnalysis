@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_logger.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_logger.mod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_logger.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_ascii.mod"
+				},
+				{
+					"logical-name" : "stdlib_optval.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

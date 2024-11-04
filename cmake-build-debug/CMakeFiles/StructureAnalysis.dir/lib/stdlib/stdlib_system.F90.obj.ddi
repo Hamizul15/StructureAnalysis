@@ -1,0 +1,20 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_system.F90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_system.mod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_system.mod"
+				}
+			],
+			"requires" : []
+		}
+	],
+	"version" : 0
+}

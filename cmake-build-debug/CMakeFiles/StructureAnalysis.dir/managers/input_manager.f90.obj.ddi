@@ -13,7 +13,12 @@
 					"logical-name" : "input_manager.mod"
 				}
 			],
-			"requires" : []
+			"requires" : 
+			[
+				{
+					"logical-name" : "supports_module.mod"
+				}
+			]
 		}
 	],
 	"version" : 0

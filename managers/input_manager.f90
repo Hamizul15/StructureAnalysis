@@ -1,10 +1,12 @@
 ! Created by hamiz on 10/21/2024.
 module input_manager
+    use supports_module
 implicit none
 
     type :: Input
         private
         real :: length
+        class(Support), allocatable :: support_
 
         contains
         procedure :: set_length

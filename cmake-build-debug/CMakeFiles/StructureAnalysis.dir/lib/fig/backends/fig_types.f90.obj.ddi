@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\fig\\\\backends\\\\fig_types.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "fig_types.mod",
+					"is-interface" : true,
+					"logical-name" : "fig_types.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "fig_config.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

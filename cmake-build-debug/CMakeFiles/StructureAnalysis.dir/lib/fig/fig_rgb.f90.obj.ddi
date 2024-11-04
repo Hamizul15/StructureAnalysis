@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\fig\\\\fig_rgb.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "fig_rgb.mod",
+					"is-interface" : true,
+					"logical-name" : "fig_rgb.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "fig_config.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_stringlist_type.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_stringlist_type.mod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_stringlist_type.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_math.mod"
+				},
+				{
+					"logical-name" : "stdlib_string_type.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

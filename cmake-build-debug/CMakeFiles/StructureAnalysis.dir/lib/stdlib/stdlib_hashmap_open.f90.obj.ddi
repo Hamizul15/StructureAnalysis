@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_hashmap_open.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_hashmaps@stdlib_hashmap_open.smod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_hashmaps@stdlib_hashmap_open.smod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_hashmap_wrappers.mod"
+				},
+				{
+					"logical-name" : "stdlib_hashmaps.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

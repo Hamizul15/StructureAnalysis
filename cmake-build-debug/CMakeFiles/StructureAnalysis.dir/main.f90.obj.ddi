@@ -9,7 +9,7 @@
 			"requires" : 
 			[
 				{
-					"logical-name" : "supports_module.mod"
+					"logical-name" : "loads_module.mod"
 				}
 			]
 		}

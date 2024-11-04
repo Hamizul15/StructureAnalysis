@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\lib\\\\stdlib\\\\stdlib_hashmap_wrappers.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "stdlib_hashmap_wrappers.mod",
+					"is-interface" : true,
+					"logical-name" : "stdlib_hashmap_wrappers.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "stdlib_hash_32bit.mod"
+				},
+				{
+					"logical-name" : "stdlib_kinds.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}
