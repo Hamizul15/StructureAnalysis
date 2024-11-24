@@ -127,7 +127,6 @@ module loads_module
         end function get_end_load
 
 
-
         !Point
         subroutine set_point_location(this, new_location)
             class(Point), intent(inout) :: this

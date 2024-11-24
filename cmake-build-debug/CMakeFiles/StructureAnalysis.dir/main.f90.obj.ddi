@@ -9,6 +9,9 @@
 			"requires" : 
 			[
 				{
+					"logical-name" : "input_manager.mod"
+				},
+				{
 					"logical-name" : "input_service.mod"
 				}
 			]
