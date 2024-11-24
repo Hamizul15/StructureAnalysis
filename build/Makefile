@@ -166,29 +166,29 @@ managers\input_manager.f90.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\StructureAnalysis.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\StructureAnalysis.dir\managers\input_manager.f90.s
 .PHONY : managers\input_manager.f90.s
 
-models\load_module.obj: models\load_module.f90.obj
-.PHONY : models\load_module.obj
+models\loads_module.obj: models\loads_module.f90.obj
+.PHONY : models\loads_module.obj
 
 # target to build an object file
-models\load_module.f90.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\StructureAnalysis.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\StructureAnalysis.dir\models\load_module.f90.obj
-.PHONY : models\load_module.f90.obj
+models\loads_module.f90.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StructureAnalysis.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.obj
+.PHONY : models\loads_module.f90.obj
 
-models\load_module.i: models\load_module.f90.i
-.PHONY : models\load_module.i
+models\loads_module.i: models\loads_module.f90.i
+.PHONY : models\loads_module.i
 
 # target to preprocess a source file
-models\load_module.f90.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\StructureAnalysis.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\StructureAnalysis.dir\models\load_module.f90.i
-.PHONY : models\load_module.f90.i
+models\loads_module.f90.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StructureAnalysis.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.i
+.PHONY : models\loads_module.f90.i
 
-models\load_module.s: models\load_module.f90.s
-.PHONY : models\load_module.s
+models\loads_module.s: models\loads_module.f90.s
+.PHONY : models\loads_module.s
 
 # target to generate assembly for a file
-models\load_module.f90.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\StructureAnalysis.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\StructureAnalysis.dir\models\load_module.f90.s
-.PHONY : models\load_module.f90.s
+models\loads_module.f90.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StructureAnalysis.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.s
+.PHONY : models\loads_module.f90.s
 
 models\supports_module.obj: models\supports_module.f90.obj
 .PHONY : models\supports_module.obj
@@ -277,9 +277,9 @@ help:
 	@echo ... managers/input_manager.obj
 	@echo ... managers/input_manager.i
 	@echo ... managers/input_manager.s
-	@echo ... models/load_module.obj
-	@echo ... models/load_module.i
-	@echo ... models/load_module.s
+	@echo ... models/loads_module.obj
+	@echo ... models/loads_module.i
+	@echo ... models/loads_module.s
 	@echo ... models/supports_module.obj
 	@echo ... models/supports_module.i
 	@echo ... models/supports_module.s

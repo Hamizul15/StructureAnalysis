@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/StructureAnalysis.dir/main.f90.obj"
   "CMakeFiles/StructureAnalysis.dir/managers/input_manager.f90.obj"
-  "CMakeFiles/StructureAnalysis.dir/models/load_module.f90.obj"
+  "CMakeFiles/StructureAnalysis.dir/models/loads_module.f90.obj"
   "CMakeFiles/StructureAnalysis.dir/models/supports_module.f90.obj"
   "CMakeFiles/StructureAnalysis.dir/services/input_service.f90.obj"
   "CMakeFiles/StructureAnalysis.dir/services/utils.f90.obj"

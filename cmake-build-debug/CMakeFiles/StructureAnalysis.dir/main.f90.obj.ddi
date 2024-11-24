@@ -9,7 +9,7 @@
 			"requires" : 
 			[
 				{
-					"logical-name" : "loads_module.mod"
+					"logical-name" : "input_service.mod"
 				}
 			]
 		}

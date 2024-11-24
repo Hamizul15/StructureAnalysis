@@ -97,18 +97,18 @@ CMakeFiles\StructureAnalysis.dir\services\utils.f90.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling Fortran source to assembly CMakeFiles/StructureAnalysis.dir/services/utils.f90.s"
 	C:\Users\hamiz\gcc\bin\gfortran.exe $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S D:\Programming\Fortran\StructureAnalysis\services\utils.f90 -o CMakeFiles\StructureAnalysis.dir\services\utils.f90.s
 
-CMakeFiles\StructureAnalysis.dir\models\load_module.f90.obj: CMakeFiles\StructureAnalysis.dir\flags.make
-CMakeFiles\StructureAnalysis.dir\models\load_module.f90.obj: D:\Programming\Fortran\StructureAnalysis\models\load_module.f90
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Programming\Fortran\StructureAnalysis\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building Fortran object CMakeFiles/StructureAnalysis.dir/models/load_module.f90.obj"
-	C:\Users\hamiz\gcc\bin\gfortran.exe $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c D:\Programming\Fortran\StructureAnalysis\models\load_module.f90 -o CMakeFiles\StructureAnalysis.dir\models\load_module.f90.obj
+CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.obj: CMakeFiles\StructureAnalysis.dir\flags.make
+CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.obj: D:\Programming\Fortran\StructureAnalysis\models\loads_module.f90
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Programming\Fortran\StructureAnalysis\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building Fortran object CMakeFiles/StructureAnalysis.dir/models/loads_module.f90.obj"
+	C:\Users\hamiz\gcc\bin\gfortran.exe $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c D:\Programming\Fortran\StructureAnalysis\models\loads_module.f90 -o CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.obj
 
-CMakeFiles\StructureAnalysis.dir\models\load_module.f90.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing Fortran source to CMakeFiles/StructureAnalysis.dir/models/load_module.f90.i"
-	C:\Users\hamiz\gcc\bin\gfortran.exe $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E D:\Programming\Fortran\StructureAnalysis\models\load_module.f90 > CMakeFiles\StructureAnalysis.dir\models\load_module.f90.i
+CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing Fortran source to CMakeFiles/StructureAnalysis.dir/models/loads_module.f90.i"
+	C:\Users\hamiz\gcc\bin\gfortran.exe $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E D:\Programming\Fortran\StructureAnalysis\models\loads_module.f90 > CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.i
 
-CMakeFiles\StructureAnalysis.dir\models\load_module.f90.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling Fortran source to assembly CMakeFiles/StructureAnalysis.dir/models/load_module.f90.s"
-	C:\Users\hamiz\gcc\bin\gfortran.exe $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S D:\Programming\Fortran\StructureAnalysis\models\load_module.f90 -o CMakeFiles\StructureAnalysis.dir\models\load_module.f90.s
+CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling Fortran source to assembly CMakeFiles/StructureAnalysis.dir/models/loads_module.f90.s"
+	C:\Users\hamiz\gcc\bin\gfortran.exe $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S D:\Programming\Fortran\StructureAnalysis\models\loads_module.f90 -o CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.s
 
 CMakeFiles\StructureAnalysis.dir\models\supports_module.f90.obj: CMakeFiles\StructureAnalysis.dir\flags.make
 CMakeFiles\StructureAnalysis.dir\models\supports_module.f90.obj: D:\Programming\Fortran\StructureAnalysis\models\supports_module.f90
@@ -141,7 +141,7 @@ StructureAnalysis_OBJECTS = \
 "CMakeFiles\StructureAnalysis.dir\managers\input_manager.f90.obj" \
 "CMakeFiles\StructureAnalysis.dir\services\input_service.f90.obj" \
 "CMakeFiles\StructureAnalysis.dir\services\utils.f90.obj" \
-"CMakeFiles\StructureAnalysis.dir\models\load_module.f90.obj" \
+"CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.obj" \
 "CMakeFiles\StructureAnalysis.dir\models\supports_module.f90.obj" \
 "CMakeFiles\StructureAnalysis.dir\main.f90.obj"
 
@@ -151,7 +151,7 @@ StructureAnalysis_EXTERNAL_OBJECTS =
 StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\managers\input_manager.f90.obj
 StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\services\input_service.f90.obj
 StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\services\utils.f90.obj
-StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\models\load_module.f90.obj
+StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\models\loads_module.f90.obj
 StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\models\supports_module.f90.obj
 StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\main.f90.obj
 StructureAnalysis.exe: CMakeFiles\StructureAnalysis.dir\build.make

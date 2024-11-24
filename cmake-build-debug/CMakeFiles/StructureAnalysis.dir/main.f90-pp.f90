@@ -4,14 +4,12 @@
 # 1 "D:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug//"
 # 1 "D:/Programming/Fortran/StructureAnalysis/main.f90"
 program structure_analysis
-    use loads_module
+    use input_service
     implicit none
 
-    class(Load), allocatable :: point1
+    integer :: test
 
-    allocate(Point::point1)
+    test = get_integer("halo", 10,  20)
 
-    call point1%set_start_location(5.0)
-
-    print *, point1%get_start_location()
+    print *, test
 end program

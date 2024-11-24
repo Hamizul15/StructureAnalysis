@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_Fortran
   "D:/Programming/Fortran/StructureAnalysis/main.f90" "D:/Programming/Fortran/StructureAnalysis/build/CMakeFiles/StructureAnalysis.dir/main.f90.obj"
   "D:/Programming/Fortran/StructureAnalysis/managers/input_manager.f90" "D:/Programming/Fortran/StructureAnalysis/build/CMakeFiles/StructureAnalysis.dir/managers/input_manager.f90.obj"
-  "D:/Programming/Fortran/StructureAnalysis/models/load_module.f90" "D:/Programming/Fortran/StructureAnalysis/build/CMakeFiles/StructureAnalysis.dir/models/load_module.f90.obj"
+  "D:/Programming/Fortran/StructureAnalysis/models/loads_module.f90" "D:/Programming/Fortran/StructureAnalysis/build/CMakeFiles/StructureAnalysis.dir/models/loads_module.f90.obj"
   "D:/Programming/Fortran/StructureAnalysis/models/supports_module.f90" "D:/Programming/Fortran/StructureAnalysis/build/CMakeFiles/StructureAnalysis.dir/models/supports_module.f90.obj"
   "D:/Programming/Fortran/StructureAnalysis/services/input_service.f90" "D:/Programming/Fortran/StructureAnalysis/build/CMakeFiles/StructureAnalysis.dir/services/input_service.f90.obj"
   "D:/Programming/Fortran/StructureAnalysis/services/utils.f90" "D:/Programming/Fortran/StructureAnalysis/build/CMakeFiles/StructureAnalysis.dir/services/utils.f90.obj"

@@ -9,6 +9,7 @@ file(GLOB_RECURSE my_manager_modules ${CMAKE_BINARY_DIR}/../managers/*.f90)
 
 #stdlib
 #file(GLOB_RECURSE stdlib_sources ${CMAKE_BINARY_DIR}/../lib/stdlib/*.f90)
+#fig
 #file(GLOB_RECURSE fig_sources ${CMAKE_BINARY_DIR}/../lib/fig/*.f90)
 
 enable_language(Fortran)
@@ -16,6 +17,6 @@ add_executable(StructureAnalysis
         ${my_manager_modules}
         ${my_service_modules}
         ${my_model_modules}
-#        ${stdlib_sources}
-#        ${fig_sources}
+        #${stdlib_sources}
+        #${fig_sources}
         main.f90)
