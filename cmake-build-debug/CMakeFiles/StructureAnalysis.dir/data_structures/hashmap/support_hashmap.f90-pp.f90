@@ -164,6 +164,7 @@ contains
             idx = mod(idx + 1, this%size)
             if (idx == original_idx) exit
         end do
+        stop "Key is lost"
     end function search
 
 end module support_hashmap

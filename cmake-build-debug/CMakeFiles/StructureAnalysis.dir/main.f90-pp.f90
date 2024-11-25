@@ -33,6 +33,16 @@ program structure_analysis
 
     key = test2%get_location()
     value = map%search(key)
+    select type(stored => value)
+    type is (Pin)
+        print *, 'PIN'
+    type is (Roller)
+        print *, 'Roller'
+    type is (Fixed)
+        print *, 'Fixed'
+    class default
+        print *, 'default'
+    end select
 
     print *, key
     print *, value%get_location()
