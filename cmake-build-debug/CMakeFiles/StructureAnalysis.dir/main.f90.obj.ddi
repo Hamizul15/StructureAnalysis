@@ -9,10 +9,10 @@
 			"requires" : 
 			[
 				{
-					"logical-name" : "input_manager.mod"
+					"logical-name" : "load_hashmap.mod"
 				},
 				{
-					"logical-name" : "input_service.mod"
+					"logical-name" : "support_hashmap.mod"
 				}
 			]
 		}

@@ -11,9 +11,19 @@
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/input_service.mod",
 			"is-private" : false
 		},
+		"load_hashmap.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/load_hashmap.mod",
+			"is-private" : false
+		},
 		"loads_module.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/loads_module.mod",
+			"is-private" : false
+		},
+		"support_hashmap.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/support_hashmap.mod",
 			"is-private" : false
 		},
 		"supports_module.mod" : 

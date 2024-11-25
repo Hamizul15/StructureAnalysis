@@ -1,7 +1,10 @@
 ! Created by hamiz on 10/21/2024.
 
 module loads_module
+    use input_service
     implicit none
+
+    private :: get_types
 
     type :: Load
         private
@@ -66,7 +69,52 @@ module loads_module
         !procedure :: get_end_load => get_distributed_end_load
     end type Distributed
 
+    interface assignment(=)
+        module procedure assign_load
+    end interface
+
     contains
+
+        function new() result(new_load)
+            implicit none
+            class(Load), allocatable :: new_load
+            integer :: type_
+
+            type_ = get_type()
+            if(type_ == 1) then
+                allocate(Point :: new_load)
+            elseif (type_ == 2) then
+                allocate(Moment :: new_load)
+            else
+                allocate(Distributed :: new_load)
+            end if
+
+           if((type_ /= size(get_types()))) then
+              call new_load%set_start_location(10.0)
+           end if
+
+        end function new
+
+        function get_type() result(type_)
+            integer :: type_, i
+            CHARACTER(len=10), DIMENSION(3) :: types
+
+            types = get_types()
+
+            WRITE (*, '(A)') 'Silahkan tipe beban yang akan dikonversi'
+            DO i = 1, SIZE(types)
+                PRINT '(I1.0, A, A)', i, '. ', types(i)
+            END DO
+
+            type_ = get_integer("Masukkan tipe beban: ", 1, size(types))
+        end function get_type
+
+        function get_types() result(types)
+            CHARACTER(len=10), DIMENSION(3) :: types
+            types(1) = 'Point'
+            types(2) = 'Moment'
+            types(3) = 'Distributed'
+        end function get_types
 
         !Setter
         subroutine set_start_location(this, new_location)
@@ -201,5 +249,16 @@ module loads_module
                 load = -1;
             end if
         end function get_moment_load
+
+
+        ! Custom assignment operator for the Load type
+        subroutine assign_load(lhs, rhs)
+            class(Load), intent(out) :: lhs
+            class(Load), intent(in) :: rhs
+            lhs%start_location = rhs%start_location
+            lhs%end_location = rhs%end_location
+            lhs%start_load = rhs%start_load
+            lhs%end_load = rhs%end_load
+        end subroutine assign_load
 
 end module loads_module

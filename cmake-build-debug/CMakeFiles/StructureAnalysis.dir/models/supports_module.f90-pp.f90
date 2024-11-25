@@ -33,6 +33,10 @@ module supports_module
         procedure :: get_number_of_reaction => get_roller_number_of_reaction
     end type Roller
 
+    interface assignment(=)
+        module procedure assign_support
+    end interface
+
 contains
 
     subroutine set_location(this, new_location)
@@ -73,5 +77,14 @@ contains
 
         get_fixed_number_of_reaction = 3
     end function get_fixed_number_of_reaction
+
+
+    ! Custom assignment operator for the Load type
+    subroutine assign_support(lhs, rhs)
+        class(Support), intent(out) :: lhs
+        class(Support), intent(in) :: rhs
+        lhs%location = rhs%location
+
+    end subroutine assign_support
 
 end module supports_module

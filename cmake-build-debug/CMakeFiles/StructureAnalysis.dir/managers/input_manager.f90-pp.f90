@@ -21,11 +21,9 @@ implicit none
         contains
         !setter
         procedure :: start
-        !procedure :: set_length
-        !procedure :: set_number_of_loads
-        !procedure :: set_number_of_supports
         !getter
         procedure :: get_length, get_number_of_loads, get_number_of_supports
+
 
     end type Input
 

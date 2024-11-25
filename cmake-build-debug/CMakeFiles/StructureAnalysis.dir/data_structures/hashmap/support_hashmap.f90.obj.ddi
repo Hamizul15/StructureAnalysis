@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\data_structures\\\\hashmap\\\\support_hashmap.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "support_hashmap.mod",
+					"is-interface" : true,
+					"logical-name" : "support_hashmap.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "supports_module.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}
