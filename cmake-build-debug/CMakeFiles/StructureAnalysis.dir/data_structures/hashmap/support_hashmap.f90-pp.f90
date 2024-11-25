@@ -135,10 +135,10 @@ contains
     end subroutine resize
 
     ! Search for a key in the hash map
-    subroutine search(this, key, value)
+    function search(this, key) result(value)
         class(SupportHashMap), intent(in) :: this
         real, intent(in) :: key
-        class(Support), allocatable, intent(out) :: value
+        class(Support), allocatable :: value
         integer :: idx, original_idx
 
         idx = hash_function(key, this%size)
@@ -164,7 +164,6 @@ contains
             idx = mod(idx + 1, this%size)
             if (idx == original_idx) exit
         end do
-        stop "Key is lost"
-    end subroutine search
+    end function search
 
 end module support_hashmap
