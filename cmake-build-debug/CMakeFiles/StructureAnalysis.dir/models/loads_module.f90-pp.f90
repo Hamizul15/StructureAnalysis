@@ -80,23 +80,29 @@ module loads_module
 
     contains
 
-        function new_load() result(new_ld)
+        function new_load(max) result(new_ld)
             implicit none
             class(Load), allocatable :: new_ld
+            real, optional ::  max
             integer :: type_
 
-            type_ = get_type()
-            if(type_ == 1) then
-                allocate(Point :: new_ld)
-            elseif (type_ == 2) then
-                allocate(Moment :: new_ld)
-            else
-                allocate(Distributed :: new_ld)
-            end if
+            if(.not.present(max)) max = huge(max)
 
-           if((type_ /= size(get_types()))) then
-              call new_ld%set_start_location(10.0)
-           end if
+            type_ = get_type()
+            if(type_ == 1) allocate(Point :: new_ld)
+            if(type_ == 2) allocate(Moment :: new_ld)
+            if(type_ == 3) allocate(Distributed :: new_ld)
+
+            select type(stored => new_ld)
+            type is (Distributed)
+                call new_ld%set_start_location(get_real("Masukkan posisi awal beban terpusat: ", 0.0, max))
+                call new_ld%set_end_location(get_real("Masukkan posisi akhir beban terpusat: ", new_ld%get_start_location(), max))
+                call new_ld%set_start_load(get_real("Masukkan beban terpusat awal: "))
+                call new_ld%set_end_load(get_real("Masukkan beban terpusan akhir: "))
+            class default
+                call new_ld%set_start_location(get_real("Masukkan posisi: ", 0.0, max))
+                call new_ld%set_start_load(get_real("Masukkan beban: "))
+            end select
 
         end function new_load
 

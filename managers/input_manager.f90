@@ -3,7 +3,7 @@ module input_manager
     use input_service
     use supports_module
     use loads_module
-    use load_hashmap
+    use load_arraylist
     use support_hashmap
     implicit none
 
@@ -13,7 +13,7 @@ module input_manager
         integer :: number_of_loads
         integer :: number_of_supports
         type(SupportHashMap) :: support_map
-        type(LoadHashMap) :: load_map
+        type(LoadArrayList) :: load_array
 
     contains
         procedure :: init, start
@@ -27,7 +27,7 @@ contains
     subroutine init(this)
         class(Input), intent(inout) :: this
 
-        call this%load_map%init_load_map()
+        !call this%load_map%init_load_map()
         call this%support_map%init_support_map()
     end subroutine init
 
@@ -37,15 +37,9 @@ contains
         integer :: i
 
         this%length = get_real("Masukkan panjang beam: ", 0.0)
-
         this%number_of_loads = get_integer("Masukkan jumlah tipe beban: ", 0)
         do i = 1, this%number_of_loads
-            print *, "Masuk"
-            allocate(load_)
-           load_ = new_load()
-            print *, "keluar"
-           call this%load_map%insert_load(load_%get_start_location(), load_)
-            deallocate(load_)
+            call this%load_array%add(new_load(this%length))
         end do
 
         this%number_of_supports = get_integer("Masukkan jumlah tipe support: ", 0)

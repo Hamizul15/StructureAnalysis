@@ -10,15 +10,14 @@ module input_service
             implicit none
             integer :: the_integer, validInput
             integer, optional :: min, max
-            integer :: amin = huge(the_integer) * -1, amax = huge(the_integer)
+            integer :: amin, amax
             character(LEN=*), optional :: message
 
-            if(present(min)) then
-                amin = min
-            end if
-            if(present(max)) then
-                amax = max
-            end if
+            amin = huge(the_integer) * -1
+            amax = huge(the_integer)
+
+            if(present(min)) amin = min
+            if(present(max)) amax = max
 
             do
                 if (.not.(present(message))) then
@@ -44,20 +43,19 @@ module input_service
 
 
         !fungsi ini mengatur tentang input real
-        integer function get_real(message, min, max)
+        real function get_real(message, min, max)
             implicit none
             real :: the_real
             integer :: validInput
             real, optional :: min, max
-            real :: amin = huge(the_real) * -1, amax = huge(the_real)
+            real :: amin, amax
             character(LEN=*), optional :: message
 
-            if(present(min)) then
-                amin = min
-            end if
-            if(present(max)) then
-                amax = max
-            end if
+            amin = huge(the_real) * -1
+            amax = huge(the_real)
+
+            if(present(min)) amin = min
+            if(present(max)) amax = max
 
             do
                 if (.not.(present(message))) then
