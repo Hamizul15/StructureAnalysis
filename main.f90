@@ -3,8 +3,8 @@ program structure_analysis
     implicit none
 
     type(Input) :: inp
-
-    call inp%init()
     call inp%start()
+
+
 
 end program

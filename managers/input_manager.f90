@@ -18,7 +18,7 @@ module input_manager
     contains
         procedure :: init, start
         !getter
-        procedure :: get_length, get_number_of_loads, get_number_of_supports
+        procedure :: get_length, get_number_of_loads, get_number_of_supports, get_supports, get_loads
 
     end type Input
 
@@ -27,7 +27,6 @@ contains
     subroutine init(this)
         class(Input), intent(inout) :: this
 
-        !call this%load_map%init_load_map()
         call this%support_map%init_support_map()
     end subroutine init
 
@@ -36,6 +35,7 @@ contains
         class(Support), allocatable :: sup_
         integer :: i
 
+        call this%init()
         this%length = get_real("-Masukkan panjang beam: ", 0.0)
 
         this%number_of_loads = get_integer("-Masukkan jumlah tipe beban: ", 0)
@@ -65,10 +65,26 @@ contains
         get_number_of_loads = this%number_of_loads
     end function get_number_of_loads
 
-    real function get_number_of_supports(this)
+    function get_number_of_supports(this) result(num_sups)
         class(Input), intent(in) :: this
+        real :: num_sups
 
-        get_number_of_supports = this%number_of_supports
+        num_sups = this%number_of_supports
     end function get_number_of_supports
+
+    function get_loads(this) result(los)
+        class(Input), intent(in) :: this
+        type(LoadArrayList) :: los
+
+        los = this%load_array
+    end function get_loads
+
+    function get_supports(this) result(sups)
+        class(Input), intent(in) :: this
+        type(SupportHashMap) :: sups
+
+        sups = this%support_map
+    end function get_supports
+
 
 end module input_manager
