@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.29)
 project(StructureAnalysis Fortran)
 
-
-
 file(GLOB_RECURSE my_service_modules ${CMAKE_BINARY_DIR}/../services/*.f90)
 file(GLOB_RECURSE my_model_modules ${CMAKE_BINARY_DIR}/../models/*.f90)
 file(GLOB_RECURSE my_manager_modules ${CMAKE_BINARY_DIR}/../managers/*.f90)
@@ -22,3 +20,6 @@ add_executable(StructureAnalysis
         #${stdlib_sources}
         #${fig_sources}
         main.f90)
+
+add_executable(ExecutableStructureAnalysis main.f90)
+

@@ -1,7 +1,9 @@
 ! Created by hamiz on 10/22/2024.
-
 module supports_module
+    use input_service
     implicit none
+
+    private :: get_types, get_type
 
     type :: Support
         private
@@ -33,6 +35,41 @@ module supports_module
     end interface
 
 contains
+
+    function new_support(max) result (sup)
+        implicit none
+        class(Support), allocatable :: sup
+        real, optional ::  max
+        integer :: type_
+
+        type_ = get_type()
+        if(type_ == 1) allocate(Pin :: sup)
+        if(type_ == 2) allocate(Roller :: sup)
+        if(type_ == 3) allocate(Fixed :: sup)
+
+        call sup%set_location(get_real("Masukkan posisi tumpuhan: ", 0.0, max))
+    end function new_support
+
+    function get_type() result(type_)
+        integer :: type_, i
+        CHARACTER(len=10), DIMENSION(3) :: types
+
+        types = get_types()
+
+        WRITE (*, '(A)') 'Silahkan pilih tipe tumpuhan'
+        DO i = 1, SIZE(types)
+            PRINT '(I1.0, A, A)', i, '. ', types(i)
+        END DO
+
+        type_ = get_integer("Masukkan tipe tumpuhan: ", 1, size(types))
+    end function get_type
+
+    function get_types() result(types)
+        CHARACTER(len=10), DIMENSION(3) :: types
+        types(1) = 'Pin'
+        types(2) = 'Roller'
+        types(3) = 'Fixed'
+    end function get_types
 
     subroutine set_location(this, new_location)
         class(Support), intent(inout) :: this

@@ -11,7 +11,7 @@ build CMakeFiles//StructureAnalysis.dir//services//utils.f90.obj | utils.mod: dy
 build CMakeFiles//StructureAnalysis.dir//models//loads_module.f90.obj | loads_module.mod: dyndep | input_service.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | supports_module.mod: dyndep
+build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | supports_module.mod: dyndep | input_service.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//data_structures//arraylist//load_arraylist.f90.obj | load_arraylist.mod: dyndep | loads_module.mod

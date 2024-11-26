@@ -185,6 +185,47 @@ build StructureAnalysis.exe: Fortran_EXECUTABLE_LINKER__StructureAnalysis_Debug 
   TARGET_IMPLIB = libStructureAnalysis.dll.a
   TARGET_PDB = StructureAnalysis.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target ExecutableStructureAnalysis
+
+
+#############################################
+# Order-only phony target for ExecutableStructureAnalysis
+
+build cmake_object_order_depends_target_ExecutableStructureAnalysis: phony || .
+
+build CMakeFiles/ExecutableStructureAnalysis.dir/main.f90-pp.f90 | CMakeFiles/ExecutableStructureAnalysis.dir/main.f90.obj.ddi: Fortran_PREPROCESS_SCAN__ExecutableStructureAnalysis_Debug D$:/Programming/Fortran/StructureAnalysis/main.f90 || cmake_object_order_depends_target_ExecutableStructureAnalysis
+  DEP_FILE = CMakeFiles\ExecutableStructureAnalysis.dir\main.f90-pp.f90.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\ExecutableStructureAnalysis.dir\main.f90.obj.ddi
+  FLAGS = -g -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles\ExecutableStructureAnalysis.dir\main.f90.obj
+
+build CMakeFiles/ExecutableStructureAnalysis.dir/main.f90.obj: Fortran_COMPILER__ExecutableStructureAnalysis_scanned_Debug CMakeFiles/ExecutableStructureAnalysis.dir/main.f90-pp.f90 || CMakeFiles/ExecutableStructureAnalysis.dir/Fortran.dd
+  FLAGS = -g -fdiagnostics-color=always -fpreprocessed
+  INCLUDES = -ID:\Programming\Fortran\StructureAnalysis
+  OBJECT_DIR = CMakeFiles\ExecutableStructureAnalysis.dir
+  OBJECT_FILE_DIR = CMakeFiles\ExecutableStructureAnalysis.dir
+  dyndep = CMakeFiles/ExecutableStructureAnalysis.dir/Fortran.dd
+
+build CMakeFiles/ExecutableStructureAnalysis.dir/Fortran.dd | D$:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/ExecutableStructureAnalysis.dir/FortranModules.json: Fortran_DYNDEP__ExecutableStructureAnalysis_Debug CMakeFiles/ExecutableStructureAnalysis.dir/main.f90.obj.ddi | D$:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/ExecutableStructureAnalysis.dir/FortranDependInfo.json
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ExecutableStructureAnalysis
+
+
+#############################################
+# Link the executable ExecutableStructureAnalysis.exe
+
+build ExecutableStructureAnalysis.exe: Fortran_EXECUTABLE_LINKER__ExecutableStructureAnalysis_Debug CMakeFiles/ExecutableStructureAnalysis.dir/main.f90.obj
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\ExecutableStructureAnalysis.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = ExecutableStructureAnalysis.exe
+  TARGET_IMPLIB = libExecutableStructureAnalysis.dll.a
+  TARGET_PDB = ExecutableStructureAnalysis.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -211,6 +252,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build ExecutableStructureAnalysis: phony ExecutableStructureAnalysis.exe
+
 build StructureAnalysis: phony StructureAnalysis.exe
 
 # =============================================================================
@@ -221,7 +264,7 @@ build StructureAnalysis: phony StructureAnalysis.exe
 #############################################
 # Folder: D:/Programming/Fortran/StructureAnalysis/cmake-build-debug
 
-build all: phony StructureAnalysis.exe
+build all: phony StructureAnalysis.exe ExecutableStructureAnalysis.exe
 
 # =============================================================================
 # Built-in targets

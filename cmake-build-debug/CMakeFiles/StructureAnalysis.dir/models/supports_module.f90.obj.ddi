@@ -13,7 +13,12 @@
 					"logical-name" : "supports_module.mod"
 				}
 			],
-			"requires" : []
+			"requires" : 
+			[
+				{
+					"logical-name" : "input_service.mod"
+				}
+			]
 		}
 	],
 	"version" : 0

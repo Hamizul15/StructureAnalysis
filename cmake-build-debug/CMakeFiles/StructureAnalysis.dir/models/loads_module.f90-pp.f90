@@ -9,7 +9,7 @@ module loads_module
     use input_service
     implicit none
 
-    private :: get_types
+    private :: get_types, get_type
 
     type :: Load
         private
@@ -85,8 +85,6 @@ module loads_module
             class(Load), allocatable :: new_ld
             real, optional ::  max
             integer :: type_
-
-            if(.not.present(max)) max = huge(max)
 
             type_ = get_type()
             if(type_ == 1) allocate(Point :: new_ld)

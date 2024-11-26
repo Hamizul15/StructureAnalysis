@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "StructureAnalysis",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "ExecutableStructureAnalysis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ExecutableStructureAnalysis-Debug-d36b774d3acd9b3461b5.json",
+					"name" : "ExecutableStructureAnalysis",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "StructureAnalysis::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-StructureAnalysis-Debug-0791925363ee697251e1.json",
+					"jsonFile" : "target-StructureAnalysis-Debug-a9a893c90682d4c29b79.json",
 					"name" : "StructureAnalysis",
 					"projectIndex" : 0
 				}
