@@ -13,13 +13,13 @@ module load_hashmap
         integer :: size
         integer :: count
     contains
-        procedure :: init, insert, search, resize
+        procedure :: init_load_map, insert_load, search_load, resize
     end type LoadHashMap
 
 contains
 
     ! Initialize the hash map
-    subroutine init(this)
+    subroutine init_load_map(this)
         class(LoadHashMap), intent(out) :: this
         integer :: i
 
@@ -40,7 +40,7 @@ contains
             call this%values(i)%set_start_load(-1.0)
             call this%values(i)%set_end_load(-1.0)
         end do
-    end subroutine init
+    end subroutine init_load_map
 
     ! Hash function to map real keys to array indices
     function hash_function(key, size) result(hash_idx)
@@ -54,7 +54,7 @@ contains
     end function hash_function
 
     ! Insert key-value pair into the hash map
-    subroutine insert(this, key, value)
+    subroutine insert_load(this, key, value)
         class(LoadHashMap), intent(inout) :: this
         real, intent(in) :: key
         class(Load), intent(in) :: value
@@ -83,7 +83,7 @@ contains
         if (real(this%count) / real(this%size) > LOAD_FACTOR_THRESHOLD) then
             call this%resize()
         end if
-    end subroutine insert
+    end subroutine insert_load
 
     ! Resize the hash map
     subroutine resize(this)
@@ -109,13 +109,13 @@ contains
 
         do i = 1, old_size
             if (old_occupied(i)) then
-                call this%insert(old_keys(i), old_values(i))
+                call this%insert_load(old_keys(i), old_values(i))
             end if
         end do
     end subroutine resize
 
     ! Search for a key in the hash map
-    function search(this, key) result(value)
+    function search_load(this, key) result(value)
         class(LoadHashMap), intent(in) :: this
         real, intent(in) :: key
         class(Load), allocatable :: value
@@ -133,6 +133,6 @@ contains
             idx = mod(idx + 1, this%size)
             if (idx == original_idx) exit
         end do
-    end function search
+    end function search_load
 
 end module load_hashmap

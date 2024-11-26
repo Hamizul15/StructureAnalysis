@@ -19,7 +19,13 @@
 					"logical-name" : "input_service.mod"
 				},
 				{
+					"logical-name" : "load_hashmap.mod"
+				},
+				{
 					"logical-name" : "loads_module.mod"
+				},
+				{
+					"logical-name" : "support_hashmap.mod"
 				},
 				{
 					"logical-name" : "supports_module.mod"

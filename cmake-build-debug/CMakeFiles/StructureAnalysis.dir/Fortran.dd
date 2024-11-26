@@ -1,5 +1,5 @@
 ninja_dyndep_version = 1.0
-build CMakeFiles//StructureAnalysis.dir//managers//input_manager.f90.obj | input_manager.mod: dyndep | input_service.mod loads_module.mod supports_module.mod
+build CMakeFiles//StructureAnalysis.dir//managers//input_manager.f90.obj | input_manager.mod: dyndep | input_service.mod load_hashmap.mod loads_module.mod support_hashmap.mod supports_module.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//services//input_service.f90.obj | input_service.mod: dyndep
@@ -14,11 +14,14 @@ build CMakeFiles//StructureAnalysis.dir//models//loads_module.f90.obj | loads_mo
 build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | supports_module.mod: dyndep
   restat = 1
 
+build CMakeFiles//StructureAnalysis.dir//data_structures//arraylist//load_arraylist.f90.obj | load_arraylist.mod: dyndep | loads_module.mod
+  restat = 1
+
 build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//load_hashmap.f90.obj | load_hashmap.mod: dyndep | loads_module.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//support_hashmap.f90.obj | support_hashmap.mod: dyndep | supports_module.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//main.f90.obj: dyndep | load_hashmap.mod support_hashmap.mod
+build CMakeFiles//StructureAnalysis.dir//main.f90.obj: dyndep | input_manager.mod
 

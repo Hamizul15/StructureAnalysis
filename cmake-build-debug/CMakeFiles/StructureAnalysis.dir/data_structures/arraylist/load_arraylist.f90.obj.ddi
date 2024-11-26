@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\data_structures\\\\arraylist\\\\load_arraylist.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "load_arraylist.mod",
+					"is-interface" : true,
+					"logical-name" : "load_arraylist.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "loads_module.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

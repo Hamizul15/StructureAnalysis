@@ -18,7 +18,7 @@ module support_hashmap
         integer :: size
         integer :: count
     contains
-        procedure :: init, insert, search, resize, get_count, get_values
+        procedure :: init_support_map, insert_support, search_support, resize, get_count, get_values
     end type SupportHashMap
 
 contains
@@ -38,7 +38,7 @@ contains
     end function get_values
 
     ! Initialize the hash map
-    subroutine init(this)
+    subroutine init_support_map(this)
         class(SupportHashMap), intent(out) :: this
         integer :: i
 
@@ -56,7 +56,7 @@ contains
             !allocate(this%values(i))
             call this%values(i)%set_location(-1.0)
         end do
-    end subroutine init
+    end subroutine init_support_map
 
     ! Hash function to map real keys to array indices
     function hash_function(key, size) result(hash_idx)
@@ -70,7 +70,7 @@ contains
     end function hash_function
 
     ! Insert key-value pair into the hash map
-    subroutine insert(this, key, value)
+    subroutine insert_support(this, key, value)
         class(SupportHashMap), intent(inout) :: this
         real, intent(in) :: key
         class(Support), allocatable, intent(in) :: value
@@ -99,7 +99,7 @@ contains
         if (real(this%count) / real(this%size) > LOAD_FACTOR_THRESHOLD) then
             call this%resize()
         end if
-    end subroutine insert
+    end subroutine insert_support
 
     ! Resize the hash map
     subroutine resize(this)
@@ -129,13 +129,13 @@ contains
                 ! Allocate a temporary value to pass to insert
                 allocate(temp_value)
                 temp_value = old_values(i)
-                call this%insert(old_keys(i), temp_value)
+                call this%insert_support(old_keys(i), temp_value)
             end if
         end do
     end subroutine resize
 
     ! Search for a key in the hash map
-    function search(this, key) result(value)
+    function search_support(this, key) result(value)
         class(SupportHashMap), intent(in) :: this
         real, intent(in) :: key
         class(Support), allocatable :: value
@@ -165,6 +165,6 @@ contains
             if (idx == original_idx) exit
         end do
         stop "Key is lost"
-    end function search
+    end function search_support
 
 end module support_hashmap

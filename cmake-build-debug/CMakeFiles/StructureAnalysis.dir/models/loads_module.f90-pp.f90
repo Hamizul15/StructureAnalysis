@@ -80,25 +80,25 @@ module loads_module
 
     contains
 
-        function new() result(new_load)
+        function new_load() result(new_ld)
             implicit none
-            class(Load), allocatable :: new_load
+            class(Load), allocatable :: new_ld
             integer :: type_
 
             type_ = get_type()
             if(type_ == 1) then
-                allocate(Point :: new_load)
+                allocate(Point :: new_ld)
             elseif (type_ == 2) then
-                allocate(Moment :: new_load)
+                allocate(Moment :: new_ld)
             else
-                allocate(Distributed :: new_load)
+                allocate(Distributed :: new_ld)
             end if
 
            if((type_ /= size(get_types()))) then
-              call new_load%set_start_location(10.0)
+              call new_ld%set_start_location(10.0)
            end if
 
-        end function new
+        end function new_load
 
         function get_type() result(type_)
             integer :: type_, i
@@ -106,7 +106,7 @@ module loads_module
 
             types = get_types()
 
-            WRITE (*, '(A)') 'Silahkan tipe beban yang akan dikonversi'
+            WRITE (*, '(A)') 'Silahkan pilih tipe beban'
             DO i = 1, SIZE(types)
                 PRINT '(I1.0, A, A)', i, '. ', types(i)
             END DO

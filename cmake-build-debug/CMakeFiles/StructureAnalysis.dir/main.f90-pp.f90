@@ -4,48 +4,12 @@
 # 1 "D:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug//"
 # 1 "D:/Programming/Fortran/StructureAnalysis/main.f90"
 program structure_analysis
-    use load_hashmap
-    use support_hashmap
+    use input_manager
     implicit none
+    
+    !type(Input) :: inp
 
-    type(SupportHashMap) :: map
-    class(Support), allocatable :: test1, test2, test3, value
-    integer :: i
-    real :: key
-
-    allocate(Pin :: test1)
-    allocate(Roller :: test2)
-    allocate(Fixed :: test3)
-
-    ! Initialize the hash map
-    call map%init()
-
-    call test1%set_location(5.0)
-    call test2%set_location(6.0)
-    call test2%set_location(7.0)
-
-    ! Insert some key-value pairs
-    call map%insert(test1%get_location(), test1)
-    call map%insert(test2%get_location(), test2)
-    call map%insert(test3%get_location(), test2)
-
-    allocate(value)
-
-    key = test2%get_location()
-    value = map%search(key)
-    select type(stored => value)
-    type is (Pin)
-        print *, 'PIN'
-    type is (Roller)
-        print *, 'Roller'
-    type is (Fixed)
-        print *, 'Fixed'
-    class default
-        print *, 'default'
-    end select
-
-    print *, key
-    print *, value%get_location()
-    print *, value%get_number_of_reaction()
+    !call inp%init()
+    !call inp%start()
 
 end program
