@@ -18,7 +18,7 @@ module load_arraylist
         private
         procedure :: resize, initialize
 
-        procedure, public :: add, get, get_size !, remove
+        procedure, public :: add, get, sum_of_loads, sum_of_moments, get_size !, remove
     end type LoadArrayList
 
 contains
@@ -53,27 +53,27 @@ contains
 
     ! Remove a person (find and shift remaining elements)
     !subroutine remove(this, person)
-        !class(LoadHashMap), intent(inout) :: this
-        !type(Load), intent(in) :: load
-        !integer :: i, found
+    !class(LoadHashMap), intent(inout) :: this
+    !type(Load), intent(in) :: load
+    !integer :: i, found
 
-        !found = 0
-        !do i = 1, size
-        !    if (this%arr(i)% arr(i)%name == person%name .and. arr(i)%age == person%age) then
-        !        found = 1
-        !exit
-        !    end if
-        !end do
+    !found = 0
+    !do i = 1, size
+    !    if (this%arr(i)% arr(i)%name == person%name .and. arr(i)%age == person%age) then
+    !        found = 1
+    !exit
+    !    end if
+    !end do
 
-        !if (found == 1) then
-            ! Shift elements after the removed person
-        !    do i = i, size-1
-        !        arr(i) = arr(i+1)
-        !    end do
-        !    size = size - 1
-        !else
-        !    print *, "Person not found"
-        !end if
+    !if (found == 1) then
+    ! Shift elements after the removed person
+    !    do i = i, size-1
+    !        arr(i) = arr(i+1)
+    !    end do
+    !    size = size - 1
+    !else
+    !    print *, "Person not found"
+    !end if
     !end subroutine remove
 
     ! Resize the array to a new size
@@ -109,5 +109,31 @@ contains
             stop "Index out of bounds"
         end if
     end function get
+
+    function sum_of_loads(this) result(the_sum)
+        class(LoadArrayList), intent(inout) :: this
+        type(Load) :: load_
+        real :: the_sum
+        integer :: i
+
+        the_sum = 0.0
+        do i = 1, this%size
+            load_ = this%get(i)
+            the_sum = the_sum + load_%get_total_load()
+        end do
+    end function sum_of_loads
+
+    function sum_of_moments(this) result(the_sum)
+        class(LoadArrayList), intent(inout) :: this
+        type(Load) :: load_
+        real :: the_sum
+        integer :: i
+
+        the_sum = 0.0
+        do i = 1, this%size
+            load_ = this%get(i)
+            if(load_%get_type() == 2) the_sum = the_sum + load_%get_start_load()
+        end do
+    end function sum_of_moments
 
 end module load_arraylist

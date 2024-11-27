@@ -36,14 +36,14 @@ contains
         integer :: i
 
         call this%init()
-        this%length = get_real("-Masukkan panjang beam: ", 0.0)
+        this%length = get_real("- Masukkan panjang beam: ", 0.0)
 
-        this%number_of_loads = get_integer("-Masukkan jumlah tipe beban: ", 0)
+        this%number_of_loads = get_integer("- Masukkan jumlah tipe beban: ", 0)
         do i = 1, this%number_of_loads
             call this%load_array%add(new_load(this%length))
         end do
 
-        this%number_of_supports = get_integer("-Masukkan jumlah tipe support: ", 0)
+        this%number_of_supports = get_integer("- Masukkan jumlah tipe support: ", 0)
         do i = 1, this%number_of_supports
             allocate(sup_)
             sup_ = new_support(this%length)

@@ -5,20 +5,8 @@
 		{
 			"outputs" : [],
 			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\data_structures\\\\hashmap\\\\load_hashmap.f90.obj",
-			"provides" : 
-			[
-				{
-					"compiled-module-path" : "load_hashmap.mod",
-					"is-interface" : true,
-					"logical-name" : "load_hashmap.mod"
-				}
-			],
-			"requires" : 
-			[
-				{
-					"logical-name" : "loads_module.mod"
-				}
-			]
+			"provides" : [],
+			"requires" : []
 		}
 	],
 	"version" : 0

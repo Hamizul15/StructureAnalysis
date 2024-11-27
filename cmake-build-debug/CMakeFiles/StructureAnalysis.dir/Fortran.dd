@@ -17,8 +17,7 @@ build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | suppo
 build CMakeFiles//StructureAnalysis.dir//data_structures//arraylist//load_arraylist.f90.obj | load_arraylist.mod: dyndep | loads_module.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//load_hashmap.f90.obj | load_hashmap.mod: dyndep | loads_module.mod
-  restat = 1
+build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//load_hashmap.f90.obj: dyndep
 
 build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//support_hashmap.f90.obj | support_hashmap.mod: dyndep | supports_module.mod
   restat = 1

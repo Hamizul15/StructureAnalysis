@@ -14,19 +14,25 @@ module loads_module
     type :: Load
         private
         real :: start_location, end_location, start_load, end_load
+        integer :: type
 
        contains
+            private
+            procedure :: set_type
+
             !setter
-            procedure :: set_start_location
-            procedure :: set_start_load
-            procedure :: set_end_location
-            procedure :: set_end_load
+            procedure, public :: set_start_location
+            procedure, public :: set_start_load
+            procedure, public :: set_end_location
+            procedure, public :: set_end_load
 
            !getter
-            procedure :: get_start_location
-            procedure :: get_end_location
-            procedure :: get_start_load
-            procedure :: get_end_load
+            procedure, public :: get_start_location
+            procedure, public :: get_end_location
+            procedure, public :: get_start_load
+            procedure, public :: get_end_load
+
+            procedure, public :: get_total_load, get_type
     end type Load
 
     type, extends(Load) :: Point
@@ -72,6 +78,8 @@ module loads_module
         !procedure :: get_end_location => get_distributed_end_location
         !procedure :: get_start_load => get_distributed_start_load
         !procedure :: get_end_load => get_distributed_end_load
+        procedure :: get_total_load => get_distributed_total_load
+
     end type Distributed
 
     interface assignment(=)
@@ -86,10 +94,11 @@ module loads_module
             real, optional ::  max
             integer :: type_
 
-            type_ = get_type()
+            type_ = get_choosen_type()
             if(type_ == 1) allocate(Point :: new_ld)
             if(type_ == 2) allocate(Moment :: new_ld)
             if(type_ == 3) allocate(Distributed :: new_ld)
+            call new_ld%set_type(type_)
 
             select type(stored => new_ld)
             type is (Distributed)
@@ -104,7 +113,7 @@ module loads_module
 
         end function new_load
 
-        function get_type() result(type_)
+        function get_choosen_type() result(type_)
             integer :: type_, i
             CHARACTER(len=10), DIMENSION(3) :: types
 
@@ -116,7 +125,7 @@ module loads_module
             END DO
 
             type_ = get_integer("Masukkan tipe beban: ", 1, size(types))
-        end function get_type
+        end function get_choosen_type
 
         function get_types() result(types)
             CHARACTER(len=10), DIMENSION(3) :: types
@@ -126,6 +135,13 @@ module loads_module
         end function get_types
 
         !Setter
+        subroutine set_type(this, typee)
+            class(Load), intent(inout) :: this
+            integer :: typee
+
+            this%type = typee
+        end subroutine set_type
+
         subroutine set_start_location(this, new_location)
             class(Load), intent(inout) :: this
             real, intent(in) :: new_location
@@ -155,6 +171,28 @@ module loads_module
         end subroutine set_end_load
 
         !Getter
+        function get_type(this) result(tipe)
+            class(Load), intent(in) :: this
+            integer :: tipe
+
+            tipe = this%type
+        end function get_type
+
+        function get_total_load(this) result(total)
+            class(Load), intent(in) :: this
+            real :: total, length
+
+            if(this%get_type() == 3) then
+                length = this%get_end_location() - this%get_start_location()
+                total = (this%get_start_load() + this%get_end_load()) * length / 2
+            else if (this%get_type() == 1) then
+                total = this%get_start_load()
+            else
+                total = 0
+            end if
+
+        end function get_total_load
+
         function get_start_location(this) result(loc)
             class(Load), intent(in) :: this
             real :: loc
@@ -260,14 +298,25 @@ module loads_module
         end function get_moment_load
 
 
+        !Distributed
+        function get_distributed_total_load(this) result(total)
+            class(Distributed), intent(in) :: this
+            real :: length, total
+
+            length = this%get_end_location() - this%get_start_location()
+            total = (this%get_start_load() + this%get_end_load()) * length / 2
+        end function get_distributed_total_load
+
+
         ! Custom assignment operator for the Load type
         subroutine assign_load(lhs, rhs)
-            class(Load), intent(out) :: lhs
+            class(Load), intent(out), allocatable :: lhs
             class(Load), intent(in) :: rhs
             lhs%start_location = rhs%start_location
             lhs%end_location = rhs%end_location
             lhs%start_load = rhs%start_load
             lhs%end_load = rhs%end_load
+            lhs%type = rhs%type
         end subroutine assign_load
 
 end module loads_module
