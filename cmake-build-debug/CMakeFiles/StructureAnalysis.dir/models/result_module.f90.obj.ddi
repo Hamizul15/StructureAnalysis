@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\models\\\\result_module.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "result_module.mod",
+					"is-interface" : true,
+					"logical-name" : "result_module.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "resultload_arraylist.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

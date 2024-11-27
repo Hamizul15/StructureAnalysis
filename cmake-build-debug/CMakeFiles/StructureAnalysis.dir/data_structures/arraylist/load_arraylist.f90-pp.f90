@@ -18,7 +18,7 @@ module load_arraylist
         private
         procedure :: resize, initialize
 
-        procedure, public :: add, get, sum_of_loads, sum_of_moments, get_size !, remove
+        procedure, public :: add_load, get_load, sum_of_loads, sum_of_moments, get_size !, remove
     end type LoadArrayList
 
 contains
@@ -33,8 +33,7 @@ contains
         end if
     end subroutine initialize
 
-    ! Add a person to the dynamic array
-    subroutine add(this, lo)
+    subroutine add_load(this, lo)
         class(LoadArrayList), intent(inout) :: this
         type(Load), intent(in) :: lo
 
@@ -49,7 +48,7 @@ contains
 
         this%size = this%size + 1
         this%arr(this%size) = lo
-    end subroutine add
+    end subroutine add_load
 
     ! Remove a person (find and shift remaining elements)
     !subroutine remove(this, person)
@@ -98,7 +97,7 @@ contains
         s = this%size
     end function get_size
 
-    function get(this, index) result(lo)
+    function get_load(this, index) result(lo)
         class(LoadArrayList), intent(inout) :: this
         integer, intent(in) :: index
         type(Load) :: lo
@@ -108,7 +107,7 @@ contains
         else
             stop "Index out of bounds"
         end if
-    end function get
+    end function get_load
 
     function sum_of_loads(this) result(the_sum)
         class(LoadArrayList), intent(inout) :: this
@@ -118,7 +117,7 @@ contains
 
         the_sum = 0.0
         do i = 1, this%size
-            load_ = this%get(i)
+            load_ = this%get_load(i)
             the_sum = the_sum + load_%get_total_load()
         end do
     end function sum_of_loads
@@ -131,7 +130,7 @@ contains
 
         the_sum = 0.0
         do i = 1, this%size
-            load_ = this%get(i)
+            load_ = this%get_load(i)
             if(load_%get_type() == 2) the_sum = the_sum + load_%get_start_load()
         end do
     end function sum_of_moments

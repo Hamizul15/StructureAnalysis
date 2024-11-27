@@ -1,6 +1,11 @@
 {
 	"modules" : 
 	{
+		"calculator_service.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/calculator_service.mod",
+			"is-private" : false
+		},
 		"input_manager.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/input_manager.mod",
@@ -19,6 +24,16 @@
 		"loads_module.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/loads_module.mod",
+			"is-private" : false
+		},
+		"result_module.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/result_module.mod",
+			"is-private" : false
+		},
+		"resultload_arraylist.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/resultload_arraylist.mod",
 			"is-private" : false
 		},
 		"support_hashmap.mod" : 

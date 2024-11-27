@@ -1,26 +1,70 @@
-module load_arraylist
-    use loads_module
+! Created by hamiz on 11/27/2024.
+module resultload_arraylist
     implicit none
 
     integer, parameter :: initial_size = 10
 
-    type LoadArrayList
+    type :: ResultLoad
+        private
+        real :: loc, load
+
+    contains
+
+        procedure :: set_location, set_load
+        procedure :: get_location, get_load
+
+    end type ResultLoad
+
+    type ResultLoadArrayList
         private
         integer :: size = 0
-        type(Load), allocatable :: arr(:)
+        type(ResultLoad), allocatable :: arr(:)
 
-        contains
+    contains
         private
         procedure :: resize, initialize
 
-        procedure, public :: add_load, get_load, sum_of_loads, sum_of_moments, get_size !, remove
-    end type LoadArrayList
+        procedure, public :: add_resultload, get_resultload, get_size !, remove
+    end type ResultLoadArrayList
 
 contains
 
+    !ResultLoad
+    subroutine set_location(this, location)
+        class(ResultLoad), intent(inout) :: this
+        real :: location
+
+        this%loc = location
+    end subroutine set_location
+
+    subroutine set_load(this, load)
+        class(ResultLoad), intent(inout) :: this
+        real :: load
+
+        this%load = load
+    end subroutine set_load
+
+
+    function get_location(this) result(loc_)
+        class(ResultLoad), intent(in) :: this
+        real :: loc_
+
+        loc_ = this%loc;
+    end function get_location
+
+    function get_load(this) result(lo)
+        class(ResultLoad), intent(in) :: this
+        real :: lo
+
+        lo = this%load;
+    end function get_load
+
+
+
+    !ResultLoadArrayList
     ! Initialize the array with a given size
     subroutine initialize(this)
-        class(LoadArrayList), intent(inout) :: this
+        class(ResultLoadArrayList), intent(inout) :: this
 
         if (.not.allocated( this%arr)) then
             allocate(this%arr(initial_size))
@@ -28,9 +72,9 @@ contains
         end if
     end subroutine initialize
 
-    subroutine add_load(this, lo)
-        class(LoadArrayList), intent(inout) :: this
-        type(Load), intent(in) :: lo
+    subroutine add_resultload(this, lo)
+        class(ResultLoadArrayList), intent(inout) :: this
+        type(ResultLoad), intent(in) :: lo
 
         if (this%size == 0) then
             call this%initialize()
@@ -43,7 +87,7 @@ contains
 
         this%size = this%size + 1
         this%arr(this%size) = lo
-    end subroutine add_load
+    end subroutine add_resultload
 
     ! Remove a person (find and shift remaining elements)
     !subroutine remove(this, person)
@@ -72,9 +116,9 @@ contains
 
     ! Resize the array to a new size
     subroutine resize(this, new_size)
-        class(LoadArrayList), intent(inout) :: this
+        class(ResultLoadArrayList), intent(inout) :: this
         integer, intent(in) :: new_size
-        type(Load), allocatable :: temp(:)
+        type(ResultLoad), allocatable :: temp(:)
 
         allocate(temp(new_size))
         temp(1:this%size) = this%arr(1:this%size)  ! Copy existing elements to temp
@@ -86,48 +130,22 @@ contains
 
     ! Get the current size of the array
     function get_size(this) result(s)
-        class(LoadArrayList), intent(inout) :: this
+        class(ResultLoadArrayList), intent(inout) :: this
         integer :: s
 
         s = this%size
     end function get_size
 
-    function get_load(this, index) result(lo)
-        class(LoadArrayList), intent(inout) :: this
+    function get_resultload(this, index) result(lo)
+        class(ResultLoadArrayList), intent(inout) :: this
         integer, intent(in) :: index
-        type(Load) :: lo
+        type(ResultLoad) :: lo
 
         if (index > 0 .and. index <= this%size) then
             lo = this%arr(index)
         else
             stop "Index out of bounds"
         end if
-    end function get_load
-
-    function sum_of_loads(this) result(the_sum)
-        class(LoadArrayList), intent(inout) :: this
-        type(Load) :: load_
-        real :: the_sum
-        integer :: i
-
-        the_sum = 0.0
-        do i = 1, this%size
-            load_ = this%get_load(i)
-            the_sum = the_sum + load_%get_total_load()
-        end do
-    end function sum_of_loads
-
-    function sum_of_moments(this) result(the_sum)
-        class(LoadArrayList), intent(inout) :: this
-        type(Load) :: load_
-        real :: the_sum
-        integer :: i
-
-        the_sum = 0.0
-        do i = 1, this%size
-            load_ = this%get_load(i)
-            if(load_%get_type() == 2) the_sum = the_sum + load_%get_start_load()
-        end do
-    end function sum_of_moments
-
-end module load_arraylist
+    end function get_resultload
+    
+end module resultload_arraylist

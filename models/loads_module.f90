@@ -1,8 +1,9 @@
 ! Created by hamiz on 10/21/2024.
-
 module loads_module
     use input_service
     implicit none
+
+    integer, parameter :: NUMBER_OF_LOADS = 3
 
     private :: get_types, get_type
 
@@ -27,7 +28,7 @@ module loads_module
             procedure, public :: get_start_load
             procedure, public :: get_end_load
 
-            procedure, public :: get_total_load, get_type
+            procedure, public :: get_total_load, get_type, get_actual_location
     end type Load
 
     type, extends(Load) :: Point
@@ -110,7 +111,7 @@ module loads_module
 
         function get_choosen_type() result(type_)
             integer :: type_, i
-            CHARACTER(len=10), DIMENSION(3) :: types
+            CHARACTER(len=10), DIMENSION(NUMBER_OF_LOADS) :: types
 
             types = get_types()
 
@@ -123,7 +124,7 @@ module loads_module
         end function get_choosen_type
 
         function get_types() result(types)
-            CHARACTER(len=10), DIMENSION(3) :: types
+            CHARACTER(len=10), DIMENSION(NUMBER_OF_LOADS) :: types
             types(1) = 'Point'
             types(2) = 'Moment'
             types(3) = 'Distributed'
@@ -187,6 +188,21 @@ module loads_module
             end if
 
         end function get_total_load
+
+        function get_actual_location(this) result(loc)
+            class(Load), intent(in) :: this
+            real :: loc, first_part, second_part, third_part
+
+            if(this%get_type() == 3) then
+                first_part = this%get_start_location() * (this%get_start_load() + 2*this%get_end_load())
+                second_part = this%get_end_location() * (this%get_end_load() + 2*this%get_start_load())
+                third_part = 3 * (this%get_start_load() + this%get_end_load())
+                loc = (first_part + second_part) / third_part
+            else
+                loc = this%get_start_location()
+            end if
+
+        end function get_actual_location
 
         function get_start_location(this) result(loc)
             class(Load), intent(in) :: this

@@ -2,164 +2,146 @@ module support_hashmap
     use supports_module
     implicit none
 
-    integer, parameter :: INITIAL_SIZE = 100
-    real, parameter :: LOAD_FACTOR_THRESHOLD = 0.75
+    integer, parameter :: initial_size = 10
 
-    type :: SupportHashMap
+    type SupportHashMap
         private
-        real, dimension(:), allocatable :: keys
-        class(Support), dimension(:), allocatable :: values(:)
-        logical, dimension(:), allocatable :: occupied
-        integer :: size
-        integer :: count
+        integer :: size = 0
+        type(Support), allocatable :: arr(:)
+        real, allocatable :: keys(:)
+
     contains
-        procedure :: init_support_map, insert_support, search_support, resize, get_count, get_values
+        private
+        procedure :: resize, initialize
+
+        procedure, public :: insert_support, get_support, get_size, get_keys, get_values !, remove
     end type SupportHashMap
 
 contains
 
-    function get_count(this) result(co)
-        class(SupportHashMap), intent(in) :: this
-        integer :: co
+    ! Initialize the array with a given size
+    subroutine initialize(this)
+        class(SupportHashMap), intent(inout) :: this
 
-        co = this%count
-    end function get_count
+        if (.not.allocated( this%arr)) then
+            allocate(this%arr(initial_size))
+            allocate(this%keys(initial_size))
+            this%size = 0
+        end if
+    end subroutine initialize
 
-    function get_values(this) result(valuess)
-        class(SupportHashMap), intent(in) :: this
-        class(Support), dimension(:), allocatable :: valuess(:)
-
-        valuess = this%values
-    end function get_values
-
-    ! Initialize the hash map
-    subroutine init_support_map(this)
-        class(SupportHashMap), intent(out) :: this
+    subroutine insert_support(this, location, lo)
+        class(SupportHashMap), intent(inout) :: this
+        type(Support), intent(in) :: lo
+        real :: location
         integer :: i
 
-        this%size = INITIAL_SIZE
-        this%count = 0
-
-        allocate(this%keys(this%size))
-        allocate(this%values(this%size))
-        allocate(this%occupied(this%size))
-
-        this%keys = -1.0
-        this%occupied = .false.
-
-        do i = 1, this%size
-            !allocate(this%values(i))
-            call this%values(i)%set_location(-1.0)
-        end do
-    end subroutine init_support_map
-
-    ! Hash function to map real keys to array indices
-    function hash_function(key, size) result(hash_idx)
-        real, intent(in) :: key
-        integer, intent(in) :: size
-        integer :: hash_idx
-        real :: scaled_key
-
-        scaled_key = key * 1e6
-        hash_idx = mod(int(scaled_key), size)
-    end function hash_function
-
-    ! Insert key-value pair into the hash map
-    subroutine insert_support(this, key, value)
-        class(SupportHashMap), intent(inout) :: this
-        real, intent(in) :: key
-        class(Support), allocatable, intent(in) :: value
-        integer :: idx, original_idx
-
-        idx = hash_function(key, this%size)
-        original_idx = idx
-
-        do while (this%occupied(idx))
-            if (this%keys(idx) == key) then
-                stop "Key already exists!"
-            end if
-            idx = mod(idx + 1, this%size)
-            if (idx == original_idx) then
-                print *, "HashMap is full!"
-                return
-            end if
-        end do
-
-        !allocate(this%values(idx))  ! Allocate individual element
-        this%keys(idx) = key
-        this%values(idx) = value
-        this%occupied(idx) = .true.
-        this%count = this%count + 1
-
-        if (real(this%count) / real(this%size) > LOAD_FACTOR_THRESHOLD) then
-            call this%resize()
+        if (this%size == 0) then
+            call this%initialize()
         end if
+
+        do i = 0, size(this%keys)
+            if(this%keys(i) == location) then
+                stop "The Key already exist"
+            end if
+        end do
+
+        if (this%size == size(this%arr)) then
+            ! Double the size of the array if it's full
+            call this%resize(size(this%arr) * 2)
+        end if
+
+        this%size = this%size + 1
+        this%arr(this%size) = lo
+        this%keys(this%size) = location
     end subroutine insert_support
 
-    ! Resize the hash map
-    subroutine resize(this)
+    ! Remove a person (find and shift remaining elements)
+    !subroutine remove(this, person)
+    !class(LoadHashMap), intent(inout) :: this
+    !type(Load), intent(in) :: load
+    !integer :: i, found
+
+    !found = 0
+    !do i = 1, size
+    !    if (this%arr(i)% arr(i)%name == person%name .and. arr(i)%age == person%age) then
+    !        found = 1
+    !exit
+    !    end if
+    !end do
+
+    !if (found == 1) then
+    ! Shift elements after the removed person
+    !    do i = i, size-1
+    !        arr(i) = arr(i+1)
+    !    end do
+    !    size = size - 1
+    !else
+    !    print *, "Person not found"
+    !end if
+    !end subroutine remove
+
+    ! Resize the array to a new size
+    subroutine resize(this, new_size)
         class(SupportHashMap), intent(inout) :: this
-        real, dimension(:), allocatable :: old_keys
-        class(Support), dimension(:), allocatable :: old_values(:)
-        logical, dimension(:), allocatable :: old_occupied
-        integer :: old_size, i, idx
-        class(Support), allocatable :: temp_value
+        integer, intent(in) :: new_size
+        type(Support), allocatable :: temp_arr(:)
+        real, allocatable :: temp_keys(:)
 
-        old_keys = this%keys
-        old_values = this%values
-        old_occupied = this%occupied
-        old_size = this%size
+        allocate(temp_arr(new_size))
+        allocate(temp_keys(new_size))
 
-        this%size = 2 * old_size
-        allocate(this%keys(this%size))
-        allocate(this%values(this%size))
-        allocate(this%occupied(this%size))
+        temp_arr(1:this%size) = this%arr(1:this%size)  ! Copy existing elements to temp
+        temp_keys(1:this%size) = this%keys(1:this%size)  ! Copy existing elements to temp
 
-        this%keys = -1.0
-        this%occupied = .false.
-        this%count = 0
+        deallocate(this%arr)              ! Deallocate old array
+        deallocate(this%keys)              ! Deallocate old array
 
-        do i = 1, old_size
-            if (old_occupied(i)) then
-                ! Allocate a temporary value to pass to insert
-                allocate(temp_value)
-                temp_value = old_values(i)
-                call this%insert_support(old_keys(i), temp_value)
-            end if
-        end do
+        allocate(this%arr(new_size))      ! Reallocate the array with the new size
+        allocate(this%keys(new_size))      ! Reallocate the array with the new size
+
+        this%arr = temp_arr                   ! Copy back the elements to the new array
+        this%keys = temp_keys                   ! Copy back the elements to the new array
+
+        deallocate(temp_arr)             ! Deallocate temporary array
+        deallocate(temp_keys)             ! Deallocate temporary array
     end subroutine resize
 
-    ! Search for a key in the hash map
-    function search_support(this, key) result(value)
-        class(SupportHashMap), intent(in) :: this
-        real, intent(in) :: key
-        class(Support), allocatable :: value
-        integer :: idx, original_idx
+    ! Get the current size of the array
+    function get_size(this) result(s)
+        class(SupportHashMap), intent(inout) :: this
+        integer :: s
 
-        idx = hash_function(key, this%size)
-        original_idx = idx
+        s = this%size
+    end function get_size
 
-        do while (this%occupied(idx))
-            if (this%keys(idx) == key) then
-                if (.not.allocated(value)) then
-                    select type(stored => this%values(idx))
-                    type is (Pin)
-                        allocate(Pin :: value)  ! Correctly allocate for Pin type
-                    type is (Roller)
-                        allocate(Roller :: value)  ! Correctly allocate for Roller type
-                    type is (Fixed)
-                        allocate(Fixed :: value)  ! Correctly allocate for Fixed type
-                    class default
-                        allocate(Support :: value)  ! Fallback to general Support
-                    end select
-                end if
-                value = this%values(idx)  ! Assign the value to the polymorphic variable
+    function get_keys(this) result(kuncis)
+        class(SupportHashMap), intent(inout) :: this
+        real, allocatable :: kuncis(:)
+
+        kuncis = this%keys
+    end function get_keys
+
+    function get_values(this) result(the_value)
+        class(SupportHashMap), intent(inout) :: this
+        type(Support), allocatable :: the_value(:)
+
+        the_value = this%arr
+    end function get_values
+
+    function get_support(this, location) result(lo)
+        class(SupportHashMap), intent(inout) :: this
+        real, intent(in) :: location
+        type(Support) :: lo
+        integer :: i
+
+        do i = 1, size(this%arr)
+            lo = this%arr(i)
+            if(lo%get_location() == location) then
                 return
             end if
-            idx = mod(idx + 1, this%size)
-            if (idx == original_idx) exit
         end do
-        stop "Key is lost"
-    end function search_support
+        stop "Location is not found"
+    end function get_support
 
 end module support_hashmap

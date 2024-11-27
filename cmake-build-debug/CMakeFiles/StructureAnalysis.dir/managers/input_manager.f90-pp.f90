@@ -21,7 +21,7 @@ module input_manager
         type(LoadArrayList) :: load_array
 
     contains
-        procedure :: init, start
+        procedure :: start !, init
         !getter
         procedure :: get_length, get_number_of_loads, get_number_of_supports, get_supports, get_loads
 
@@ -29,26 +29,24 @@ module input_manager
 
 contains
 
-    subroutine init(this)
-        class(Input), intent(inout) :: this
-
-        call this%support_map%init_support_map()
-    end subroutine init
+    !subroutine init(this)
+    !    class(Input), intent(inout) :: this
+    !
+    !   call this%support_map%init_support_map()
+    !end subroutine init
 
     subroutine start(this)
         class(Input), intent(inout) :: this
         class(Support), allocatable :: sup_
         integer :: i
 
-        call this%init()
+        !call this%init()
         this%length = get_real("- Masukkan panjang beam: ", 0.0)
 
         this%number_of_loads = get_integer("- Masukkan jumlah tipe beban: ", 0)
         do i = 1, this%number_of_loads
-            call this%load_array%add(new_load(this%length))
+            call this%load_array%add_load(new_load(this%length))
         end do
-
-        print *, this%load_array%sum_of_moments()
 
         this%number_of_supports = get_integer("- Masukkan jumlah tipe support: ", 0)
         do i = 1, this%number_of_supports
