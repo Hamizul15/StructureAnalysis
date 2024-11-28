@@ -5,8 +5,29 @@
 		{
 			"outputs" : [],
 			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\managers\\\\calculator_manager.f90.obj",
-			"provides" : [],
-			"requires" : []
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "calculator_manager.mod",
+					"is-interface" : true,
+					"logical-name" : "calculator_manager.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "calculator_determined_service.mod"
+				},
+				{
+					"logical-name" : "calculator_service.mod"
+				},
+				{
+					"logical-name" : "input_manager.mod"
+				},
+				{
+					"logical-name" : "supports_module.mod"
+				}
+			]
 		}
 	],
 	"version" : 0

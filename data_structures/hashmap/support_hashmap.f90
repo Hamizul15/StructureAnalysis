@@ -14,7 +14,8 @@ module support_hashmap
         private
         procedure :: resize, initialize
 
-        procedure, public :: insert_support, get_support, get_size, get_keys, get_values !, remove
+        procedure, public :: insert_support, get_support_by_key, get_support_by_index
+        procedure, public :: get_size, get_keys, get_values, sum_of_number_of_reactions !, remove
     end type SupportHashMap
 
 contains
@@ -129,19 +130,45 @@ contains
         the_value = this%arr
     end function get_values
 
-    function get_support(this, location) result(lo)
+    function sum_of_number_of_reactions(this) result(xxx)
+        class(SupportHashMap), intent(inout) :: this
+        integer :: xxx, i
+        type(Support) :: lo
+
+        xxx = 0
+        do i = 1, this%size
+            lo = this%arr(i)
+            xxx = xxx + lo%get_number_of_reaction()
+        end do
+
+    end function sum_of_number_of_reactions
+
+    function get_support_by_key(this, location) result(lo)
         class(SupportHashMap), intent(inout) :: this
         real, intent(in) :: location
         type(Support) :: lo
         integer :: i
 
-        do i = 1, size(this%arr)
+        do i = 1, this%size
             lo = this%arr(i)
             if(lo%get_location() == location) then
                 return
             end if
         end do
         stop "Location is not found"
-    end function get_support
+    end function get_support_by_key
+
+    function get_support_by_index(this, index) result(lo)
+        class(SupportHashMap), intent(inout) :: this
+        integer, intent(in) :: index
+        type(Support) :: lo
+        integer :: i
+
+        if (index > 0 .and. index <= this%size) then
+            lo = this%arr(index)
+        else
+            stop "Index out of bounds"
+        end if
+    end function get_support_by_index
 
 end module support_hashmap

@@ -1,6 +1,16 @@
 {
 	"modules" : 
 	{
+		"calculator_determined_service.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/calculator_determined_service.mod",
+			"is-private" : false
+		},
+		"calculator_manager.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/calculator_manager.mod",
+			"is-private" : false
+		},
 		"calculator_service.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/calculator_service.mod",

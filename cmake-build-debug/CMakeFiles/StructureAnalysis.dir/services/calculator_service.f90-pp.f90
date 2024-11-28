@@ -21,7 +21,7 @@ module calculator_service
     type, extends(Calculator) :: CalculotrDetermined
     contains
         private
-        procedure :: get_anchor_support, get_the_other_support
+        procedure :: get_anchor_support, get_the_other_support, get_reaction_of_
 
         procedure, public :: calculate => calculate_determined
     end type CalculotrDetermined
@@ -50,6 +50,15 @@ module calculator_service
     !Determined
     subroutine calculate_determined(this)
         class(CalculotrDetermined), intent(in) :: this
+        type(Result) :: result_
+        type(LoadArrayList) :: loads
+
+        loads = this%input_%get_loads()
+        result_ = this%get_reaction_of_()
+
+        print *, loads%sum_of_loads()
+        print *, "Va = ",  result_%get_ra()
+        print *, "Vb = ", result_%get_rb()
 
     end subroutine calculate_determined
 
@@ -68,11 +77,17 @@ module calculator_service
 
         do i = 1, loads%get_size()
             current_load = loads%get_load(i)
-            if(anchor%get_location() > current_load%get_actual_location()) then
+            print *, ""
+            print *, "Total Load = ", current_load%get_total_load()
+            print *, "Actual Location = ", current_load%get_actual_location()
+            print *, "Anchor Location = ", anchor%get_location()
+            print *, ""
+
+            !if(anchor%get_location() > current_load%get_actual_location()) then
                 reaction = reaction + (current_load%get_total_load() * (anchor%get_location() - current_load%get_actual_location()))
-            else if (anchor%get_location() < current_load%get_actual_location()) then
-                reaction = reaction + (current_load%get_total_load() * (current_load%get_actual_location() - anchor%get_location()))
-            end if
+            !else if (anchor%get_location() < current_load%get_actual_location()) then
+                !reaction = reaction + (current_load%get_total_load() * (current_load%get_actual_location() - anchor%get_location()))
+            !end if
         end do
 
         reaction = reaction / (anchor%get_location() - the_other%get_location())

@@ -1,8 +1,14 @@
 ninja_dyndep_version = 1.0
+build CMakeFiles//StructureAnalysis.dir//managers//calculator_manager.f90.obj | calculator_manager.mod: dyndep | calculator_determined_service.mod calculator_service.mod input_manager.mod supports_module.mod
+  restat = 1
+
 build CMakeFiles//StructureAnalysis.dir//managers//input_manager.f90.obj | input_manager.mod: dyndep | input_service.mod load_arraylist.mod loads_module.mod support_hashmap.mod supports_module.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//services//calculator_service.f90.obj | calculator_service.mod: dyndep | input_manager.mod result_module.mod supports_module.mod
+build CMakeFiles//StructureAnalysis.dir//services//calculator//calculator_determined_service.f90.obj | calculator_determined_service.mod: dyndep | calculator_service.mod
+  restat = 1
+
+build CMakeFiles//StructureAnalysis.dir//services//calculator//calculator_service.f90.obj | calculator_service.mod: dyndep | input_manager.mod result_module.mod supports_module.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//services//input_service.f90.obj | input_service.mod: dyndep
@@ -31,5 +37,5 @@ build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//load_hashmap.
 build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//support_hashmap.f90.obj | support_hashmap.mod: dyndep | supports_module.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//main.f90.obj: dyndep | calculator_service.mod input_manager.mod
+build CMakeFiles//StructureAnalysis.dir//main.f90.obj: dyndep | calculator_manager.mod input_manager.mod
 

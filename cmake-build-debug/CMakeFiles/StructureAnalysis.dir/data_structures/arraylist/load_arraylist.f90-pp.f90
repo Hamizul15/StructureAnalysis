@@ -118,7 +118,7 @@ contains
         the_sum = 0.0
         do i = 1, this%size
             load_ = this%get_load(i)
-            the_sum = the_sum + load_%get_total_load()
+            if(load_%get_type() /= 2) the_sum = the_sum + load_%get_total_load()
         end do
     end function sum_of_loads
 

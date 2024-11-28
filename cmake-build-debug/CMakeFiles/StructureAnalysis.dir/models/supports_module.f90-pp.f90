@@ -8,7 +8,7 @@ module supports_module
     use input_service
     implicit none
 
-    integer, parameter :: NUMBER_OF_SUPPORTS = 3
+    integer, parameter :: NUMBER_OF_SUPPORTS = 3, PIN_ = 1, ROLLER_ = 2, FIXED_ = 3
 
     private :: get_types, get_type
 
@@ -56,12 +56,12 @@ contains
         allowed_fixed_loc(2) = max
 
         type_ = get_choosen_type()
-        if(type_ == 1) allocate(Pin :: sup)
-        if(type_ == 2) allocate(Roller :: sup)
-        if(type_ == 3) allocate(Fixed :: sup)
+        if(type_ == PIN_) allocate(Pin :: sup)
+        if(type_ == ROLLER_) allocate(Roller :: sup)
+        if(type_ == FIXED_) allocate(Fixed :: sup)
         sup%type = type_
 
-        if (type_ == 3) then
+        if (type_ == FIXED_) then
             call sup%set_location(get_real_restricted("Masukkan posisi tumpuhan: ", allowed_fixed_loc))
         else
             call sup%set_location(get_real("Masukkan posisi tumpuhan: ", 0.0, max))
@@ -84,9 +84,9 @@ contains
 
     function get_types() result(types)
         CHARACTER(len=10), DIMENSION(NUMBER_OF_SUPPORTS) :: types
-        types(1) = 'Pin'
-        types(2) = 'Roller'
-        types(3) = 'Fixed'
+        types(PIN_) = 'Pin'
+        types(ROLLER_) = 'Roller'
+        types(FIXED_) = 'Fixed'
     end function get_types
 
     subroutine set_location(this, new_location)
@@ -105,12 +105,13 @@ contains
 
     function get_number_of_reaction(this) result(reactions)
         class(Support), intent(in) :: this
-        integer :: reactions
+        integer :: reactions, typee
 
         reactions = 0
-        if(this%get_type() == 1) reactions = 2
-        if(this%get_type() == 2) reactions = 1
-        if(this%get_type() == 3) reactions = 3
+        typee = this%get_type()
+        if(this%get_type() == PIN_) reactions = 2
+        if(this%get_type() == ROLLER_) reactions = 1
+        if(this%get_type() == FIXED_) reactions = 3
     end function get_number_of_reaction
 
     function get_type(this) result(tipe)
@@ -144,7 +145,6 @@ contains
         class(Support), intent(in) :: rhs
         lhs%location = rhs%location
         lhs%type = rhs%type
-
     end subroutine assign_support
 
 end module supports_module

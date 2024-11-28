@@ -9,7 +9,7 @@
 			"requires" : 
 			[
 				{
-					"logical-name" : "calculator_service.mod"
+					"logical-name" : "calculator_manager.mod"
 				},
 				{
 					"logical-name" : "input_manager.mod"

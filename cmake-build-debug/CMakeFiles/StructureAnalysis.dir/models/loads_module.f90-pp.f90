@@ -186,10 +186,8 @@ module loads_module
             if(this%get_type() == 3) then
                 length = this%get_end_location() - this%get_start_location()
                 total = (this%get_start_load() + this%get_end_load()) * length / 2
-            else if (this%get_type() == 1) then
-                total = this%get_start_load()
             else
-                total = 0
+                total = this%get_start_load()
             end if
 
         end function get_total_load

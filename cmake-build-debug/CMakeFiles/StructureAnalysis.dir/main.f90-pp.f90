@@ -5,16 +5,13 @@
 # 1 "D:/Programming/Fortran/StructureAnalysis/main.f90"
 program structure_analysis
     use input_manager
-    use calculator_service
+    use calculator_manager
     implicit none
 
     type(Input) :: inp
-    class(Calculator), allocatable :: cacl
-
-    allocate(CalculotrDetermined :: cacl)
+    type(CalculatorManager) :: cacl
 
     call inp%start()
-    call cacl%init(inp)
+    call cacl%calculate(inp)
 
-    call cacl%calculate()
 end program
