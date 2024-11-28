@@ -34,6 +34,14 @@ module resultload_arraylist
 
 contains
 
+    function new_resultload(location, load) result(xxx)
+        type(ResultLoad) :: xxx
+        real :: location, load
+
+        call xxx%set_location(location)
+        call xxx%set_load(load)
+    end function new_resultload
+
     !ResultLoad
     subroutine set_location(this, location)
         class(ResultLoad), intent(inout) :: this

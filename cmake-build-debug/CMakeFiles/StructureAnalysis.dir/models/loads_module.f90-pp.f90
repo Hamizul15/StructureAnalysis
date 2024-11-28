@@ -106,7 +106,13 @@ module loads_module
                 call new_ld%set_start_location(get_real("Masukkan posisi awal beban terpusat: ", 0.0, max))
                 call new_ld%set_end_location(get_real("Masukkan posisi akhir beban terpusat: ", new_ld%get_start_location(), max))
                 call new_ld%set_start_load(get_real("Masukkan beban terpusat awal: "))
-                call new_ld%set_end_load(get_real("Masukkan beban terpusan akhir: "))
+
+                if(new_ld%get_start_load() > 0) then
+                    call new_ld%set_end_load(get_real("Masukkan beban terpusan akhir: ", 0.0))
+                else if (new_ld%get_start_load() < 0) then
+                    call new_ld%set_end_load(get_real("Masukkan beban terpusan akhir: ", huge(max) * -1, 0.0))
+                end if
+
             class default
                 call new_ld%set_start_location(get_real("Masukkan posisi: ", 0.0, max))
                 call new_ld%set_start_load(get_real("Masukkan beban: "))

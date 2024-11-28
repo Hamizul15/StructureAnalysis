@@ -10,7 +10,7 @@ module result_module
     type :: Result
 
         private
-        real :: ra, rb, ma
+        type(ResultLoad) :: ra, rb, ma
         type(ResultLoadArrayList) :: moments
         type(ResultLoadArrayList) :: sheers
 
@@ -24,42 +24,42 @@ module result_module
 
     subroutine set_ra(this, ra)
         class(Result), intent(inout) :: this
-        real :: ra
+        type(ResultLoad) :: ra
 
         this%ra = ra
     end subroutine set_ra
 
     subroutine set_rb(this, rb)
         class(Result), intent(inout) :: this
-        real :: rb
+        type(ResultLoad) :: rb
 
         this%rb = rb
     end subroutine set_rb
 
     subroutine set_ma(this, ma)
         class(Result), intent(inout) :: this
-        real :: ma
+        type(ResultLoad) :: ma
 
         this%ma = ma
     end subroutine set_ma
 
     function get_ra(this) result(ra_)
         class(Result), intent(in) :: this
-        real :: ra_
+        type(ResultLoad) :: ra_
 
         ra_ = this%ra;
     end function get_ra
 
     function get_rb(this) result(rb_)
         class(Result), intent(in) :: this
-        real :: rb_
+        type(ResultLoad) :: rb_
 
         rb_ = this%rb;
     end function get_rb
 
     function get_ma(this) result(ma_)
         class(Result), intent(in) :: this
-        real :: ma_
+        type(ResultLoad) :: ma_
 
         ma_ = this%ma;
     end function get_ma

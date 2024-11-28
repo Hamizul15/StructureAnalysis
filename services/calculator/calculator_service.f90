@@ -1,7 +1,7 @@
 module calculator_service
     use input_manager, only : Input, SupportHashMap, Load, LoadArrayList
     use supports_module, only : Support
-    use result_module, only : Result, get_result_rb => get_rb
+    use result_module, only : Result, ResultLoad, get_result_rb => get_rb
     implicit none
 
     type, abstract :: Calculator

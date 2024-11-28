@@ -35,7 +35,6 @@ module calculator_manager
             allocate(CalculatorDetermined :: calc)
         else if (number_of_reactions < 3) then
             print *, "Kondisi gelagar tidak stabil!"
-            return
         else if (number_of_reactions > 3) then
             !allocate(CalculatorUndetermined :: calc)
             print *, "Terdeteksi Struktur Tidak Tentu! Program kami belum mendukung untuk memecahkan tersebut!"

@@ -17,6 +17,9 @@
 			[
 				{
 					"logical-name" : "calculator_service.mod"
+				},
+				{
+					"logical-name" : "resultload_arraylist.mod"
 				}
 			]
 		}
