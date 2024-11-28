@@ -12,13 +12,19 @@ module input_manager
         real :: length
         integer :: number_of_loads
         integer :: number_of_supports
+        integer :: step_for_md
         type(SupportHashMap) :: support_map
         type(LoadArrayList) :: load_array
 
     contains
         procedure :: start !, init
         !getter
-        procedure :: get_length, get_number_of_loads, get_number_of_supports, get_supports, get_loads
+        procedure :: get_length
+        procedure :: get_step_for_md
+        procedure :: get_number_of_loads
+        procedure :: get_number_of_supports
+        procedure :: get_supports
+        procedure :: get_loads
 
     end type Input
 
@@ -37,6 +43,7 @@ contains
 
         !call this%init()
         this%length = get_real("- Masukkan panjang beam: ", 0.0)
+        this%step_for_md = get_integer("- Masukkan jumlah step untuk MDN: ", 0)
 
         this%number_of_loads = get_integer("- Masukkan jumlah tipe beban: ", 0)
         do i = 1, this%number_of_loads
@@ -58,6 +65,12 @@ contains
 
         get_length = this%length
     end function get_length
+
+    real function get_step_for_md(this)
+        class(Input), intent(in) :: this
+
+        get_step_for_md = this%step_for_md
+    end function get_step_for_md
 
     real function get_number_of_loads(this)
         class(Input), intent(in) :: this

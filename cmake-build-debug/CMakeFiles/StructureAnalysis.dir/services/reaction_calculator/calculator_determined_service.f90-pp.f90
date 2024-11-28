@@ -8,6 +8,7 @@ module calculator_determined_service
     use calculator_service
     use resultload_arraylist
     use supports_module
+    use sheer_calculator
 
     type, extends(Calculator) :: CalculatorDetermined
     contains
@@ -42,22 +43,23 @@ module calculator_determined_service
             else
                 call this%calculate_with_two_support()
             end if
-
         end subroutine calculate_determined
 
         !Two Support
         subroutine calculate_with_two_support(this)
             class(CalculatorDetermined), intent(inout) :: this
             type(Result) :: result_
-            type(ResultLoad) :: va, vb
-            type(ResultLoadArrayList) :: reactions
+            type(ResultLoad) :: va, vb, current_sheer
+            type(ResultLoadArrayList) :: reactions, sheers
             type(LoadArrayList) :: loads
             type(Input) :: input_
+            integer :: i
 
             input_ = this%get_input()
             loads = input_%get_loads()
             result_ = this%get_two_support_result()
             reactions = result_%get_reactions()
+            sheers = result_%get_sheers()
 
             va = reactions%get_resultload(1)
             vb = reactions%get_resultload(2)
@@ -65,6 +67,13 @@ module calculator_determined_service
             print *, loads%sum_of_loads()
             print *, "Va = ",  va%get_load()
             print *, "Vb = ",  vb%get_load()
+
+            print *, ""
+            print *, "Bidang D"
+            do i = 1, sheers%get_size()
+                current_sheer = sheers%get_resultload(i)
+                print *, current_sheer%get_location(), " - ", current_sheer%get_load()
+            end do
 
         end subroutine calculate_with_two_support
 
@@ -74,6 +83,7 @@ module calculator_determined_service
             type(LoadArrayList) :: loads
             type(Support) :: anchor, the_other
             type(Load) :: current_load
+            type(SheerCalculator) :: sheer_calc
             type(ResultLoadArrayList) :: reactions
             real :: reaction, distance_to_anchor
             integer :: i
@@ -97,6 +107,9 @@ module calculator_determined_service
             call reactions%add_resultload(new_resultload(the_other%get_location(), reaction))
             call reactions%add_resultload(new_resultload(anchor%get_location() , loads%sum_of_loads() - reaction))
             call result_%set_reactions(reactions)
+
+            call sheer_calc%init(input_, result_%get_reactions())
+            call result_%set_sheers(sheer_calc%get_sheers())
 
         end function get_two_support_result
 

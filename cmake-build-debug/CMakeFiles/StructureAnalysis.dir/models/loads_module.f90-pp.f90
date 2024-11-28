@@ -8,7 +8,7 @@ module loads_module
     use input_service
     implicit none
 
-    integer, parameter :: NUMBER_OF_LOADS = 3
+    integer, parameter :: NUMBER_OF_LOADS = 3, POINT_ = 1, MOMENT_ = 2, DISTRIBUTED_ = 3
 
     private :: get_types, get_type
 
@@ -136,9 +136,9 @@ module loads_module
 
         function get_types() result(types)
             CHARACTER(len=10), DIMENSION(NUMBER_OF_LOADS) :: types
-            types(1) = 'Point'
-            types(2) = 'Moment'
-            types(3) = 'Distributed'
+            types(POINT_) = 'Point'
+            types(MOMENT_) = 'Moment'
+            types(DISTRIBUTED_) = 'Distributed'
         end function get_types
 
         !Setter

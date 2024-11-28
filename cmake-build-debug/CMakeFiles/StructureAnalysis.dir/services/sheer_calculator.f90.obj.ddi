@@ -16,6 +16,12 @@
 			"requires" : 
 			[
 				{
+					"logical-name" : "input_manager.mod"
+				},
+				{
+					"logical-name" : "loads_module.mod"
+				},
+				{
 					"logical-name" : "result_module.mod"
 				},
 				{

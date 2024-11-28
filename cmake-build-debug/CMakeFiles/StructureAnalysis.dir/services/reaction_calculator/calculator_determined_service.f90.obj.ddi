@@ -22,6 +22,9 @@
 					"logical-name" : "resultload_arraylist.mod"
 				},
 				{
+					"logical-name" : "sheer_calculator.mod"
+				},
+				{
 					"logical-name" : "supports_module.mod"
 				}
 			]
