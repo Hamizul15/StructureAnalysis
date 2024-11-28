@@ -108,9 +108,9 @@ module loads_module
                 call new_ld%set_start_load(get_real("Masukkan beban terpusat awal: "))
 
                 if(new_ld%get_start_load() > 0) then
-                    call new_ld%set_end_load(get_real("Masukkan beban terpusan akhir: ", 0.0))
+                    call new_ld%set_end_load(get_real("Masukkan beban terpusat akhir: ", 0.0))
                 else if (new_ld%get_start_load() < 0) then
-                    call new_ld%set_end_load(get_real("Masukkan beban terpusan akhir: ", huge(max) * -1, 0.0))
+                    call new_ld%set_end_load(get_real("Masukkan beban terpusat akhir: ", huge(max) * -1, 0.0))
                 end if
 
             class default

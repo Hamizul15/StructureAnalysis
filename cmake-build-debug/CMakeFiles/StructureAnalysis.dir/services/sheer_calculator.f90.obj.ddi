@@ -1,0 +1,28 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\services\\\\sheer_calculator.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "sheer_calculator.mod",
+					"is-interface" : true,
+					"logical-name" : "sheer_calculator.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "result_module.mod"
+				},
+				{
+					"logical-name" : "resultload_arraylist.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

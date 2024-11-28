@@ -11,12 +11,15 @@ module result_module
 
         private
         type(ResultLoad) :: ra, rb, ma
+        type(ResultLoadArrayList) :: reactions
+        type(ResultLoadArrayList) :: moment_reactions
         type(ResultLoadArrayList) :: moments
         type(ResultLoadArrayList) :: sheers
 
         contains
         procedure set_ra, set_rb, set_ma
-        procedure :: get_ra, get_rb, get_ma, get_moments, get_sheers
+        procedure set_reactions, set_moment_reactions, set_moments, set_sheers
+        procedure :: get_ra, get_rb, get_ma, get_moments, get_sheers, get_reactions, get_moment_reactions
 
     end type Result
 
@@ -43,6 +46,37 @@ module result_module
         this%ma = ma
     end subroutine set_ma
 
+    subroutine set_moments(this, moments)
+        class(Result), intent(inout) :: this
+        type(ResultLoadArrayList) :: moments
+
+        this%moments = moments
+    end subroutine set_moments
+
+    subroutine set_sheers(this, sheers)
+        class(Result), intent(inout) :: this
+        type(ResultLoadArrayList) :: sheers
+
+        this%sheers = sheers
+    end subroutine set_sheers
+
+    subroutine set_reactions(this, reactions)
+        class(Result), intent(inout) :: this
+        type(ResultLoadArrayList) :: reactions
+
+        this%reactions = reactions
+    end subroutine set_reactions
+
+    subroutine set_moment_reactions(this, mreactions)
+        class(Result), intent(inout) :: this
+        type(ResultLoadArrayList) :: mreactions
+
+        this%moment_reactions = mreactions
+    end subroutine set_moment_reactions
+
+
+
+    !Getter
     function get_ra(this) result(ra_)
         class(Result), intent(in) :: this
         type(ResultLoad) :: ra_
@@ -77,5 +111,19 @@ module result_module
 
         mom = this%moments
     end function get_moments
+
+    function get_moment_reactions(this) result(mreactions)
+        class(Result), intent(in) :: this
+        type(ResultLoadArrayList) :: mreactions
+
+        mreactions = this%moment_reactions
+    end function get_moment_reactions
+
+    function get_reactions(this) result(reactions)
+        class(Result), intent(in) :: this
+        type(ResultLoadArrayList) :: reactions
+
+        reactions = this%reactions
+    end function get_reactions
 
 end module result_module

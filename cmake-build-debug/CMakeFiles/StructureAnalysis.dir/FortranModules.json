@@ -46,6 +46,11 @@
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/resultload_arraylist.mod",
 			"is-private" : false
 		},
+		"sheer_calculator.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/sheer_calculator.mod",
+			"is-private" : false
+		},
 		"support_hashmap.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/support_hashmap.mod",

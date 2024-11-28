@@ -1,7 +1,13 @@
+# 1 "D:/Programming/Fortran/StructureAnalysis/services/reaction_calculator/calculator_determined_service.f90"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "D:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug//"
+# 1 "D:/Programming/Fortran/StructureAnalysis/services/reaction_calculator/calculator_determined_service.f90"
 ! Created by hamiz on 11/27/2024.
 module calculator_determined_service
     use calculator_service
     use resultload_arraylist
+    use supports_module
 
     type, extends(Calculator) :: CalculatorDetermined
     contains
@@ -23,8 +29,20 @@ module calculator_determined_service
 
         subroutine calculate_determined(this)
             class(CalculatorDetermined), intent(inout) :: this
+            type(Input) :: input_
+            type(SupportHashMap) :: sup_map
+            type(Support) :: sup
 
-            call this%calculate_with_two_support()
+            input_ = this%get_input()
+            sup_map = input_%get_supports()
+            sup = sup_map%get_support_by_index(1)
+
+            if (sup%get_type() == FIXED_) then
+                call this%calculate_with_fixed_support()
+            else
+                call this%calculate_with_two_support()
+            end if
+
         end subroutine calculate_determined
 
         !Two Support
@@ -32,14 +50,17 @@ module calculator_determined_service
             class(CalculatorDetermined), intent(inout) :: this
             type(Result) :: result_
             type(ResultLoad) :: va, vb
+            type(ResultLoadArrayList) :: reactions
             type(LoadArrayList) :: loads
             type(Input) :: input_
 
             input_ = this%get_input()
             loads = input_%get_loads()
             result_ = this%get_two_support_result()
-            va = result_%get_ra()
-            vb = result_%get_rb()
+            reactions = result_%get_reactions()
+
+            va = reactions%get_resultload(1)
+            vb = reactions%get_resultload(2)
 
             print *, loads%sum_of_loads()
             print *, "Va = ",  va%get_load()
@@ -49,10 +70,11 @@ module calculator_determined_service
 
         function get_two_support_result(this) result(result_)
             class(CalculatorDetermined), intent(inout) :: this
-            type(LoadArrayList) :: loads
             type(Result) :: result_
+            type(LoadArrayList) :: loads
             type(Support) :: anchor, the_other
             type(Load) :: current_load
+            type(ResultLoadArrayList) :: reactions
             real :: reaction, distance_to_anchor
             integer :: i
             type(Input) :: input_
@@ -64,26 +86,17 @@ module calculator_determined_service
 
             do i = 1, loads%get_size()
                 current_load = loads%get_load(i)
-                !print *, ""
-                !print *, "Total Load = ", current_load%get_total_load()
-                !print *, "Actual Location = ", current_load%get_actual_location()
-                !print *, "Anchor Location = ", anchor%get_location()
-                !print *, ""
-
-                !if(anchor%get_location() > current_load%get_actual_location()) then
                 if(current_load%get_type() /= 2) then
                     distance_to_anchor = anchor%get_location() - current_load%get_actual_location()
                     reaction = reaction + (current_load%get_total_load() * distance_to_anchor)
                 end if
-                !else if (anchor%get_location() < current_load%get_actual_location()) then
-                !reaction = reaction + (current_load%get_total_load() * (current_load%get_actual_location() - anchor%get_location()))
-                !end if
             end do
 
             reaction = reaction / (anchor%get_location() - the_other%get_location())
 
-            call result_%set_ra(new_resultload(the_other%get_location(), reaction))
-            call result_%set_rb(new_resultload(anchor%get_location() , loads%sum_of_loads() - reaction))
+            call reactions%add_resultload(new_resultload(the_other%get_location(), reaction))
+            call reactions%add_resultload(new_resultload(anchor%get_location() , loads%sum_of_loads() - reaction))
+            call result_%set_reactions(reactions)
 
         end function get_two_support_result
 
@@ -134,28 +147,31 @@ module calculator_determined_service
             class(CalculatorDetermined), intent(inout) :: this
             type(Result) :: result_
             type(Input) :: input_
+            type(ResultLoadArrayList) :: reactions, mreactions
             type(ResultLoad) :: ma, ra
 
             input_ = this%get_input()
             result_ = this%get_fixed_support_result()
-            ra = result_%get_ra()
-            ma = result_%get_ma()
+            reactions = result_%get_reactions()
+            mreactions = result_%get_moment_reactions()
+
+            ra = reactions%get_resultload(1)
+            ma = mreactions%get_resultload(1)
 
             print *, "Va = ",  ra%get_load()
             print *, "Ma = ", ma%get_load()
-
-
         end subroutine calculate_with_fixed_support
 
         function get_fixed_support_result(this) result(result_)
             class(CalculatorDetermined), intent(inout) :: this
+            type(Result) :: result_
             type(LoadArrayList) :: loads
             type(SupportHashMap) :: sup_map
+            type(ResultLoadArrayList) :: reactions, moment_reactions
             type(Support), allocatable :: supports(:)
-            type(Result) :: result_
             type(Support) :: anchor
             type(Load) :: current_load
-            real :: ma
+            real :: ma, distance_to_anchor
             integer :: i
             type(Input) :: input_
 
@@ -168,15 +184,18 @@ module calculator_determined_service
             do i = 1, loads%get_size()
                 current_load = loads%get_load(i)
                 if(current_load%get_type() /= 2) then
-                    ma = ma + (current_load%get_total_load() * (anchor%get_location() - current_load%get_actual_location()) * -1)
+                    distance_to_anchor = (anchor%get_location() - current_load%get_actual_location()) * -1
+                    ma = ma + (current_load%get_total_load() * distance_to_anchor)
                 else
                     ma = ma + current_load%get_total_load()
                 end if
             end do
 
-            call result_%set_ra(new_resultload(anchor%get_location(), loads%sum_of_loads()))
-            call result_%set_ma(new_resultload(anchor%get_location(), ma))
+            call reactions%add_resultload(new_resultload(anchor%get_location(), loads%sum_of_loads()))
+            call moment_reactions%add_resultload(new_resultload(anchor%get_location(), ma))
 
+            call result_%set_reactions(reactions)
+            call result_%set_moment_reactions(moment_reactions)
         end function get_fixed_support_result
 
 end module calculator_determined_service
