@@ -106,4 +106,20 @@ module input_service
             end do
         end function get_real_restricted
 
+        function get_character(message) result(the_character)
+            implicit none
+            character(LEN=*), intent(in), optional :: message
+            character :: the_character
+
+            do
+                if (.not. present(message)) then
+                    write(*, '(A)', ADVANCE='NO') 'Please enter character: '
+                else
+                    write(*, '(A)', ADVANCE='NO') message
+                end if
+                READ(*, *) the_character
+                exit
+            end do
+        end function get_character
+
 end module input_service
