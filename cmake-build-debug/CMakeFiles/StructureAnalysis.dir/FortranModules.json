@@ -36,6 +36,16 @@
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/loads_module.mod",
 			"is-private" : false
 		},
+		"location_manager.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/location_manager.mod",
+			"is-private" : false
+		},
+		"real_set.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/real_set.mod",
+			"is-private" : false
+		},
 		"result_module.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/result_module.mod",

@@ -13,6 +13,9 @@
 				},
 				{
 					"logical-name" : "input_manager.mod"
+				},
+				{
+					"logical-name" : "real_set.mod"
 				}
 			]
 		}

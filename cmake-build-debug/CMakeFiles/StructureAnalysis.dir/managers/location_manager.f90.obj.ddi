@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\managers\\\\location_manager.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "location_manager.mod",
+					"is-interface" : true,
+					"logical-name" : "location_manager.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "real_set.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

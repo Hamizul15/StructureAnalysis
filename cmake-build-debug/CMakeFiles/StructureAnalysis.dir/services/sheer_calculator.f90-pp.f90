@@ -40,7 +40,7 @@ module sheer_calculator
         type(ResultLoadArrayList) :: sheers
         real :: i, step, current_loc, total_load
 
-        step = this%input_%get_length() / this%input_%get_step_for_md()
+        step = this%input_%get_length() / 10
         do i = 0, this%input_%get_length(), step
             current_loc = i
             total_load = this%get_current_sum_of_loads(current_loc) + this%get_current_sum_of_reactions(current_loc)

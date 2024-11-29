@@ -48,7 +48,7 @@ contains
 
         !call this%init()
         this%length = get_real("- Masukkan panjang beam: ", 0.0)
-        this%step_for_md = get_integer("- Masukkan jumlah step untuk MDN: ", 0)
+        !this%step_for_md = get_integer("- Masukkan jumlah step untuk MDN: ", 0)
 
         this%number_of_loads = get_integer("- Masukkan jumlah tipe beban: ", 0)
         do i = 1, this%number_of_loads

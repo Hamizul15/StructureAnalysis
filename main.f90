@@ -1,6 +1,7 @@
 program structure_analysis
     use input_manager
     use calculator_manager
+    use real_set
     implicit none
 
     type(Input) :: inp
@@ -11,10 +12,10 @@ program structure_analysis
         call inp%start()
         call cacl%calculate(inp)
 
-        continue_option = get_character("Menghitung lagi(Input Y) atau Berhenti(Input sesuatu): ")
+        continue_option = get_character("Menghitung lagi(input Y) atau Berhenti(input sesuatu): ")
         if((continue_option /= 'Y').and.(continue_option /= 'y')) then
             EXIT
         end if
-    END DO
+    end do
 
 end program
