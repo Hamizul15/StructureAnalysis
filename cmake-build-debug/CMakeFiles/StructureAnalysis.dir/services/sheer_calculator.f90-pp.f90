@@ -9,6 +9,8 @@ module sheer_calculator
     use input_manager, only : Input, LoadArrayList, Load
     use result_module, only : get_data_sheers => get_sheers
     use resultload_arraylist, only : ResultLoadArrayList, ResultLoad, new_resultload
+    use location_manager
+    use location_interval_arraylist, only : LocationInterval, LocationIntervalArrayList
 
     type :: SheerCalculator
         private
@@ -38,29 +40,60 @@ module sheer_calculator
     function get_sheers(this) result(sheers)
         class(SheerCalculator), intent(inout) :: this
         type(ResultLoadArrayList) :: sheers
-        real :: i, step, current_loc, total_load
+        type(LocationIntervalArrayList) :: intervals
+        type(LocationInterval) :: current_inter
+        real :: current_loc, step, total_load, x, y
+        integer :: i, iteration = 1
 
-        step = this%input_%get_length() / 10
-        do i = 0, this%input_%get_length(), step
-            current_loc = i
-            total_load = this%get_current_sum_of_loads(current_loc) + this%get_current_sum_of_reactions(current_loc)
-            call sheers%add_resultload(new_resultload(current_loc, total_load))
+        intervals = get_intervals()
+        print *, ""
+        print *, "Bidang D"
+        do i = 1, intervals%get_size()
+            current_inter = intervals%get_location_lnterval(i)
+            !step = (current_inter%get_end() - current_inter%get_start()) / 10
+            print *, ""
+            print *, current_inter%get_start(), " <= x <= ", current_inter%get_end()
+            do current_loc = current_inter%get_start(), current_inter%get_end()
+                x = this%get_current_sum_of_loads(current_loc, iteration)
+                y = this%get_current_sum_of_reactions(current_loc, iteration)
+                total_load = x + y
+                call sheers%add_resultload(new_resultload(current_loc, total_load))
+                print *, current_loc, " --> ", x, " + " , y, " = ", total_load
+                iteration = iteration + 1
+            end do
+            iteration = 1
         end do
+        print *, ""
+        !step = this%input_%get_length() / 10
+        !do i = 1, this%input_%get_length(), step
+        !    current_loc = i
+        !    total_load = this%get_current_sum_of_loads(current_loc) + this%get_current_sum_of_reactions(current_loc)
+        !    call sheers%add_resultload(new_resultload(current_loc, total_load))
+        !end do
 
     end function get_sheers
 
-    function get_current_sum_of_loads(this, current_loc) result(sum)
+    function get_current_sum_of_loads(this, current_loc, iteration) result(sum)
         class(SheerCalculator), intent(inout) :: this
         real, intent(in) :: current_loc
         real :: sum
         real :: distance, numerator, denominator
         type(Load) :: current_load
-        integer :: i
+        integer :: i, iteration
+        logical :: the_condition
 
         sum = 0.0
         do i = 1, this%loads%get_size()
             current_load = this%loads%get_load(i)
-            if ((current_load%get_start_location() < current_loc).and.(current_load%get_type() /= MOMENT_)) then
+            if(current_load%get_type() == MOMENT_) cycle
+
+            if(iteration == 1) then
+                the_condition = current_load%get_start_location() <= current_loc
+            else
+                the_condition = current_load%get_start_location() < current_loc
+            end if
+
+            if (the_condition) then
                 !check wheteher location is between distributed load
                 if((current_load%get_type() == DISTRIBUTED_).and.(current_loc < current_load%get_end_location())) then
                     sum = sum + this%find_current_load_of_distributed(current_loc, current_load)
@@ -86,17 +119,26 @@ module sheer_calculator
 
     end function find_current_load_of_distributed
 
-    function get_current_sum_of_reactions(this, current_loc) result(sum)
+    function get_current_sum_of_reactions(this, current_loc, iteration) result(sum)
         class(SheerCalculator), intent(inout) :: this
         real, intent(in) :: current_loc
         real :: sum
         type(ResultLoad) :: current_reaction
         integer :: i
+        logical :: the_condition
 
         sum = 0.0
         do i = 1, this%reactions%get_size()
             current_reaction = this%reactions%get_resultload(i)
-            if (current_reaction%get_location() < current_loc) then
+            if(current_reaction%get_location() == this%input_%get_length()) cycle
+
+            if(iteration == 1) then
+                the_condition = current_reaction%get_location() <= current_loc
+            else
+                the_condition = current_reaction%get_location() < current_loc
+            end if
+
+            if (the_condition) then
                     sum = sum + current_reaction%get_load()
             end if
         end do

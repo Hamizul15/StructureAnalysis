@@ -63,12 +63,12 @@ module calculator_determined_service
             print *, "Va = ",  va%get_load()
             print *, "Vb = ",  vb%get_load()
 
-            print *, ""
-            print *, "Bidang D"
-            do i = 1, sheers%get_size()
-                current_sheer = sheers%get_resultload(i)
-                print *, current_sheer%get_location(), " - ", current_sheer%get_load()
-            end do
+            !print *, ""
+            !print *, "Bidang D"
+            !do i = 1, sheers%get_size()
+            !    current_sheer = sheers%get_resultload(i)
+            !    print *, current_sheer%get_location(), " -> ", current_sheer%get_load()
+            !end do
 
         end subroutine calculate_with_two_support
 

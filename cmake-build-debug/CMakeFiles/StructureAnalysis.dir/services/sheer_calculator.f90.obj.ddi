@@ -22,6 +22,12 @@
 					"logical-name" : "loads_module.mod"
 				},
 				{
+					"logical-name" : "location_interval_arraylist.mod"
+				},
+				{
+					"logical-name" : "location_manager.mod"
+				},
+				{
 					"logical-name" : "result_module.mod"
 				},
 				{
