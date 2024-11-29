@@ -6,6 +6,7 @@
 ! Created by hamiz on 10/21/2024.
 module loads_module
     use input_service
+    use location_manager
     implicit none
 
     integer, parameter :: NUMBER_OF_LOADS = 3, POINT_ = 1, MOMENT_ = 2, DISTRIBUTED_ = 3
@@ -113,9 +114,13 @@ module loads_module
                     call new_ld%set_end_load(get_real("Masukkan beban terpusat akhir: ", huge(max) * -1, 0.0))
                 end if
 
+                call add_location(new_ld%get_start_location())
+                call add_location(new_ld%get_end_location())
+
             class default
                 call new_ld%set_start_location(get_real("Masukkan posisi: ", 0.0, max))
                 call new_ld%set_start_load(get_real("Masukkan beban: "))
+                call add_location(new_ld%get_start_location())
             end select
 
         end function new_load

@@ -17,7 +17,7 @@ module input_manager
         type(LoadArrayList) :: load_array
 
     contains
-        procedure :: start !, init
+        procedure :: start, dispose !, init
         !getter
         procedure :: get_length
         procedure :: get_step_for_md
@@ -59,6 +59,17 @@ contains
         end do
 
     end subroutine start
+
+    subroutine dispose(this)
+        class(Input), intent(inout) :: this
+
+        this%length = -1.0
+        this%number_of_supports = -1
+        this%number_of_supports = -1
+        this%step_for_md = -1
+        call this%load_array%clear_loads()
+        call this%support_map%clear_supports()
+    end subroutine dispose
 
     real function get_length(this)
         class(Input), intent(in) :: this

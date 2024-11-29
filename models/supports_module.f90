@@ -1,6 +1,7 @@
 ! Created by hamiz on 10/22/2024.
 module supports_module
     use input_service
+    use location_manager
     implicit none
 
     integer, parameter :: NUMBER_OF_SUPPORTS = 3, PIN_ = 1, ROLLER_ = 2, FIXED_ = 3
@@ -9,7 +10,7 @@ module supports_module
 
     type :: Support
         private
-        real :: location
+        real :: loc
         integer :: type
 
     contains
@@ -61,6 +62,7 @@ contains
         else
             call sup%set_location(get_real("Masukkan posisi tumpuhan: ", 0.0, max))
         end if
+        call add_location(sup%get_location())
     end function new_support
 
     function get_choosen_type() result(type_)
@@ -88,14 +90,14 @@ contains
         class(Support), intent(inout) :: this
         real, intent(in) :: new_location
 
-        this%location = new_location
+        this%loc = new_location
     end subroutine set_location
 
     function get_location(this) result(loc)
         class(Support), intent(in) :: this
         real :: loc
 
-        loc = this%location
+        loc = this%loc
     end function get_location
 
     function get_number_of_reaction(this) result(reactions)
@@ -138,7 +140,7 @@ contains
     subroutine assign_support(lhs, rhs)
         class(Support), intent(out) :: lhs
         class(Support), intent(in) :: rhs
-        lhs%location = rhs%location
+        lhs%loc = rhs%loc
         lhs%type = rhs%type
     end subroutine assign_support
 

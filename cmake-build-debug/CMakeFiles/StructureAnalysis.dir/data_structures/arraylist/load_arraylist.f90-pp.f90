@@ -18,10 +18,10 @@ module load_arraylist
         private
         procedure :: resize, initialize
 
-        procedure, public :: add_load, get_load, sum_of_loads, sum_of_moments, get_size !, remove
+        procedure, public :: add_load, get_load, sum_of_loads, sum_of_moments, get_size, clear_loads !, remove
     end type LoadArrayList
 
-contains
+    contains
 
     ! Initialize the array with a given size
     subroutine initialize(this)
@@ -88,6 +88,13 @@ contains
         this%arr = temp                   ! Copy back the elements to the new array
         deallocate(temp)             ! Deallocate temporary array
     end subroutine resize
+
+    subroutine clear_loads(this)
+        class(LoadArrayList), intent(inout) :: this
+
+        this%size = 0
+        deallocate(this%arr)
+    end subroutine clear_loads
 
     ! Get the current size of the array
     function get_size(this) result(s)

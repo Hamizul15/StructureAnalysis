@@ -15,7 +15,10 @@
 					"logical-name" : "input_manager.mod"
 				},
 				{
-					"logical-name" : "real_set.mod"
+					"logical-name" : "location_interval_arraylist.mod"
+				},
+				{
+					"logical-name" : "location_manager.mod"
 				}
 			]
 		}

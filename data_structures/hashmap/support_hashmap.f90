@@ -15,7 +15,7 @@ module support_hashmap
         procedure :: resize, initialize
 
         procedure, public :: insert_support, get_support_by_key, get_support_by_index
-        procedure, public :: get_size, get_keys, get_values, sum_of_number_of_reactions !, remove
+        procedure, public :: get_size, get_keys, get_values, sum_of_number_of_reactions, clear_supports !, remove
     end type SupportHashMap
 
 contains
@@ -107,6 +107,14 @@ contains
         deallocate(temp_arr)             ! Deallocate temporary array
         deallocate(temp_keys)             ! Deallocate temporary array
     end subroutine resize
+
+    subroutine clear_supports(this)
+        class(SupportHashMap), intent(inout) :: this
+
+        this%size = 0
+        deallocate(this%arr)
+        deallocate(this%keys)
+    end subroutine clear_supports
 
     ! Get the current size of the array
     function get_size(this) result(s)

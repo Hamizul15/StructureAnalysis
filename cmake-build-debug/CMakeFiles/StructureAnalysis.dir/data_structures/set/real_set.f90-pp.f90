@@ -17,7 +17,7 @@ module real_set
         private
         procedure :: resize, initialize
 
-        procedure, public :: add_real_to_set, get_real_from_set, get_size, sort_real_set!, remove
+        procedure, public :: add_real_to_set, get_real_from_set, get_size, clear_real_set, sort_real_set!, remove
     end type RealSet
 
 contains
@@ -47,7 +47,7 @@ contains
         end if
 
         do i = 1, this%size
-            if(this%arr(i) == lo) stop "The value already exists"
+            if(this%arr(i) == lo) return
         end do
 
         this%size = this%size + 1
@@ -92,6 +92,13 @@ contains
         this%arr = temp                   ! Copy back the elements to the new array
         deallocate(temp)             ! Deallocate temporary array
     end subroutine resize
+
+    subroutine clear_real_set(this)
+        class(RealSet), intent(inout) :: this
+
+        this%size = 0
+        deallocate(this%arr)
+    end subroutine clear_real_set
 
     ! Get the current size of the array
     function get_size(this) result(s)

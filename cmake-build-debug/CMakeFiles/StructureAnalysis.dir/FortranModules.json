@@ -36,6 +36,16 @@
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/loads_module.mod",
 			"is-private" : false
 		},
+		"location_interval_arraylist.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/location_interval_arraylist.mod",
+			"is-private" : false
+		},
+		"location_interval_module.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/location_interval_module.mod",
+			"is-private" : false
+		},
 		"location_manager.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/location_manager.mod",

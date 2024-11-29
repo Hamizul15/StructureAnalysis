@@ -17,6 +17,9 @@
 			[
 				{
 					"logical-name" : "input_service.mod"
+				},
+				{
+					"logical-name" : "location_manager.mod"
 				}
 			]
 		}

@@ -5,7 +5,7 @@ build CMakeFiles//StructureAnalysis.dir//managers//calculator_manager.f90.obj | 
 build CMakeFiles//StructureAnalysis.dir//managers//input_manager.f90.obj | input_manager.mod: dyndep | input_service.mod load_arraylist.mod loads_module.mod support_hashmap.mod supports_module.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//managers//location_manager.f90.obj | location_manager.mod: dyndep | real_set.mod
+build CMakeFiles//StructureAnalysis.dir//managers//location_manager.f90.obj | location_manager.mod: dyndep | location_interval_arraylist.mod location_interval_module.mod real_set.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//services//input_service.f90.obj | input_service.mod: dyndep
@@ -23,16 +23,22 @@ build CMakeFiles//StructureAnalysis.dir//services//sheer_calculator.f90.obj | sh
 build CMakeFiles//StructureAnalysis.dir//services//utils.f90.obj | utils.mod: dyndep
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//models//loads_module.f90.obj | loads_module.mod: dyndep | input_service.mod
+build CMakeFiles//StructureAnalysis.dir//models//loads_module.f90.obj | loads_module.mod: dyndep | input_service.mod location_manager.mod
+  restat = 1
+
+build CMakeFiles//StructureAnalysis.dir//models//location_interval_module.f90.obj | location_interval_module.mod: dyndep
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//models//result_module.f90.obj | result_module.mod: dyndep | resultload_arraylist.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | supports_module.mod: dyndep | input_service.mod
+build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | supports_module.mod: dyndep | input_service.mod location_manager.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//data_structures//arraylist//load_arraylist.f90.obj | load_arraylist.mod: dyndep | loads_module.mod
+  restat = 1
+
+build CMakeFiles//StructureAnalysis.dir//data_structures//arraylist//location_interval_arraylist.f90.obj | location_interval_arraylist.mod: dyndep | location_interval_module.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//data_structures//arraylist//resultload_arraylist.f90.obj | resultload_arraylist.mod: dyndep
@@ -44,5 +50,5 @@ build CMakeFiles//StructureAnalysis.dir//data_structures//hashmap//support_hashm
 build CMakeFiles//StructureAnalysis.dir//data_structures//set//real_set.f90.obj | real_set.mod: dyndep
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//main.f90.obj: dyndep | calculator_manager.mod input_manager.mod real_set.mod
+build CMakeFiles//StructureAnalysis.dir//main.f90.obj: dyndep | calculator_manager.mod input_manager.mod location_interval_arraylist.mod location_manager.mod
 
