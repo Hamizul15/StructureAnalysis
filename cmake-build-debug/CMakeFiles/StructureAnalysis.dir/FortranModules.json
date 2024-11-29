@@ -51,6 +51,11 @@
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/location_manager.mod",
 			"is-private" : false
 		},
+		"moment_calculator.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/moment_calculator.mod",
+			"is-private" : false
+		},
 		"real_set.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/real_set.mod",

@@ -1,0 +1,40 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\services\\\\moment_calculator.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "moment_calculator.mod",
+					"is-interface" : true,
+					"logical-name" : "moment_calculator.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "input_manager.mod"
+				},
+				{
+					"logical-name" : "loads_module.mod"
+				},
+				{
+					"logical-name" : "location_interval_arraylist.mod"
+				},
+				{
+					"logical-name" : "location_manager.mod"
+				},
+				{
+					"logical-name" : "result_module.mod"
+				},
+				{
+					"logical-name" : "resultload_arraylist.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

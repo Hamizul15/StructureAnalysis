@@ -112,6 +112,8 @@ module loads_module
                     call new_ld%set_end_load(get_real("Masukkan beban terpusat akhir: ", 0.0))
                 else if (new_ld%get_start_load() < 0) then
                     call new_ld%set_end_load(get_real("Masukkan beban terpusat akhir: ", huge(max) * -1, 0.0))
+                else
+                    call new_ld%set_end_load(get_real("Masukkan beban terpusat akhir: "))
                 end if
 
                 call add_location(new_ld%get_start_location())
@@ -205,13 +207,14 @@ module loads_module
 
         function get_actual_location(this) result(loc)
             class(Load), intent(in) :: this
-            real :: loc, first_part, second_part, third_part
+            real :: loc, length, first_part, second_part, third_part
 
             if(this%get_type() == 3) then
-                first_part = this%get_start_location() * (this%get_start_load() + 2*this%get_end_load())
-                second_part = this%get_end_location() * (this%get_end_load() + 2*this%get_start_load())
-                third_part = 3 * (this%get_start_load() + this%get_end_load())
-                loc = (first_part + second_part) / third_part
+                length = this%get_end_location() - this%get_start_location()
+                first_part = (this%get_start_load() + 2 * this%get_end_load()) * length
+                second_part = 3 * (this%get_start_load() + this%get_end_load())
+                !third_part = 3 * (this%get_start_load() + this%get_end_load())
+                loc = first_part / second_part
             else
                 loc = this%get_start_location()
             end if

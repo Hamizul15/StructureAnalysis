@@ -37,40 +37,56 @@ module sheer_calculator
         this%reactions = reactions
     end subroutine init
 
+    !function get_sheers(this) result(sheers)
+    !    class(SheerCalculator), intent(inout) :: this
+    !    type(ResultLoadArrayList) :: sheers
+    !    type(LocationIntervalArrayList) :: intervals
+    !    type(LocationInterval) :: current_inter
+    !    real :: current_loc, step, total_load, x, y
+    !    integer :: i, iteration = 1
+
+    !    intervals = get_intervals()
+    !    print *, ""
+    !    print *, "Bidang D"
+    !    do i = 1, intervals%get_size()
+    !        current_inter = intervals%get_location_lnterval(i)
+    !        !step = (current_inter%get_end() - current_inter%get_start()) / 10
+    !        print *, ""
+    !        print *, current_inter%get_start(), " <= x <= ", current_inter%get_end()
+    !        do current_loc = current_inter%get_start(), current_inter%get_end()
+    !            x = this%get_current_sum_of_loads(current_loc, iteration)
+    !            y = this%get_current_sum_of_reactions(current_loc, iteration)
+    !            total_load = x + y
+    !            call sheers%add_resultload(new_resultload(current_loc, total_load))
+    !            print *, current_loc, " --> ", x, " + " , y, " = ", total_load
+    !            iteration = iteration + 1
+    !        end do
+    !        iteration = 1
+    !    end do
+    !    print *, ""
+    !end function get_sheers
+
     function get_sheers(this) result(sheers)
         class(SheerCalculator), intent(inout) :: this
         type(ResultLoadArrayList) :: sheers
         type(LocationIntervalArrayList) :: intervals
         type(LocationInterval) :: current_inter
-        real :: current_loc, step, total_load, x, y
+        real :: current_loc, step, total_load, sum_of_reactions, sum_of_loads
         integer :: i, iteration = 1
 
         intervals = get_intervals()
-        print *, ""
-        print *, "Bidang D"
         do i = 1, intervals%get_size()
             current_inter = intervals%get_location_lnterval(i)
-            !step = (current_inter%get_end() - current_inter%get_start()) / 10
-            print *, ""
-            print *, current_inter%get_start(), " <= x <= ", current_inter%get_end()
             do current_loc = current_inter%get_start(), current_inter%get_end()
-                x = this%get_current_sum_of_loads(current_loc, iteration)
-                y = this%get_current_sum_of_reactions(current_loc, iteration)
-                total_load = x + y
+                sum_of_loads = this%get_current_sum_of_loads(current_loc, iteration)
+                sum_of_reactions = this%get_current_sum_of_reactions(current_loc, iteration)
+                total_load = sum_of_loads + sum_of_reactions
+
                 call sheers%add_resultload(new_resultload(current_loc, total_load))
-                print *, current_loc, " --> ", x, " + " , y, " = ", total_load
                 iteration = iteration + 1
             end do
             iteration = 1
         end do
-        print *, ""
-        !step = this%input_%get_length() / 10
-        !do i = 1, this%input_%get_length(), step
-        !    current_loc = i
-        !    total_load = this%get_current_sum_of_loads(current_loc) + this%get_current_sum_of_reactions(current_loc)
-        !    call sheers%add_resultload(new_resultload(current_loc, total_load))
-        !end do
-
     end function get_sheers
 
     function get_current_sum_of_loads(this, current_loc, iteration) result(sum)
