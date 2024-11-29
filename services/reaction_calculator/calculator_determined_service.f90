@@ -94,6 +94,8 @@ module calculator_determined_service
                 if(current_load%get_type() /= 2) then
                     distance_to_anchor = anchor%get_location() - current_load%get_actual_location()
                     reaction = reaction + (current_load%get_total_load() * distance_to_anchor)
+                else
+                    reaction = reaction + current_load%get_total_load() * -1
                 end if
             end do
 
