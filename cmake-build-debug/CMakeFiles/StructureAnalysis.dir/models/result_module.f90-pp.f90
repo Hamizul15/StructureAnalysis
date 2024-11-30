@@ -16,7 +16,7 @@ module result_module
         type(ResultLoadArrayList) :: moments
         type(ResultLoadArrayList) :: sheers
 
-        contains
+    contains
         !procedure :: set_ra, set_rb, set_ma
         !procedure :: get_ra, get_rb, get_ma
         procedure :: set_reactions, set_moment_reactions, set_moments, set_sheers
@@ -24,7 +24,7 @@ module result_module
 
     end type Result
 
-    contains
+contains
 
     !subroutine set_ra(this, ra)
     !    class(Result), intent(inout) :: this

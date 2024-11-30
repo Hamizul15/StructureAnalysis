@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "StructureAnalysis",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ExecutableStructureAnalysis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ExecutableStructureAnalysis-Debug-d36b774d3acd9b3461b5.json",
+					"name" : "ExecutableStructureAnalysis",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "StructureAnalysis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-StructureAnalysis-Debug-9a201d0d9312b160d8d4.json",
+					"name" : "StructureAnalysis",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug",
+		"source" : "D:/Programming/Fortran/StructureAnalysis"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

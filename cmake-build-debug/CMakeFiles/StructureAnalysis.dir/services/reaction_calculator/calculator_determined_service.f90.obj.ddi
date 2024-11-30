@@ -19,6 +19,9 @@
 					"logical-name" : "calculator_service.mod"
 				},
 				{
+					"logical-name" : "location_manager.mod"
+				},
+				{
 					"logical-name" : "moment_calculator.mod"
 				},
 				{

@@ -19,6 +19,9 @@
 				},
 				{
 					"logical-name" : "location_manager.mod"
+				},
+				{
+					"logical-name" : "message_module.mod"
 				}
 			]
 		}

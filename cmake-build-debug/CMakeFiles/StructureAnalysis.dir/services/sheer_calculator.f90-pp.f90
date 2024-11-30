@@ -19,7 +19,7 @@ module sheer_calculator
         type(LoadArrayList) :: loads
         type(LoadArrayList) :: non_moment_loads
 
-        contains
+    contains
         private
         procedure :: get_current_sum_of_loads
         procedure :: get_current_sum_of_reactions
@@ -29,7 +29,7 @@ module sheer_calculator
         procedure, public :: init, get_sheers
     end type SheerCalculator
 
-    contains
+contains
 
     subroutine init(this, input_, reactions)
         class(SheerCalculator), intent(inout) :: this
@@ -49,7 +49,6 @@ module sheer_calculator
     !    type(LocationInterval) :: current_inter
     !    real :: current_loc, step, total_load, x, y
     !    integer :: i, iteration = 1
-
     !    intervals = get_intervals()
     !    print *, ""
     !    print *, "Bidang D"
@@ -144,12 +143,12 @@ module sheer_calculator
             if(current_reaction%get_location() == this%input_%get_length()) cycle
 
             if (this%get_proper_condition(iteration, current_loc, current_reaction%get_location())) then
-                    sum = sum + current_reaction%get_load()
+                sum = sum + current_reaction%get_load()
             end if
         end do
     end function get_current_sum_of_reactions
 
-    function get_proper_condition(this, itertaion, current_loc, load_loc) result(the_condition)
+    function get_proper_condition(this, iteration, current_loc, load_loc) result(the_condition)
         class(SheerCalculator), intent(inout) :: this
         real, intent(in) :: current_loc, load_loc
         logical :: the_condition

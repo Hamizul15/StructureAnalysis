@@ -24,7 +24,7 @@ module resultload_arraylist
         private
         procedure :: resize, initialize
 
-        procedure, public :: add_resultload, get_resultload, get_size !, remove
+        procedure, public :: add_resultload, get_resultload, get_size, clear_resultloads !, remove
     end type ResultLoadArrayList
 
 contains
@@ -135,6 +135,13 @@ contains
         this%arr = temp                   ! Copy back the elements to the new array
         deallocate(temp)             ! Deallocate temporary array
     end subroutine resize
+
+    subroutine clear_resultloads(this)
+        class(ResultLoadArrayList), intent(inout) :: this
+
+        this%size = 0
+        deallocate(this%arr)
+    end subroutine clear_resultloads
 
     ! Get the current size of the array
     function get_size(this) result(s)

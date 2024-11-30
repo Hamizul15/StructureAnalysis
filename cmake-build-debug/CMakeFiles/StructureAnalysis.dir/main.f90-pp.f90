@@ -5,6 +5,7 @@
 # 1 "D:/Programming/Fortran/StructureAnalysis/main.f90"
 program structure_analysis
     use input_manager
+    use message_module
     use calculator_manager
     use location_manager
     use location_interval_arraylist
@@ -15,6 +16,7 @@ program structure_analysis
     character :: continue_option
 
     do
+        call display_intro()
         call construct_location_manager()
         call inp%start()
         call cacl%calculate(inp)

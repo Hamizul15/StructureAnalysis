@@ -47,6 +47,45 @@ module moment_calculator
 
         end subroutine init
 
+        !function get_moments(this) result(moments)
+        !    class(MomentCalculator), intent(inout) :: this
+        !    type(ResultLoadArrayList) :: moments
+        !    type(LocationIntervalArrayList) :: intervals
+        !    type(LocationInterval) :: current_inter
+        !    real :: current_loc, total_load, moment_of_reactions, moments_of_loads, sum_of_moments
+        !    integer :: i, iteration = 1
+
+        !    intervals = get_intervals()
+        !    print *, ""
+        !    print *, "Bidang M"
+        !    do i = 1, intervals%get_size()
+        !        current_inter = intervals%get_location_lnterval(i)
+        !        print *, ""
+        !        print *, current_inter%get_start(), " <= x <= ", current_inter%get_end()
+        !        do current_loc = current_inter%get_start(), current_inter%get_end()
+        !            moments_of_loads = this%get_current_moment_of_loads(current_loc, iteration)
+        !            moment_of_reactions = this%get_current_moment_of_reactions(current_loc, iteration)
+        !            sum_of_moments = this%get_current_sum_of_moments(current_loc, iteration)
+        !            total_load = moments_of_loads + moment_of_reactions + sum_of_moments
+        !            call moments%add_resultload(new_resultload(current_loc, total_load))
+
+        !            write(*, '(F8.2)', ADVANCE='NO') current_loc
+        !            write(*, '(A)', ADVANCE='NO') " --> "
+        !            write(*, '(F8.2)', ADVANCE='NO') moments_of_loads
+        !            write(*, '(A)', ADVANCE='NO') " + "
+        !            write(*, '(F8.2)', ADVANCE='NO') moment_of_reactions
+        !            write(*, '(A)', ADVANCE='NO') " + "
+        !            write(*, '(F8.2)', ADVANCE='NO') sum_of_moments
+        !            write(*, '(A)', ADVANCE='NO') " = "
+        !            write(*, '(F8.2)') total_load
+!
+        !            iteration = iteration + 1
+        !        end do
+        !        iteration = 1
+        !    end do
+        !    print *, ""
+        !end function get_moments
+
         function get_moments(this) result(moments)
             class(MomentCalculator), intent(inout) :: this
             type(ResultLoadArrayList) :: moments
@@ -56,34 +95,18 @@ module moment_calculator
             integer :: i, iteration = 1
 
             intervals = get_intervals()
-            print *, ""
-            print *, "Bidang M"
             do i = 1, intervals%get_size()
                 current_inter = intervals%get_location_lnterval(i)
-                print *, ""
-                print *, current_inter%get_start(), " <= x <= ", current_inter%get_end()
                 do current_loc = current_inter%get_start(), current_inter%get_end()
                     moments_of_loads = this%get_current_moment_of_loads(current_loc, iteration)
                     moment_of_reactions = this%get_current_moment_of_reactions(current_loc, iteration)
                     sum_of_moments = this%get_current_sum_of_moments(current_loc, iteration)
                     total_load = moments_of_loads + moment_of_reactions + sum_of_moments
                     call moments%add_resultload(new_resultload(current_loc, total_load))
-
-                    write(*, '(F8.2)', ADVANCE='NO') current_loc
-                    write(*, '(A)', ADVANCE='NO') " --> "
-                    write(*, '(F8.2)', ADVANCE='NO') moments_of_loads
-                    write(*, '(A)', ADVANCE='NO') " + "
-                    write(*, '(F8.2)', ADVANCE='NO') moment_of_reactions
-                    write(*, '(A)', ADVANCE='NO') " + "
-                    write(*, '(F8.2)', ADVANCE='NO') sum_of_moments
-                    write(*, '(A)', ADVANCE='NO') " = "
-                    write(*, '(F8.2)') total_load
-
                     iteration = iteration + 1
                 end do
                 iteration = 1
             end do
-            print *, ""
         end function get_moments
 
         function find_current_load_of_distributed(this, current_loc, distributed_load) result(cld)
@@ -171,12 +194,12 @@ module moment_calculator
                 end if
             end do
 
-                do i = 1, this%moments%get_size()
-                    current_mreaction = this%moments%get_resultload(i)
+            do i = 1, this%moments%get_size()
+                current_mreaction = this%moments%get_resultload(i)
                 if (this%get_proper_condition(iteration, current_loc, current_mreaction%get_location())) then
                     sum = sum + current_mreaction%get_load() * -1
                 end if
-                end do
+            end do
         end function get_current_sum_of_moments
 
         function get_proper_condition(this, iteration, current_loc, load_location) result(the_condition)

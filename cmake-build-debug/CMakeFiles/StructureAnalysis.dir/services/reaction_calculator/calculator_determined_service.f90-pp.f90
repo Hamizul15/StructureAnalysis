@@ -10,10 +10,16 @@ module calculator_determined_service
     use supports_module
     use sheer_calculator
     use moment_calculator
+    use location_manager
+
+    implicit none
 
     type, extends(Calculator) :: CalculatorDetermined
     contains
         private
+        procedure :: print_sheer
+        procedure :: print_moment
+        procedure :: print_load
         ! two support
         procedure :: calculate_with_two_support
         procedure :: get_anchor_support
@@ -46,12 +52,69 @@ module calculator_determined_service
             end if
         end subroutine calculate_determined
 
+        subroutine print_load(this, label, loc, load)
+            class(CalculatorDetermined), intent(inout) :: this
+            character(*) :: label
+            real :: loc, load
+
+            print *, ""
+            write(*, '(A2)', ADVANCE='NO') label
+            write(*, '(A)', ADVANCE='NO') "("
+            write(*, '(F6.2)', ADVANCE='NO') loc
+            write(*, '(A)', ADVANCE='NO') ")"
+            write(*, '(A4)', ADVANCE='NO') "="
+            write(*, '(F8.2)') load
+        end subroutine print_load
+
+        subroutine print_sheer(this, sheer)
+            class(CalculatorDetermined), intent(inout) :: this
+            type(ResultLoadArrayList) :: sheer
+            type(ResultLoad) :: current_sheer
+            type(LocationIntervalArrayList) :: intervals
+            type(LocationInterval) :: current_inter
+            integer :: i
+
+            print *, ""
+            print *, "Bidang D"
+            write(*, '(A8)', ADVANCE='NO') "Lokasi"
+            write(*, '(A8)', ADVANCE='NO') " --> "
+            write(*, '(A8)') "Beban"
+            do i = 1, sheer%get_size()
+                current_sheer = sheer%get_resultload(i)
+                write(*, '(F8.2)', ADVANCE='NO') current_sheer%get_location()
+                write(*, '(A8)', ADVANCE='NO') " --> "
+                write(*, '(F8.2)') current_sheer%get_load()
+            end do
+            print *, ""
+        end subroutine print_sheer
+
+        subroutine print_moment(this, moment)
+            class(CalculatorDetermined), intent(inout) :: this
+            type(ResultLoadArrayList) :: moment
+            type(ResultLoad) :: current_moment
+            type(LocationInterval) :: current_inter
+            integer :: i
+
+            print *, ""
+            print *, "Bidang M"
+            write(*, '(A8)', ADVANCE='NO') "Lokasi"
+            write(*, '(A8)', ADVANCE='NO') " --> "
+            write(*, '(A8)') "Momen"
+            do i = 1, moment%get_size()
+                current_moment = moment%get_resultload(i)
+                write(*, '(F8.2)', ADVANCE='NO') current_moment%get_location()
+                write(*, '(A8)', ADVANCE='NO') " --> "
+                write(*, '(F8.2)') current_moment%get_load()
+            end do
+            print *, ""
+        end subroutine print_moment
+
         !Two Support
         subroutine calculate_with_two_support(this)
             class(CalculatorDetermined), intent(inout) :: this
             type(Result) :: result_
             type(ResultLoad) :: va, vb, current_sheer
-            type(ResultLoadArrayList) :: reactions, sheers
+            type(ResultLoadArrayList) :: reactions
             type(LoadArrayList) :: loads
             type(Input) :: input_
             integer :: i
@@ -60,21 +123,14 @@ module calculator_determined_service
             loads = input_%get_loads()
             result_ = this%get_two_support_result()
             reactions = result_%get_reactions()
-            sheers = result_%get_sheers()
 
             va = reactions%get_resultload(1)
             vb = reactions%get_resultload(2)
 
-            print *, loads%sum_of_loads()
-            print *, "Va = ",  va%get_load()
-            print *, "Vb = ",  vb%get_load()
-
-            !print *, ""
-            !print *, "Bidang D"
-            !do i = 1, sheers%get_size()
-            !    current_sheer = sheers%get_resultload(i)
-            !    print *, current_sheer%get_location(), " -> ", current_sheer%get_load()
-            !end do
+            call this%print_load("Va", va%get_location(), va%get_load())
+            call this%print_load("Vb", vb%get_location(), vb%get_load())
+            call this%print_sheer(result_%get_sheers())
+            call this%print_moment(result_%get_moments())
 
         end subroutine calculate_with_two_support
 
@@ -178,8 +234,11 @@ module calculator_determined_service
             ra = reactions%get_resultload(1)
             ma = mreactions%get_resultload(1)
 
-            print *, "Va = ",  ra%get_load()
-            print *, "Ma = ", ma%get_load()
+            call this%print_load("Va", ra%get_location(), ra%get_load())
+            call this%print_load("Ma", ma%get_location(), ma%get_load())
+            call this%print_sheer(result_%get_sheers())
+            call this%print_moment(result_%get_moments())
+
         end subroutine calculate_with_fixed_support
 
         function get_fixed_support_result(this) result(result_)
