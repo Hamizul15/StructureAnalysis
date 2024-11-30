@@ -26,6 +26,7 @@ program structure_analysis
 
         call inp%dispose()
         call dispose_location_manager()
+        print *, ""
     end do
 
 end program

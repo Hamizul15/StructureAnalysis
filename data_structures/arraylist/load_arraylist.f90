@@ -13,7 +13,12 @@ module load_arraylist
         private
         procedure :: resize, initialize
 
-        procedure, public :: add_load, get_load, sum_of_loads, sum_of_moments, get_size, clear_loads !, remove
+        procedure, public :: add_load, get_load
+        procedure, public :: sum_of_loads, sum_of_moments
+        procedure, public :: get_size, clear_loads !, remove
+        procedure, public :: get_moments
+        procedure, public :: get_non_moments
+
     end type LoadArrayList
 
     contains
@@ -110,6 +115,30 @@ module load_arraylist
             stop "Index out of bounds"
         end if
     end function get_load
+
+    function get_moments(this) result(lo)
+        class(LoadArrayList), intent(inout) :: this
+        type(LoadArrayList) :: lo
+        type(Load) :: current_load
+        integer :: i
+
+        do i = 1, this%size
+            current_load = this%arr(i)
+            if(current_load%get_type() == MOMENT_) call lo%add_load(current_load)
+        end do
+    end function get_moments
+
+    function get_non_moments(this) result(lo)
+        class(LoadArrayList), intent(inout) :: this
+        type(LoadArrayList) :: lo
+        type(Load) :: current_load
+        integer :: i
+
+        do i = 1, this%size
+            current_load = this%arr(i)
+            if(current_load%get_type() /= MOMENT_) call lo%add_load(current_load)
+        end do
+    end function get_non_moments
 
     function sum_of_loads(this) result(the_sum)
         class(LoadArrayList), intent(inout) :: this

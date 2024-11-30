@@ -14,7 +14,7 @@ build CMakeFiles//StructureAnalysis.dir//services//input_service.f90.obj | input
 build CMakeFiles//StructureAnalysis.dir//services//moment_calculator.f90.obj | moment_calculator.mod: dyndep | input_manager.mod loads_module.mod location_interval_arraylist.mod location_manager.mod result_module.mod resultload_arraylist.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//services//reaction_calculator//calculator_determined_service.f90.obj | calculator_determined_service.mod: dyndep | calculator_service.mod resultload_arraylist.mod sheer_calculator.mod supports_module.mod
+build CMakeFiles//StructureAnalysis.dir//services//reaction_calculator//calculator_determined_service.f90.obj | calculator_determined_service.mod: dyndep | calculator_service.mod moment_calculator.mod resultload_arraylist.mod sheer_calculator.mod supports_module.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//services//reaction_calculator//calculator_service.f90.obj | calculator_service.mod: dyndep | input_manager.mod result_module.mod supports_module.mod

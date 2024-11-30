@@ -141,6 +141,7 @@ contains
         class(ResultLoadArrayList), intent(inout) :: this
         integer :: s
 
+
         s = this%size
     end function get_size
 

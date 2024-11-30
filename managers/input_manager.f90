@@ -42,7 +42,9 @@ contains
         integer :: i
 
         !call this%init()
+        call add_location(0.0)
         this%length = get_real("- Masukkan panjang beam: ", 0.0)
+        call add_location(this%length)
         !this%step_for_md = get_integer("- Masukkan jumlah step untuk MDN: ", 0)
 
         this%number_of_loads = get_integer("- Masukkan jumlah tipe beban: ", 0)

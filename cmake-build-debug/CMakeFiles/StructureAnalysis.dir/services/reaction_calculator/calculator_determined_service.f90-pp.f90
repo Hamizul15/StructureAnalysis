@@ -9,6 +9,7 @@ module calculator_determined_service
     use resultload_arraylist
     use supports_module
     use sheer_calculator
+    use moment_calculator
 
     type, extends(Calculator) :: CalculatorDetermined
     contains
@@ -84,6 +85,7 @@ module calculator_determined_service
             type(Support) :: anchor, the_other
             type(Load) :: current_load
             type(SheerCalculator) :: sheer_calc
+            type(MomentCalculator) :: moment_calc
             type(ResultLoadArrayList) :: reactions
             real :: reaction, distance_to_anchor
             integer :: i
@@ -110,8 +112,11 @@ module calculator_determined_service
             call reactions%add_resultload(new_resultload(anchor%get_location() , loads%sum_of_loads() - reaction))
             call result_%set_reactions(reactions)
 
-            call sheer_calc%init(input_, result_%get_reactions())
+            call sheer_calc%init(input_, reactions)
             call result_%set_sheers(sheer_calc%get_sheers())
+
+            call moment_calc%init(input_, reactions)
+            call result_%set_moments(moment_calc%get_moments())
 
         end function get_two_support_result
 
@@ -185,6 +190,8 @@ module calculator_determined_service
             type(ResultLoadArrayList) :: reactions, moment_reactions
             type(Support), allocatable :: supports(:)
             type(Support) :: anchor
+            type(SheerCalculator) :: sheer_calc
+            type(MomentCalculator) :: moment_calc
             type(Load) :: current_load
             real :: ma, distance_to_anchor
             integer :: i
@@ -211,6 +218,13 @@ module calculator_determined_service
 
             call result_%set_reactions(reactions)
             call result_%set_moment_reactions(moment_reactions)
+
+            call sheer_calc%init(input_, reactions)
+            call result_%set_sheers(sheer_calc%get_sheers())
+
+            call moment_calc%init(input_, reactions, moment_reactions)
+            call result_%set_moments(moment_calc%get_moments())
+
         end function get_fixed_support_result
 
 end module calculator_determined_service

@@ -207,14 +207,13 @@ module loads_module
 
         function get_actual_location(this) result(loc)
             class(Load), intent(in) :: this
-            real :: loc, length, first_part, second_part, third_part
+            real :: loc, length, first_part, second_part
 
             if(this%get_type() == 3) then
                 length = this%get_end_location() - this%get_start_location()
                 first_part = (this%get_start_load() + 2 * this%get_end_load()) * length
                 second_part = 3 * (this%get_start_load() + this%get_end_load())
-                !third_part = 3 * (this%get_start_load() + this%get_end_load())
-                loc = first_part / second_part
+                loc = this%get_start_location() + ( first_part / second_part)
             else
                 loc = this%get_start_location()
             end if

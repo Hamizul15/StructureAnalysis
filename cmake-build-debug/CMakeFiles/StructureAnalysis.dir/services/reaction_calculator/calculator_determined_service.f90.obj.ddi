@@ -19,6 +19,9 @@
 					"logical-name" : "calculator_service.mod"
 				},
 				{
+					"logical-name" : "moment_calculator.mod"
+				},
+				{
 					"logical-name" : "resultload_arraylist.mod"
 				},
 				{

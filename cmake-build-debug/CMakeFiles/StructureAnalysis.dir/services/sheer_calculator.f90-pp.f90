@@ -17,10 +17,14 @@ module sheer_calculator
         type(Input) :: input_
         type(ResultLoadArrayList) :: reactions
         type(LoadArrayList) :: loads
+        type(LoadArrayList) :: non_moment_loads
 
         contains
         private
-        procedure :: get_current_sum_of_loads, get_current_sum_of_reactions, find_current_load_of_distributed
+        procedure :: get_current_sum_of_loads
+        procedure :: get_current_sum_of_reactions
+        procedure :: find_current_load_of_distributed
+        procedure :: get_proper_condition
 
         procedure, public :: init, get_sheers
     end type SheerCalculator
@@ -34,6 +38,7 @@ module sheer_calculator
 
         this%input_ = input_
         this%loads = input_%get_loads()
+        this%non_moment_loads = this%loads%get_non_moments()
         this%reactions = reactions
     end subroutine init
 
@@ -89,37 +94,6 @@ module sheer_calculator
         end do
     end function get_sheers
 
-    function get_current_sum_of_loads(this, current_loc, iteration) result(sum)
-        class(SheerCalculator), intent(inout) :: this
-        real, intent(in) :: current_loc
-        real :: sum
-        real :: distance, numerator, denominator
-        type(Load) :: current_load
-        integer :: i, iteration
-        logical :: the_condition
-
-        sum = 0.0
-        do i = 1, this%loads%get_size()
-            current_load = this%loads%get_load(i)
-            if(current_load%get_type() == MOMENT_) cycle
-
-            if(iteration == 1) then
-                the_condition = current_load%get_start_location() <= current_loc
-            else
-                the_condition = current_load%get_start_location() < current_loc
-            end if
-
-            if (the_condition) then
-                !check wheteher location is between distributed load
-                if((current_load%get_type() == DISTRIBUTED_).and.(current_loc < current_load%get_end_location())) then
-                    sum = sum + this%find_current_load_of_distributed(current_loc, current_load)
-                else
-                    sum = sum + current_load%get_total_load() * -1
-                end if
-            end if
-        end do
-    end function get_current_sum_of_loads
-
     function find_current_load_of_distributed(this, current_loc, distributed_load) result(cld)
         class(SheerCalculator), intent(inout) :: this
         real, intent(in) :: current_loc
@@ -135,29 +109,57 @@ module sheer_calculator
 
     end function find_current_load_of_distributed
 
+    function get_current_sum_of_loads(this, current_loc, iteration) result(sum)
+        class(SheerCalculator), intent(inout) :: this
+        real, intent(in) :: current_loc
+        real :: sum
+        type(Load) :: current_load
+        integer :: i, iteration
+
+        sum = 0.0
+        do i = 1, this%non_moment_loads%get_size()
+            current_load = this%non_moment_loads%get_load(i)
+            if (this%get_proper_condition(iteration, current_loc, current_load%get_start_location())) then
+                !check wheteher location is between distributed load
+                if((current_load%get_type() == DISTRIBUTED_).and.(current_loc < current_load%get_end_location())) then
+                    sum = sum + this%find_current_load_of_distributed(current_loc, current_load)
+                else
+                    sum = sum + current_load%get_total_load() * -1
+                end if
+            end if
+        end do
+    end function get_current_sum_of_loads
+
     function get_current_sum_of_reactions(this, current_loc, iteration) result(sum)
         class(SheerCalculator), intent(inout) :: this
         real, intent(in) :: current_loc
         real :: sum
         type(ResultLoad) :: current_reaction
-        integer :: i
-        logical :: the_condition
+        integer :: i, iteration
 
         sum = 0.0
         do i = 1, this%reactions%get_size()
             current_reaction = this%reactions%get_resultload(i)
+
             if(current_reaction%get_location() == this%input_%get_length()) cycle
 
-            if(iteration == 1) then
-                the_condition = current_reaction%get_location() <= current_loc
-            else
-                the_condition = current_reaction%get_location() < current_loc
-            end if
-
-            if (the_condition) then
+            if (this%get_proper_condition(iteration, current_loc, current_reaction%get_location())) then
                     sum = sum + current_reaction%get_load()
             end if
         end do
     end function get_current_sum_of_reactions
+
+    function get_proper_condition(this, itertaion, current_loc, load_loc) result(the_condition)
+        class(SheerCalculator), intent(inout) :: this
+        real, intent(in) :: current_loc, load_loc
+        logical :: the_condition
+        integer :: iteration
+
+        if(iteration == 1) then
+            the_condition = load_loc <= current_loc
+        else
+            the_condition = load_loc < current_loc
+        end if
+    end function get_proper_condition
 
 end module sheer_calculator
