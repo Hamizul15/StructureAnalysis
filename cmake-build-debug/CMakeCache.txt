@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Build the testing tree.
-BUILD_TESTING:BOOL=ON
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Users/hamiz/gcc/bin/addr2line.exe
 
@@ -83,68 +80,14 @@ CMAKE_Fortran_FLAGS_RELWITHDEBINFO:STRING=-O2 -g
 //Convert GNU import libraries to MS format (requires Visual Studio)
 CMAKE_GNUtoMS:BOOL=OFF
 
-//User executables (bin)
-CMAKE_INSTALL_BINDIR:PATH=bin
-
-//Read-only architecture-independent data (DATAROOTDIR)
-CMAKE_INSTALL_DATADIR:PATH=
-
-//Read-only architecture-independent data root (share)
-CMAKE_INSTALL_DATAROOTDIR:PATH=share
-
-//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
-CMAKE_INSTALL_DOCDIR:PATH=
-
-//C header files (include)
-CMAKE_INSTALL_INCLUDEDIR:PATH=include
-
-//Info documentation (DATAROOTDIR/info)
-CMAKE_INSTALL_INFODIR:PATH=
-
-//Object code libraries (lib)
-CMAKE_INSTALL_LIBDIR:PATH=lib
-
-//Program executables (libexec)
-CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
-
-//Locale-dependent data (DATAROOTDIR/locale)
-CMAKE_INSTALL_LOCALEDIR:PATH=
-
-//Modifiable single-machine data (var)
-CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
-
-//Man documentation (DATAROOTDIR/man)
-CMAKE_INSTALL_MANDIR:PATH=
-
-//Directory in prefix to install generated module files
-CMAKE_INSTALL_MODULEDIR:STRING=include/fortran_stdlib/GNU-12.3.0
-
-//C header files for non-gcc (/usr/include)
-CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
-
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/StructureAnalysis
-
-//Run-time variable data (LOCALSTATEDIR/run)
-CMAKE_INSTALL_RUNSTATEDIR:PATH=
-
-//System admin executables (sbin)
-CMAKE_INSTALL_SBINDIR:PATH=sbin
-
-//Modifiable architecture-independent data (com)
-CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
-
-//Read-only single-machine data (etc)
-CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Users/hamiz/gcc/bin/ld.exe
 
 //make program
 CMAKE_MAKE_PROGRAM:FILEPATH=C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe
-
-//Maximum array rank for generated procedures
-CMAKE_MAXIMUM_RANK:STRING=4
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -267,76 +210,6 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Path to the coverage program that CTest uses for performing coverage
-// inspection
-COVERAGE_COMMAND:FILEPATH=C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/mingw/bin/gcov.exe
-
-//Extra command line flags to pass to the coverage tool
-COVERAGE_EXTRA_FLAGS:STRING=-l
-
-//How many times to retry timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_COUNT:STRING=3
-
-//How long to wait between timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_DELAY:STRING=5
-
-//Maximum time allowed before CTest will kill the test.
-DART_TESTING_TIMEOUT:STRING=1500
-
-//Directory under which to collect all populated content
-FETCHCONTENT_BASE_DIR:PATH=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps
-
-//Disables all attempts to download or update content and assumes
-// source dirs already exist
-FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
-
-//Enables QUIET option for all content population
-FETCHCONTENT_QUIET:BOOL=ON
-
-//When not empty, overrides where to find pre-populated content
-// for fortran_stdlib
-FETCHCONTENT_SOURCE_DIR_FORTRAN_STDLIB:PATH=
-
-//When not empty, overrides where to find pre-populated content
-// for stdlib
-FETCHCONTENT_SOURCE_DIR_STDLIB:PATH=
-
-//Enables UPDATE_DISCONNECTED behavior for all content population
-FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of fortran_stdlib
-FETCHCONTENT_UPDATES_DISCONNECTED_FORTRAN_STDLIB:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of stdlib
-FETCHCONTENT_UPDATES_DISCONNECTED_STDLIB:BOOL=OFF
-
-//Path to a program.
-FYPP:FILEPATH=FYPP-NOTFOUND
-
-//Path to a program.
-GITCOMMAND:FILEPATH=C:/Program Files/Git/cmd/git.exe
-
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
-
-//Command to build the project
-MAKECOMMAND:STRING="C:\Users\hamiz\AppData\Local\JetBrains\CLion 2024.2\bin\cmake\win\x64\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
-
-//Path to the memory checking command, used for memory error detection.
-MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
-
-//File that contains suppressions for the memory checker
-MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
-
-//Arguments to supply to pkg-config
-PKG_CONFIG_ARGN:STRING=
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
-
-//Name of the computer/site where compile is being run
-SITE:STRING=LAPTOP-8UCJ45TF
-
 //Value Computed by CMake
 StructureAnalysis_BINARY_DIR:STATIC=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug
 
@@ -345,18 +218,6 @@ StructureAnalysis_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 StructureAnalysis_SOURCE_DIR:STATIC=D:/Programming/Fortran/StructureAnalysis
-
-//Value Computed by CMake
-fortran_stdlib_BINARY_DIR:STATIC=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/fortran_stdlib-build
-
-//The directory containing a CMake configuration file for fortran_stdlib.
-fortran_stdlib_DIR:PATH=fortran_stdlib_DIR-NOTFOUND
-
-//Value Computed by CMake
-fortran_stdlib_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-fortran_stdlib_SOURCE_DIR:STATIC=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/fortran_stdlib-src
 
 
 ########################
@@ -426,38 +287,6 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=D:/Programming/Fortran/StructureAnalysis
-//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
-CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
-CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
-CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
-CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
-CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
-CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
-CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
-CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
-CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
-CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
-CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
-CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
-CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
-CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
-CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
-CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
@@ -529,88 +358,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_COMMAND
-COVERAGE_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
-COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
-CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
-CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: DART_TESTING_TIMEOUT
-DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
-FORTRAN_STDLIB_CFLAGS:INTERNAL=
-FORTRAN_STDLIB_CFLAGS_I:INTERNAL=
-FORTRAN_STDLIB_CFLAGS_OTHER:INTERNAL=
-FORTRAN_STDLIB_FOUND:INTERNAL=
-FORTRAN_STDLIB_INCLUDEDIR:INTERNAL=
-FORTRAN_STDLIB_LIBDIR:INTERNAL=
-FORTRAN_STDLIB_LIBS:INTERNAL=
-FORTRAN_STDLIB_LIBS_L:INTERNAL=
-FORTRAN_STDLIB_LIBS_OTHER:INTERNAL=
-FORTRAN_STDLIB_LIBS_PATHS:INTERNAL=
-FORTRAN_STDLIB_MODULE_NAME:INTERNAL=
-FORTRAN_STDLIB_PREFIX:INTERNAL=
-FORTRAN_STDLIB_STATIC_CFLAGS:INTERNAL=
-FORTRAN_STDLIB_STATIC_CFLAGS_I:INTERNAL=
-FORTRAN_STDLIB_STATIC_CFLAGS_OTHER:INTERNAL=
-FORTRAN_STDLIB_STATIC_LIBDIR:INTERNAL=
-FORTRAN_STDLIB_STATIC_LIBS:INTERNAL=
-FORTRAN_STDLIB_STATIC_LIBS_L:INTERNAL=
-FORTRAN_STDLIB_STATIC_LIBS_OTHER:INTERNAL=
-FORTRAN_STDLIB_STATIC_LIBS_PATHS:INTERNAL=
-FORTRAN_STDLIB_VERSION:INTERNAL=
-//ADVANCED property for variable: GITCOMMAND
-GITCOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MAKECOMMAND
-MAKECOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_COMMAND
-MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
-MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_ARGN
-PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SITE
-SITE-ADVANCED:INTERNAL=1
-//Test WITH_CBOOL
-WITH_CBOOL:INTERNAL=1
-//Result of TRY_COMPILE
-WITH_CBOOL_COMPILED:INTERNAL=TRUE
-//Result of try_run()
-WITH_CBOOL_EXITCODE:INTERNAL=0
-//Test WITH_QP
-WITH_QP:INTERNAL=1
-//Result of TRY_COMPILE
-WITH_QP_COMPILED:INTERNAL=TRUE
-//Result of try_run()
-WITH_QP_EXITCODE:INTERNAL=0
-//Test WITH_XDP
-WITH_XDP:INTERNAL=1
-//Result of TRY_COMPILE
-WITH_XDP_COMPILED:INTERNAL=TRUE
-//Result of try_run()
-WITH_XDP_EXITCODE:INTERNAL=0
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
-//CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/StructureAnalysis
-__pkg_config_checked_FORTRAN_STDLIB:INTERNAL=1
-//Test f03rank
-f03rank:INTERNAL=1
-//Test f03real128
-f03real128:INTERNAL=1
-//Result of TRY_COMPILE
-f03real128_COMPILED:INTERNAL=TRUE
-//Result of try_run()
-f03real128_EXITCODE:INTERNAL=0
-//Test f18errorstop
-f18errorstop:INTERNAL=1
-//Result of TRY_COMPILE
-f18errorstop_COMPILED:INTERNAL=TRUE
-//Result of try_run()
-f18errorstop_EXITCODE:INTERNAL=0
 

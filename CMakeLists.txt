@@ -21,5 +21,3 @@ add_executable(StructureAnalysis
         #${fig_sources}
         main.f90)
 
-add_executable(ExecutableStructureAnalysis main.f90)
-

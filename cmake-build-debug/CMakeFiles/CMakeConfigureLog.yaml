@@ -34,7 +34,7 @@ events:
       Supported LTO compression algorithms: zlib
       gcc version 12.3.0 (GCC) 
       COLLECT_GCC_OPTIONS='-v' '-mtune=generic' '-march=x86-64' '-dumpdir' 'a-'
-       c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe CMakeFortranCompilerId.F -ffixed-form -cpp=C:\\Users\\hamiz\\AppData\\Local\\Temp\\cc4VRwfL.f90 -quiet -v -iprefix c:\\users\\hamiz\\gcc\\bin\\../lib/gcc/x86_64-w64-mingw32/12.3.0/ -U_REENTRANT CMakeFortranCompilerId.F -quiet -dumpdir a- -dumpbase CMakeFortranCompilerId.F -dumpbase-ext .F -mtune=generic -march=x86-64 -version -fintrinsic-modules-path c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/finclude -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccKiAmBm.s
+       c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe CMakeFortranCompilerId.F -ffixed-form -cpp=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccHRzKUm.f90 -quiet -v -iprefix c:\\users\\hamiz\\gcc\\bin\\../lib/gcc/x86_64-w64-mingw32/12.3.0/ -U_REENTRANT CMakeFortranCompilerId.F -quiet -dumpdir a- -dumpbase CMakeFortranCompilerId.F -dumpbase-ext .F -mtune=generic -march=x86-64 -version -fintrinsic-modules-path c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/finclude -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccuLxjKy.s
       GNU Fortran (GCC) version 12.3.0 (x86_64-w64-mingw32)
       	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
       GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -54,7 +54,7 @@ events:
       	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
       GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
       COLLECT_GCC_OPTIONS='-v' '-mtune=generic' '-march=x86-64' '-dumpdir' 'a-'
-       c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccgeJV02.o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccKiAmBm.s
+       c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccZ1hpCV.o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccuLxjKy.s
       GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
       Reading specs from c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/libgfortran.spec
       rename spec lib to liborig
@@ -62,7 +62,7 @@ events:
       COMPILER_PATH=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../libexec/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/
       LIBRARY_PATH=c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../lib/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../
       COLLECT_GCC_OPTIONS='-v' '-mtune=generic' '-march=x86-64' '-dumpdir' 'a.'
-       c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/collect2.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccEfd5AL.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccgeJV02.o -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o
+       c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/collect2.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccKURTZk.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccZ1hpCV.o -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o
       COLLECT_GCC_OPTIONS='-v' '-mtune=generic' '-march=x86-64' '-dumpdir' 'a.'
       
       
@@ -80,8 +80,8 @@ events:
     checks:
       - "Detecting Fortran compiler ABI info"
     directories:
-      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fyvzxy"
-      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fyvzxy"
+      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pqymt3"
+      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pqymt3"
     cmakeVariables:
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_Fortran_FLAGS: ""
@@ -90,10 +90,10 @@ events:
       variable: "CMAKE_Fortran_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fyvzxy'
+        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pqymt3'
         
-        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_cb045
-        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp   -fdiagnostics-color=always   -v -E "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90" -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_cb045.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 --out=CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 --dep=CMakeFiles\\cmTC_cb045.dir\\CMakeFortranCompilerABI.F90-pp.f90.d --obj=CMakeFiles\\cmTC_cb045.dir\\CMakeFortranCompilerABI.F90.obj --ddi=CMakeFiles\\cmTC_cb045.dir\\CMakeFortranCompilerABI.F90.obj.ddi --src-orig="C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90""
+        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_eb527
+        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp   -fdiagnostics-color=always   -v -E "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90" -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_eb527.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 --out=CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 --dep=CMakeFiles\\cmTC_eb527.dir\\CMakeFortranCompilerABI.F90-pp.f90.d --obj=CMakeFiles\\cmTC_eb527.dir\\CMakeFortranCompilerABI.F90.obj --ddi=CMakeFiles\\cmTC_eb527.dir\\CMakeFortranCompilerABI.F90.obj.ddi --src-orig="C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90""
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe
@@ -102,8 +102,8 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 12.3.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/'
-         c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -cpp=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccHNGFWJ.f90 -E -quiet -v -iprefix c:\\users\\hamiz\\gcc\\bin\\../lib/gcc/x86_64-w64-mingw32/12.3.0/ -U_REENTRANT C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 -dumpdir CMakeFiles/cmTC_cb045.dir/ -dumpbase CMakeFortranCompilerABI.F90-pp.F90 -dumpbase-ext .F90 -mtune=generic -march=x86-64 -fdiagnostics-color=always -fsyntax-only
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/'
+         c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -cpp=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccdr3pTw.f90 -E -quiet -v -iprefix c:\\users\\hamiz\\gcc\\bin\\../lib/gcc/x86_64-w64-mingw32/12.3.0/ -U_REENTRANT C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 -dumpdir CMakeFiles/cmTC_eb527.dir/ -dumpbase CMakeFortranCompilerABI.F90-pp.F90 -dumpbase-ext .F90 -mtune=generic -march=x86-64 -fdiagnostics-color=always -fsyntax-only
         ignoring duplicate directory "c:/users/hamiz/gcc/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/12.3.0/include"
         ignoring nonexistent directory "/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0/home/gfortran/gcc-home/binary/mingw32/native/x86_64/gcc/12.3.0/lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../include"
         ignoring duplicate directory "c:/users/hamiz/gcc/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/12.3.0/include-fixed"
@@ -117,9 +117,9 @@ events:
         End of search list.
         COMPILER_PATH=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../libexec/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../lib/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.'\x0d
-        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_cb045.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_cb045.dir/Fortran.dd @CMakeFiles/cmTC_cb045.dir/Fortran.dd.rsp
-        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -I"C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules" -fdiagnostics-color=always   -v -fpreprocessed -c CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.'\x0d
+        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_eb527.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_eb527.dir/Fortran.dd @CMakeFiles/cmTC_eb527.dir/Fortran.dd.rsp
+        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -I"C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules" -fdiagnostics-color=always   -v -fpreprocessed -c CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe
@@ -128,22 +128,22 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 12.3.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/'
-         c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -quiet -dumpdir CMakeFiles/cmTC_cb045.dir/ -dumpbase CMakeFortranCompilerABI.F90.f90 -dumpbase-ext .f90 -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fpreprocessed -fintrinsic-modules-path c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/finclude -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\cchqbHdS.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/'
+         c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -quiet -dumpdir CMakeFiles/cmTC_eb527.dir/ -dumpbase CMakeFortranCompilerABI.F90.f90 -dumpbase-ext .f90 -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fpreprocessed -fintrinsic-modules-path c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/finclude -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccvGHjZM.s
         GNU Fortran (GCC) version 12.3.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         GNU Fortran2008 (GCC) version 12.3.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/'
-         c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj C:\\Users\\hamiz\\AppData\\Local\\Temp\\cchqbHdS.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/'
+         c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccvGHjZM.s
         GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
         COMPILER_PATH=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../libexec/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../lib/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.'\x0d
-        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe  -v -Wl,-v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_cb045.exe -Wl,--out-implib,libcmTC_cb045.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        Driving: C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -v -Wl,-v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_cb045.exe -Wl,--out-implib,libcmTC_cb045.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -l gfortran
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.'\x0d
+        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe  -v -Wl,-v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_eb527.exe -Wl,--out-implib,libcmTC_eb527.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Driving: C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -v -Wl,-v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_eb527.exe -Wl,--out-implib,libcmTC_eb527.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -l gfortran
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe
@@ -155,15 +155,15 @@ events:
         gcc version 12.3.0 (GCC) 
         Reading specs from c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/libgfortran.spec
         rename spec lib to liborig
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb045.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cb045-'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb527.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_eb527-'
         COMPILER_PATH=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../libexec/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/;c:/users/hamiz/gcc/bin/../lib/gcc/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/;c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb045.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cb045.'
-         c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/collect2.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\cc9zgRiT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_cb045.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_cb045.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb527.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_eb527.'
+         c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/collect2.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccX6PenT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_eb527.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_eb527.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o
         collect2 version 12.3.0
-        c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\cc9zgRiT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_cb045.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_cb045.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o\x0d
+        c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccX6PenT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_eb527.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_eb527.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o\x0d
         GNU ld (GNU Binutils) 2.39\x0d
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb045.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cb045.'\x0d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb527.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_eb527.'\x0d
         
       exitCode: 0
   -
@@ -196,10 +196,10 @@ events:
       Parsed Fortran implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fyvzxy']
+        ignore line: [Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pqymt3']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_cb045]
-        ignore line: [[1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp   -fdiagnostics-color=always   -v -E "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90" -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_cb045.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 --out=CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 --dep=CMakeFiles\\cmTC_cb045.dir\\CMakeFortranCompilerABI.F90-pp.f90.d --obj=CMakeFiles\\cmTC_cb045.dir\\CMakeFortranCompilerABI.F90.obj --ddi=CMakeFiles\\cmTC_cb045.dir\\CMakeFortranCompilerABI.F90.obj.ddi --src-orig="C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90""]
+        ignore line: [Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_eb527]
+        ignore line: [[1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp   -fdiagnostics-color=always   -v -E "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90" -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_eb527.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 --out=CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 --dep=CMakeFiles\\cmTC_eb527.dir\\CMakeFortranCompilerABI.F90-pp.f90.d --obj=CMakeFiles\\cmTC_eb527.dir\\CMakeFortranCompilerABI.F90.obj --ddi=CMakeFiles\\cmTC_eb527.dir\\CMakeFortranCompilerABI.F90.obj.ddi --src-orig="C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90""]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe]
@@ -208,8 +208,8 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 12.3.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/']
-        ignore line: [ c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -cpp=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccHNGFWJ.f90 -E -quiet -v -iprefix c:\\users\\hamiz\\gcc\\bin\\../lib/gcc/x86_64-w64-mingw32/12.3.0/ -U_REENTRANT C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 -dumpdir CMakeFiles/cmTC_cb045.dir/ -dumpbase CMakeFortranCompilerABI.F90-pp.F90 -dumpbase-ext .F90 -mtune=generic -march=x86-64 -fdiagnostics-color=always -fsyntax-only]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/']
+        ignore line: [ c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -cpp=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccdr3pTw.f90 -E -quiet -v -iprefix c:\\users\\hamiz\\gcc\\bin\\../lib/gcc/x86_64-w64-mingw32/12.3.0/ -U_REENTRANT C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 -dumpdir CMakeFiles/cmTC_eb527.dir/ -dumpbase CMakeFortranCompilerABI.F90-pp.F90 -dumpbase-ext .F90 -mtune=generic -march=x86-64 -fdiagnostics-color=always -fsyntax-only]
         ignore line: [ignoring duplicate directory "c:/users/hamiz/gcc/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/12.3.0/include"]
         ignore line: [ignoring nonexistent directory "/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0/home/gfortran/gcc-home/binary/mingw32/native/x86_64/gcc/12.3.0/lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../include"]
         ignore line: [ignoring duplicate directory "c:/users/hamiz/gcc/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/12.3.0/include-fixed"]
@@ -230,9 +230,9 @@ events:
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/]
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.'\x0d]
-        ignore line: [[2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_cb045.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_cb045.dir/Fortran.dd @CMakeFiles/cmTC_cb045.dir/Fortran.dd.rsp]
-        ignore line: [[3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -I"C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules" -fdiagnostics-color=always   -v -fpreprocessed -c CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-cpp' '-v' '-E' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.'\x0d]
+        ignore line: [[2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_eb527.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_eb527.dir/Fortran.dd @CMakeFiles/cmTC_eb527.dir/Fortran.dd.rsp]
+        ignore line: [[3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -I"C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules" -fdiagnostics-color=always   -v -fpreprocessed -c CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe]
@@ -241,16 +241,16 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 12.3.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/']
-        ignore line: [ c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90-pp.f90 -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -quiet -dumpdir CMakeFiles/cmTC_cb045.dir/ -dumpbase CMakeFortranCompilerABI.F90.f90 -dumpbase-ext .f90 -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fpreprocessed -fintrinsic-modules-path c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/finclude -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\cchqbHdS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/']
+        ignore line: [ c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/f951.exe CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90-pp.f90 -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -quiet -dumpdir CMakeFiles/cmTC_eb527.dir/ -dumpbase CMakeFortranCompilerABI.F90.f90 -dumpbase-ext .f90 -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -fpreprocessed -fintrinsic-modules-path c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/finclude -o C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccvGHjZM.s]
         ignore line: [GNU Fortran (GCC) version 12.3.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [GNU Fortran2008 (GCC) version 12.3.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/']
-        ignore line: [ c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -o CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj C:\\Users\\hamiz\\AppData\\Local\\Temp\\cchqbHdS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/']
+        ignore line: [ c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -I C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules -o CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccvGHjZM.s]
         ignore line: [GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39]
         ignore line: [COMPILER_PATH=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/]
         ignore line: [c:/users/hamiz/gcc/bin/../libexec/gcc/]
@@ -261,9 +261,9 @@ events:
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/]
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.'\x0d]
-        ignore line: [[4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe  -v -Wl -v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_cb045.exe -Wl --out-implib libcmTC_cb045.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
-        ignore line: [Driving: C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -v -Wl -v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_cb045.exe -Wl --out-implib libcmTC_cb045.dll.a -Wl --major-image-version 0 --minor-image-version 0 -l gfortran]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-I' 'C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\share\\cmake-3.29\\Modules' '-v' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.'\x0d]
+        ignore line: [[4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe  -v -Wl -v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_eb527.exe -Wl --out-implib libcmTC_eb527.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Driving: C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -v -Wl -v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj -o cmTC_eb527.exe -Wl --out-implib libcmTC_eb527.dll.a -Wl --major-image-version 0 --minor-image-version 0 -l gfortran]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe]
@@ -275,7 +275,7 @@ events:
         ignore line: [gcc version 12.3.0 (GCC) ]
         ignore line: [Reading specs from c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/libgfortran.spec]
         ignore line: [rename spec lib to liborig]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb045.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cb045-']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb527.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_eb527-']
         ignore line: [COMPILER_PATH=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/]
         ignore line: [c:/users/hamiz/gcc/bin/../libexec/gcc/]
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/]
@@ -285,13 +285,13 @@ events:
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib/]
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb045.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cb045.']
-        link line: [ c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/collect2.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\cc9zgRiT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_cb045.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_cb045.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb527.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_eb527.']
+        link line: [ c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/collect2.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccX6PenT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_eb527.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_eb527.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o]
           arg [c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\cc9zgRiT.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccX6PenT.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
@@ -321,7 +321,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_cb045.exe] ==> ignore
+          arg [cmTC_eb527.exe] ==> ignore
           arg [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o] ==> obj [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o]
           arg [-Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0] ==> dir [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0]
@@ -331,9 +331,9 @@ events:
           arg [-Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib] ==> dir [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib]
           arg [-Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../..] ==> dir [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj] ==> ignore
+          arg [CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_cb045.dll.a] ==> ignore
+          arg [libcmTC_eb527.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -365,7 +365,7 @@ events:
           arg [-lkernel32] ==> lib [kernel32]
           arg [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o] ==> obj [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o]
         ignore line: [collect2 version 12.3.0]
-        ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\cc9zgRiT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_cb045.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_cb045.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_cb045.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o\x0d]
+        ignore line: [c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/liblto_plugin.dll -plugin-opt=c:/users/hamiz/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/12.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\hamiz\\AppData\\Local\\Temp\\ccX6PenT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/12.3.0 -m i386pep -Bdynamic -o cmTC_eb527.exe c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtbegin.o -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0 -Lc:/users/hamiz/gcc/bin/../lib/gcc -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../../../x86_64-w64-mingw32/lib -Lc:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/../../.. -v CMakeFiles/cmTC_eb527.dir/CMakeFortranCompilerABI.F90.obj --out-implib libcmTC_eb527.dll.a --major-image-version 0 --minor-image-version 0 -lgfortran -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lquadmath -lm -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 c:/users/hamiz/gcc/bin/../lib/gcc/x86_64-w64-mingw32/12.3.0/crtend.o\x0d]
         linker tool for 'Fortran': c:/users/hamiz/gcc/x86_64-w64-mingw32/bin/ld.exe
         remove lib [msvcrt]
         remove lib [msvcrt]
@@ -395,233 +395,4 @@ events:
     message: |
       Running the Fortran compiler's linker: "c:/users/hamiz/gcc/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.39
-...
-
----
-events:
-  -
-    kind: "try_run-v1"
-    backtrace:
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckFortranSourceRuns.cmake:75 (cmake_check_source_runs)"
-      - "cmake-build-debug/_deps/stdlib-src/config/CMakeLists.txt:20 (check_fortran_source_runs)"
-    checks:
-      - "Performing Test WITH_CBOOL"
-    directories:
-      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yhmbc5"
-      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yhmbc5"
-    cmakeVariables:
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_Fortran_FLAGS: ""
-      CMAKE_Fortran_FLAGS_DEBUG: "-g"
-      CMAKE_MODULE_PATH: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/cmake"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/DefaultFlags.cmake"
-    buildResult:
-      variable: "WITH_CBOOL_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yhmbc5'
-        
-        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_40bdd
-        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp -DWITH_CBOOL  -fdiagnostics-color=always -E D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yhmbc5/src.F90 -o CMakeFiles/cmTC_40bdd.dir/src.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_40bdd.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_40bdd.dir/src.F90-pp.f90 --out=CMakeFiles/cmTC_40bdd.dir/src.F90-pp.f90 --dep=CMakeFiles\\cmTC_40bdd.dir\\src.F90-pp.f90.d --obj=CMakeFiles\\cmTC_40bdd.dir\\src.F90.obj --ddi=CMakeFiles\\cmTC_40bdd.dir\\src.F90.obj.ddi --src-orig=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yhmbc5/src.F90"
-        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_40bdd.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_40bdd.dir/Fortran.dd @CMakeFiles/cmTC_40bdd.dir/Fortran.dd.rsp
-        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -ID:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-yhmbc5 -fdiagnostics-color=always -fpreprocessed -c CMakeFiles/cmTC_40bdd.dir/src.F90-pp.f90 -o CMakeFiles/cmTC_40bdd.dir/src.F90.obj
-        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe   CMakeFiles/cmTC_40bdd.dir/src.F90.obj -o cmTC_40bdd.exe -Wl,--out-implib,libcmTC_40bdd.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        
-      exitCode: 0
-    runResult:
-      variable: "WITH_CBOOL_EXITCODE"
-      cached: true
-      stdout: |
-      stderr: |
-      exitCode: 0
-  -
-    kind: "try_run-v1"
-    backtrace:
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckFortranSourceRuns.cmake:75 (cmake_check_source_runs)"
-      - "cmake-build-debug/_deps/stdlib-src/config/CMakeLists.txt:29 (check_fortran_source_runs)"
-    checks:
-      - "Performing Test WITH_QP"
-    directories:
-      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zppjve"
-      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zppjve"
-    cmakeVariables:
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_Fortran_FLAGS: ""
-      CMAKE_Fortran_FLAGS_DEBUG: "-g"
-      CMAKE_MODULE_PATH: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/cmake"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/DefaultFlags.cmake"
-    buildResult:
-      variable: "WITH_QP_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zppjve'
-        
-        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_594f8
-        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp -DWITH_QP  -fdiagnostics-color=always -E D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zppjve/src.F90 -o CMakeFiles/cmTC_594f8.dir/src.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_594f8.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_594f8.dir/src.F90-pp.f90 --out=CMakeFiles/cmTC_594f8.dir/src.F90-pp.f90 --dep=CMakeFiles\\cmTC_594f8.dir\\src.F90-pp.f90.d --obj=CMakeFiles\\cmTC_594f8.dir\\src.F90.obj --ddi=CMakeFiles\\cmTC_594f8.dir\\src.F90.obj.ddi --src-orig=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zppjve/src.F90"
-        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_594f8.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_594f8.dir/Fortran.dd @CMakeFiles/cmTC_594f8.dir/Fortran.dd.rsp
-        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -ID:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-zppjve -fdiagnostics-color=always -fpreprocessed -c CMakeFiles/cmTC_594f8.dir/src.F90-pp.f90 -o CMakeFiles/cmTC_594f8.dir/src.F90.obj
-        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe   CMakeFiles/cmTC_594f8.dir/src.F90.obj -o cmTC_594f8.exe -Wl,--out-implib,libcmTC_594f8.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        
-      exitCode: 0
-    runResult:
-      variable: "WITH_QP_EXITCODE"
-      cached: true
-      stdout: |
-      stderr: |
-      exitCode: 0
-  -
-    kind: "try_run-v1"
-    backtrace:
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckFortranSourceRuns.cmake:75 (cmake_check_source_runs)"
-      - "cmake-build-debug/_deps/stdlib-src/config/CMakeLists.txt:36 (check_fortran_source_runs)"
-    checks:
-      - "Performing Test WITH_XDP"
-    directories:
-      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhiwpk"
-      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhiwpk"
-    cmakeVariables:
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_Fortran_FLAGS: ""
-      CMAKE_Fortran_FLAGS_DEBUG: "-g"
-      CMAKE_MODULE_PATH: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/cmake"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/DefaultFlags.cmake"
-    buildResult:
-      variable: "WITH_XDP_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhiwpk'
-        
-        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_4067a
-        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp -DWITH_XDP  -fdiagnostics-color=always -E D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhiwpk/src.F90 -o CMakeFiles/cmTC_4067a.dir/src.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_4067a.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_4067a.dir/src.F90-pp.f90 --out=CMakeFiles/cmTC_4067a.dir/src.F90-pp.f90 --dep=CMakeFiles\\cmTC_4067a.dir\\src.F90-pp.f90.d --obj=CMakeFiles\\cmTC_4067a.dir\\src.F90.obj --ddi=CMakeFiles\\cmTC_4067a.dir\\src.F90.obj.ddi --src-orig=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhiwpk/src.F90"
-        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_4067a.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_4067a.dir/Fortran.dd @CMakeFiles/cmTC_4067a.dir/Fortran.dd.rsp
-        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -ID:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qhiwpk -fdiagnostics-color=always -fpreprocessed -c CMakeFiles/cmTC_4067a.dir/src.F90-pp.f90 -o CMakeFiles/cmTC_4067a.dir/src.F90.obj
-        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe   CMakeFiles/cmTC_4067a.dir/src.F90.obj -o cmTC_4067a.exe -Wl,--out-implib,libcmTC_4067a.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        
-      exitCode: 0
-    runResult:
-      variable: "WITH_XDP_EXITCODE"
-      cached: true
-      stdout: |
-      stderr: |
-      exitCode: 0
-  -
-    kind: "try_run-v1"
-    backtrace:
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckFortranSourceRuns.cmake:75 (cmake_check_source_runs)"
-      - "cmake-build-debug/_deps/stdlib-src/CMakeLists.txt:37 (check_fortran_source_runs)"
-    checks:
-      - "Performing Test f18errorstop"
-    directories:
-      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6d60er"
-      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6d60er"
-    cmakeVariables:
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_Fortran_FLAGS: ""
-      CMAKE_Fortran_FLAGS_DEBUG: "-g"
-      CMAKE_MODULE_PATH: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/cmake"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/DefaultFlags.cmake"
-    buildResult:
-      variable: "f18errorstop_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6d60er'
-        
-        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_a3968
-        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp -Df18errorstop  -fdiagnostics-color=always -E D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6d60er/src.F90 -o CMakeFiles/cmTC_a3968.dir/src.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_a3968.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_a3968.dir/src.F90-pp.f90 --out=CMakeFiles/cmTC_a3968.dir/src.F90-pp.f90 --dep=CMakeFiles\\cmTC_a3968.dir\\src.F90-pp.f90.d --obj=CMakeFiles\\cmTC_a3968.dir\\src.F90.obj --ddi=CMakeFiles\\cmTC_a3968.dir\\src.F90.obj.ddi --src-orig=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6d60er/src.F90"
-        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_a3968.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_a3968.dir/Fortran.dd @CMakeFiles/cmTC_a3968.dir/Fortran.dd.rsp
-        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -ID:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-6d60er -fdiagnostics-color=always -fpreprocessed -c CMakeFiles/cmTC_a3968.dir/src.F90-pp.f90 -o CMakeFiles/cmTC_a3968.dir/src.F90.obj
-        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe   CMakeFiles/cmTC_a3968.dir/src.F90.obj -o cmTC_a3968.exe -Wl,--out-implib,libcmTC_a3968.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        
-      exitCode: 0
-    runResult:
-      variable: "f18errorstop_EXITCODE"
-      cached: true
-      stdout: |
-      stderr: |
-        ERROR STOP 0
-        
-        Error termination. Backtrace:
-        
-        Could not print backtrace: libbacktrace could not find executable to open
-        #0  0x4f70faba
-        #1  0x4f7071a1
-        #2  0x4f702ba1
-        #3  0x4f6e154d
-        #4  0x4f6e1589
-        #5  0x4f6e13ad
-        #6  0x4f6e14e5
-        #7  0xf0af257c
-        #8  0xf178af07
-        #9  0xffffffff
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckFortranSourceCompiles.cmake:79 (cmake_check_source_compiles)"
-      - "cmake-build-debug/_deps/stdlib-src/CMakeLists.txt:38 (check_fortran_source_compiles)"
-    checks:
-      - "Performing Test f03rank"
-    directories:
-      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8102o3"
-      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8102o3"
-    cmakeVariables:
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_Fortran_FLAGS: ""
-      CMAKE_Fortran_FLAGS_DEBUG: "-g"
-      CMAKE_MODULE_PATH: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/cmake"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/DefaultFlags.cmake"
-    buildResult:
-      variable: "f03rank"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8102o3'
-        
-        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_2f247
-        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp -Df03rank  -fdiagnostics-color=always -E D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8102o3/src.f90 -o CMakeFiles/cmTC_2f247.dir/src.f90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_2f247.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_2f247.dir/src.f90-pp.f90 --out=CMakeFiles/cmTC_2f247.dir/src.f90-pp.f90 --dep=CMakeFiles\\cmTC_2f247.dir\\src.f90-pp.f90.d --obj=CMakeFiles\\cmTC_2f247.dir\\src.f90.obj --ddi=CMakeFiles\\cmTC_2f247.dir\\src.f90.obj.ddi --src-orig=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8102o3/src.f90"
-        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_2f247.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_2f247.dir/Fortran.dd @CMakeFiles/cmTC_2f247.dir/Fortran.dd.rsp
-        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -ID:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-8102o3 -fdiagnostics-color=always -fpreprocessed -c CMakeFiles/cmTC_2f247.dir/src.f90-pp.f90 -o CMakeFiles/cmTC_2f247.dir/src.f90.obj
-        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe   CMakeFiles/cmTC_2f247.dir/src.f90.obj -o cmTC_2f247.exe -Wl,--out-implib,libcmTC_2f247.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        
-      exitCode: 0
-  -
-    kind: "try_run-v1"
-    backtrace:
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
-      - "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckFortranSourceRuns.cmake:75 (cmake_check_source_runs)"
-      - "cmake-build-debug/_deps/stdlib-src/CMakeLists.txt:39 (check_fortran_source_runs)"
-    checks:
-      - "Performing Test f03real128"
-    directories:
-      source: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4c2l2h"
-      binary: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4c2l2h"
-    cmakeVariables:
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_Fortran_FLAGS: ""
-      CMAKE_Fortran_FLAGS_DEBUG: "-g"
-      CMAKE_MODULE_PATH: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/cmake"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/_deps/stdlib-src/config/DefaultFlags.cmake"
-    buildResult:
-      variable: "f03real128_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4c2l2h'
-        
-        Run Build Command(s): "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -v cmTC_79a23
-        [1/4] C:\\Windows\\system32\\cmd.exe /C "C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -cpp -Df03real128  -fdiagnostics-color=always -E D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4c2l2h/src.F90 -o CMakeFiles/cmTC_79a23.dir/src.F90-pp.f90 && "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_depends --tdi=CMakeFiles\\cmTC_79a23.dir\\FortranDependInfo.json --lang=Fortran --src=CMakeFiles/cmTC_79a23.dir/src.F90-pp.f90 --out=CMakeFiles/cmTC_79a23.dir/src.F90-pp.f90 --dep=CMakeFiles\\cmTC_79a23.dir\\src.F90-pp.f90.d --obj=CMakeFiles\\cmTC_79a23.dir\\src.F90.obj --ddi=CMakeFiles\\cmTC_79a23.dir\\src.F90.obj.ddi --src-orig=D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4c2l2h/src.F90"
-        [2/4] "C:\\Users\\hamiz\\AppData\\Local\\JetBrains\\CLion 2024.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_79a23.dir\\FortranDependInfo.json --lang=Fortran --dd=CMakeFiles/cmTC_79a23.dir/Fortran.dd @CMakeFiles/cmTC_79a23.dir/Fortran.dd.rsp
-        [3/4] C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe -ID:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-4c2l2h -fdiagnostics-color=always -fpreprocessed -c CMakeFiles/cmTC_79a23.dir/src.F90-pp.f90 -o CMakeFiles/cmTC_79a23.dir/src.F90.obj
-        [4/4] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\hamiz\\gcc\\bin\\gfortran.exe   CMakeFiles/cmTC_79a23.dir/src.F90.obj -o cmTC_79a23.exe -Wl,--out-implib,libcmTC_79a23.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        
-      exitCode: 0
-    runResult:
-      variable: "f03real128_EXITCODE"
-      cached: true
-      stdout: |
-      stderr: |
-      exitCode: 0
 ...

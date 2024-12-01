@@ -14,8 +14,8 @@ module support_hashmap
         private
         procedure :: resize, initialize
 
-        procedure, public :: insert_support, get_support_by_key, get_support_by_index
-        procedure, public :: get_size, get_keys, get_values, sum_of_number_of_reactions, clear_supports !, remove
+        procedure, public :: insert_support, insert_support_no_key, get_support_by_key, get_support_by_index
+        procedure, public :: get_size, get_keys, get_values, sum_of_number_of_reactions, clear_supports
     end type SupportHashMap
 
 contains
@@ -41,9 +41,10 @@ contains
             call this%initialize()
         end if
 
-        do i = 0, size(this%keys)
+        do i = 0, this%size
             if(this%keys(i) == location) then
-                stop "The Key already exist"
+                stop "The location is already occupied"
+                return
             end if
         end do
 
@@ -57,30 +58,12 @@ contains
         this%keys(this%size) = location
     end subroutine insert_support
 
-    ! Remove a person (find and shift remaining elements)
-    !subroutine remove(this, person)
-    !class(LoadHashMap), intent(inout) :: this
-    !type(Load), intent(in) :: load
-    !integer :: i, found
+    subroutine insert_support_no_key(this, lo)
+        class(SupportHashMap), intent(inout) :: this
+        type(Support), intent(in) :: lo
 
-    !found = 0
-    !do i = 1, size
-    !    if (this%arr(i)% arr(i)%name == person%name .and. arr(i)%age == person%age) then
-    !        found = 1
-    !exit
-    !    end if
-    !end do
-
-    !if (found == 1) then
-    ! Shift elements after the removed person
-    !    do i = i, size-1
-    !        arr(i) = arr(i+1)
-    !    end do
-    !    size = size - 1
-    !else
-    !    print *, "Person not found"
-    !end if
-    !end subroutine remove
+        call this%insert_support(lo%get_location(), lo)
+    end subroutine insert_support_no_key
 
     ! Resize the array to a new size
     subroutine resize(this, new_size)

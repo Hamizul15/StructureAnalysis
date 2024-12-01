@@ -15,7 +15,7 @@ module load_arraylist
 
         procedure, public :: add_load, get_load
         procedure, public :: sum_of_loads, sum_of_moments
-        procedure, public :: get_size, clear_loads !, remove
+        procedure, public :: get_size, clear_loads
         procedure, public :: get_moments
         procedure, public :: get_non_moments
 
@@ -49,31 +49,6 @@ module load_arraylist
         this%size = this%size + 1
         this%arr(this%size) = lo
     end subroutine add_load
-
-    ! Remove a person (find and shift remaining elements)
-    !subroutine remove(this, person)
-    !class(LoadHashMap), intent(inout) :: this
-    !type(Load), intent(in) :: load
-    !integer :: i, found
-
-    !found = 0
-    !do i = 1, size
-    !    if (this%arr(i)% arr(i)%name == person%name .and. arr(i)%age == person%age) then
-    !        found = 1
-    !exit
-    !    end if
-    !end do
-
-    !if (found == 1) then
-    ! Shift elements after the removed person
-    !    do i = i, size-1
-    !        arr(i) = arr(i+1)
-    !    end do
-    !    size = size - 1
-    !else
-    !    print *, "Person not found"
-    !end if
-    !end subroutine remove
 
     ! Resize the array to a new size
     subroutine resize(this, new_size)

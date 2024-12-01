@@ -43,7 +43,6 @@ contains
 
     subroutine start(this)
         class(Input), intent(inout) :: this
-        class(Support), allocatable :: sup_
         integer :: i
 
         !call this%init()
@@ -59,10 +58,7 @@ contains
 
         this%number_of_supports = get_integer("- Masukkan jumlah tipe support: ", 0)
         do i = 1, this%number_of_supports
-            allocate(sup_)
-            sup_ = new_support(this%length)
-            call this%support_map%insert_support(sup_%get_location(), sup_)
-            deallocate(sup_)
+            call this%support_map%insert_support_no_key(new_support(this%length))
         end do
 
     end subroutine start
