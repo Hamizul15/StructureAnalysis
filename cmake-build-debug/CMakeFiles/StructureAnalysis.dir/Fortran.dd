@@ -11,7 +11,7 @@ build CMakeFiles//StructureAnalysis.dir//managers//location_manager.f90.obj | lo
 build CMakeFiles//StructureAnalysis.dir//services//input_service.f90.obj | input_service.mod: dyndep
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//services//introduction_module.f90.obj | message_module.mod: dyndep
+build CMakeFiles//StructureAnalysis.dir//services//message_module.f90.obj | message_module.mod: dyndep
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//services//moment_calculator.f90.obj | moment_calculator.mod: dyndep | input_manager.mod loads_module.mod location_interval_arraylist.mod location_manager.mod result_module.mod resultload_arraylist.mod
@@ -29,7 +29,7 @@ build CMakeFiles//StructureAnalysis.dir//services//sheer_calculator.f90.obj | sh
 build CMakeFiles//StructureAnalysis.dir//services//utils.f90.obj | utils.mod: dyndep
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//models//loads_module.f90.obj | loads_module.mod: dyndep | input_service.mod location_manager.mod
+build CMakeFiles//StructureAnalysis.dir//models//loads_module.f90.obj | loads_module.mod: dyndep | input_service.mod location_manager.mod message_module.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//models//location_interval_module.f90.obj | location_interval_module.mod: dyndep
@@ -38,7 +38,7 @@ build CMakeFiles//StructureAnalysis.dir//models//location_interval_module.f90.ob
 build CMakeFiles//StructureAnalysis.dir//models//result_module.f90.obj | result_module.mod: dyndep | resultload_arraylist.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | supports_module.mod: dyndep | input_service.mod location_manager.mod
+build CMakeFiles//StructureAnalysis.dir//models//supports_module.f90.obj | supports_module.mod: dyndep | input_service.mod location_manager.mod message_module.mod
   restat = 1
 
 build CMakeFiles//StructureAnalysis.dir//data_structures//arraylist//load_arraylist.f90.obj | load_arraylist.mod: dyndep | loads_module.mod

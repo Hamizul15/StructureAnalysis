@@ -1,13 +1,8 @@
-# 1 "D:/Programming/Fortran/StructureAnalysis/services/introduction_module.f90"
-# 1 "<built-in>"
-# 1 "<command-line>"
-# 1 "D:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug//"
-# 1 "D:/Programming/Fortran/StructureAnalysis/services/introduction_module.f90"
 ! Created by hamiz on 12/1/2024.
 module message_module
     implicit none
 
-    public :: display_intro
+    public :: display_intro, display_depiction_of_supports, display_depiction_of_loads
 
     contains
 
@@ -28,6 +23,23 @@ module message_module
         Print *, "======================================================="
         Print *, ""
     end subroutine display_intro
+
+    subroutine display_depiction_of_supports()
+        print *, "  1.   _         2.   _           3.  ,|| "
+        print *, "      /.\            /.\              ,||--------- "
+        print *, "     /. .\          /. .\             ,||--------- "
+        print *, "    /. . .\        /. . .\            ,|| "
+        print *, "    =======        ======="
+        print *, "                      O"
+    end subroutine display_depiction_of_supports
+
+    subroutine display_depiction_of_loads()
+        print *, "  1.   ||        2.  ==                3. ============"
+        print *, "       ||           //	    /\             ||   ||   ||"
+        print *, "       ||           ==     /\\\           ||   ||   ||"
+        print *, "      \||/          \\      //            ||   ||   ||"
+        print *, "       \/             =======             ============"
+    end subroutine display_depiction_of_loads
 
 
 

@@ -53,55 +53,84 @@ module calculator_determined_service
             real :: loc, load
 
             print *, ""
-            write(*, '(A2)', ADVANCE='NO') label
-            write(*, '(A)', ADVANCE='NO') "("
-            write(*, '(F6.2)', ADVANCE='NO') loc
-            write(*, '(A)', ADVANCE='NO') ")"
-            write(*, '(A4)', ADVANCE='NO') "="
+            write(*, '(A2)', advance='NO') label
+            write(*, '(A)', advance='NO') "("
+            write(*, '(F6.2)', advance='NO') loc
+            write(*, '(A)', advance='NO') ")"
+            write(*, '(A4)', advance='NO') "="
             write(*, '(F8.2)') load
         end subroutine print_load
 
-        subroutine print_sheer(this, sheer)
+        subroutine print_sheer(this, sheers)
             class(CalculatorDetermined), intent(inout) :: this
-            type(ResultLoadArrayList) :: sheer
+            type(ResultLoadArrayList), allocatable :: sheers(:)
+            type(ResultLoadArrayList) :: current_sheers
             type(ResultLoad) :: current_sheer
             type(LocationIntervalArrayList) :: intervals
             type(LocationInterval) :: current_inter
-            integer :: i
+            integer :: i, j
+
+            intervals = get_intervals()
 
             print *, ""
             print *, "Bidang D"
-            write(*, '(A8)', ADVANCE='NO') "Lokasi"
-            write(*, '(A8)', ADVANCE='NO') " --> "
-            write(*, '(A8)') "Beban"
-            do i = 1, sheer%get_size()
-                current_sheer = sheer%get_resultload(i)
-                write(*, '(F8.2)', ADVANCE='NO') current_sheer%get_location()
-                write(*, '(A8)', ADVANCE='NO') " --> "
-                write(*, '(F8.2)') current_sheer%get_load()
+            do i = 1, intervals%get_size()
+                current_inter = intervals%get_location_lnterval(i)
+                current_sheers = sheers(i)
+
+                print *, ""
+                write(*, '(A8)', advance='NO') "Interval"
+                write(*, '(F8.2)', advance='NO') current_inter%get_start()
+                write(*, '(A16)', advance='NO') " <= x <= "
+                write(*, '(F16.2)', advance='NO') current_inter%get_end()
+                print *, ""
+                write(*, '(A16)', advance='NO') "Lokasi"
+                write(*, '(A16)', advance='NO') " --> "
+                write(*, '(A16)') "Beban"
+                do j = 1, current_sheers%get_size()
+                    current_sheer = current_sheers%get_resultload(j)
+                    write(*, '(F16.2)', ADVANCE='NO') current_sheer%get_location()
+                    write(*, '(A16)', ADVANCE='NO') " --> "
+                    write(*, '(F16.2)') current_sheer%get_load()
+                end do
             end do
             print *, ""
         end subroutine print_sheer
 
-        subroutine print_moment(this, moment)
+        subroutine print_moment(this, moments)
             class(CalculatorDetermined), intent(inout) :: this
-            type(ResultLoadArrayList) :: moment
+            type(ResultLoadArrayList), allocatable :: moments(:)
+            type(ResultLoadArrayList) :: current_moments
             type(ResultLoad) :: current_moment
+            type(LocationIntervalArrayList) :: intervals
             type(LocationInterval) :: current_inter
-            integer :: i
+            integer :: i, j
+
+            intervals = get_intervals()
 
             print *, ""
             print *, "Bidang M"
-            write(*, '(A8)', ADVANCE='NO') "Lokasi"
-            write(*, '(A8)', ADVANCE='NO') " --> "
-            write(*, '(A8)') "Momen"
-            do i = 1, moment%get_size()
-                current_moment = moment%get_resultload(i)
-                write(*, '(F8.2)', ADVANCE='NO') current_moment%get_location()
-                write(*, '(A8)', ADVANCE='NO') " --> "
-                write(*, '(F8.2)') current_moment%get_load()
+            do i = 1, intervals%get_size()
+                current_inter = intervals%get_location_lnterval(i)
+                current_moments = moments(i)
+
+                print *, ""
+                write(*, '(A8)', advance='NO') "Interval"
+                write(*, '(F8.2)', advance='NO') current_inter%get_start()
+                write(*, '(A16)', advance='NO') " <= x <= "
+                write(*, '(F16.2)') current_inter%get_end()
+                print *, ""
+                write(*, '(A16)', ADVANCE='NO') "Lokasi"
+                write(*, '(A16)', ADVANCE='NO') " --> "
+                write(*, '(A16)') "Beban"
+                do j = 1, current_moments%get_size()
+                    current_moment = current_moments%get_resultload(j)
+                    write(*, '(F16.2)', ADVANCE='NO') current_moment%get_location()
+                    write(*, '(A16)', ADVANCE='NO') " --> "
+                    write(*, '(F16.2)') current_moment%get_load()
+                end do
             end do
-            print *, ""
+
         end subroutine print_moment
 
         !Two Support

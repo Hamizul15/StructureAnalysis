@@ -67,13 +67,15 @@ contains
 
     function get_sheers(this) result(sheers)
         class(SheerCalculator), intent(inout) :: this
-        type(ResultLoadArrayList) :: sheers
+        type(ResultLoadArrayList), allocatable :: sheers(:)
+        type(ResultLoadArrayList) :: current_sheers
         type(LocationIntervalArrayList) :: intervals
         type(LocationInterval) :: current_inter
         real :: current_loc, step, total_load, sum_of_reactions, sum_of_loads
         integer :: i, iteration = 1
 
         intervals = get_intervals()
+        allocate(sheers(intervals%get_size()))
         do i = 1, intervals%get_size()
             current_inter = intervals%get_location_lnterval(i)
             do current_loc = current_inter%get_start(), current_inter%get_end()
@@ -81,9 +83,10 @@ contains
                 sum_of_reactions = this%get_current_sum_of_reactions(current_loc, iteration)
                 total_load = sum_of_loads + sum_of_reactions
 
-                call sheers%add_resultload(new_resultload(current_loc, total_load))
+                call current_sheers%add_resultload(new_resultload(current_loc, total_load))
                 iteration = iteration + 1
             end do
+            sheers(i) = current_sheers
             iteration = 1
         end do
     end function get_sheers

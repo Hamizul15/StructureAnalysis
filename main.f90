@@ -13,6 +13,7 @@ program structure_analysis
     do
         call display_intro()
         call construct_location_manager()
+
         call inp%start()
         call cacl%calculate(inp)
 

@@ -7,6 +7,7 @@
 module loads_module
     use input_service
     use location_manager
+    use message_module
     implicit none
 
     integer, parameter :: NUMBER_OF_LOADS = 3, POINT_ = 1, MOMENT_ = 2, DISTRIBUTED_ = 3
@@ -134,6 +135,7 @@ module loads_module
             types = get_types()
 
             WRITE (*, '(A)') 'Silahkan pilih tipe beban'
+            call display_depiction_of_loads()
             DO i = 1, SIZE(types)
                 PRINT '(I1.0, A, A)', i, '. ', types(i)
             END DO

@@ -93,13 +93,15 @@ module moment_calculator
 
         function get_moments(this) result(moments)
             class(MomentCalculator), intent(inout) :: this
-            type(ResultLoadArrayList) :: moments
+            type(ResultLoadArrayList), allocatable :: moments(:)
+            type(ResultLoadArrayList) :: current_moments
             type(LocationIntervalArrayList) :: intervals
             type(LocationInterval) :: current_inter
             real :: current_loc, total_load, moment_of_reactions, moments_of_loads, sum_of_moments
             integer :: i, iteration = 1
 
             intervals = get_intervals()
+            allocate(moments(intervals%get_size()))
             do i = 1, intervals%get_size()
                 current_inter = intervals%get_location_lnterval(i)
                 do current_loc = current_inter%get_start(), current_inter%get_end()
@@ -107,9 +109,10 @@ module moment_calculator
                     moment_of_reactions = this%get_current_moment_of_reactions(current_loc, iteration)
                     sum_of_moments = this%get_current_sum_of_moments(current_loc, iteration)
                     total_load = moments_of_loads + moment_of_reactions + sum_of_moments
-                    call moments%add_resultload(new_resultload(current_loc, total_load))
+                    call current_moments%add_resultload(new_resultload(current_loc, total_load))
                     iteration = iteration + 1
                 end do
+                moments(i) = current_moments
                 iteration = 1
             end do
         end function get_moments

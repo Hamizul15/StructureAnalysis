@@ -148,7 +148,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "services/introduction_module.f90",
+			"path" : "services/message_module.f90",
 			"sourceGroupIndex" : 0
 		},
 		{

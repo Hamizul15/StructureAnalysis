@@ -3,6 +3,6 @@
 -- Detecting Fortran compiler ABI info
 -- Detecting Fortran compiler ABI info - done
 -- Check for working Fortran compiler: C:/Users/hamiz/gcc/bin/gfortran.exe - skipped
--- Configuring done (3.3s)
+-- Configuring done (1.7s)
 -- Generating done (0.0s)
 -- Build files have been written to: D:/Programming/Fortran/StructureAnalysis/cmake-build-debug

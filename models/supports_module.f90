@@ -2,6 +2,7 @@
 module supports_module
     use input_service
     use location_manager
+    use message_module
     implicit none
 
     integer, parameter :: NUMBER_OF_SUPPORTS = 3, PIN_ = 1, ROLLER_ = 2, FIXED_ = 3
@@ -72,6 +73,7 @@ contains
         types = get_types()
 
         WRITE (*, '(A)') 'Silahkan pilih tipe tumpuhan'
+        call display_depiction_of_supports()
         DO i = 1, SIZE(types)
             PRINT '(I1.0, A, A)', i, '. ', types(i)
         END DO
