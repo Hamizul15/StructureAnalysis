@@ -26,9 +26,6 @@ build CMakeFiles//StructureAnalysis.dir//services//reaction_calculator//calculat
 build CMakeFiles//StructureAnalysis.dir//services//sheer_calculator.f90.obj | sheer_calculator.mod: dyndep | input_manager.mod loads_module.mod location_interval_arraylist.mod location_manager.mod result_module.mod resultload_arraylist.mod
   restat = 1
 
-build CMakeFiles//StructureAnalysis.dir//services//utils.f90.obj | utils.mod: dyndep
-  restat = 1
-
 build CMakeFiles//StructureAnalysis.dir//models//loads_module.f90.obj | loads_module.mod: dyndep | input_service.mod location_manager.mod message_module.mod
   restat = 1
 

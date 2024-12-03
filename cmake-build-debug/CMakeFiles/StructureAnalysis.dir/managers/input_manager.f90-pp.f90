@@ -25,7 +25,7 @@ module input_manager
         procedure :: start, dispose !, init
         !getter
         procedure :: get_length
-        procedure :: get_step_for_md
+        !procedure :: get_step_for_md
         procedure :: get_number_of_loads
         procedure :: get_number_of_supports
         procedure :: get_supports
@@ -49,7 +49,6 @@ contains
         call add_location(0.0)
         this%length = get_real("- Masukkan panjang beam: ", 0.0)
         call add_location(this%length)
-        !this%step_for_md = get_integer("- Masukkan jumlah step untuk MDN: ", 0)
 
         print *, ""
         this%number_of_loads = get_integer("- Masukkan jumlah tipe beban: ", 0)
@@ -70,8 +69,8 @@ contains
 
         this%length = -1.0
         this%number_of_supports = -1
-        this%number_of_supports = -1
-        this%step_for_md = -1
+        this%number_of_loads = -1
+        !this%step_for_md = -1
         call this%load_array%clear_loads()
         call this%support_map%clear_supports()
     end subroutine dispose
@@ -82,11 +81,11 @@ contains
         get_length = this%length
     end function get_length
 
-    real function get_step_for_md(this)
-        class(Input), intent(in) :: this
+    !real function get_step_for_md(this)
+    !    class(Input), intent(in) :: this
 
-        get_step_for_md = this%step_for_md
-    end function get_step_for_md
+    !    get_step_for_md = this%step_for_md
+    !end function get_step_for_md
 
     real function get_number_of_loads(this)
         class(Input), intent(in) :: this

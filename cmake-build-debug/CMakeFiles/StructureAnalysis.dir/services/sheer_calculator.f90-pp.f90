@@ -92,6 +92,7 @@ contains
                 iteration = iteration + 1
             end do
             sheers(i) = current_sheers
+            call current_sheers%clear_resultloads()
             iteration = 1
         end do
     end function get_sheers

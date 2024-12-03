@@ -90,11 +90,6 @@
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/supports_module.mod",
 			"is-private" : false
-		},
-		"utils.mod" : 
-		{
-			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/utils.mod",
-			"is-private" : false
 		}
 	},
 	"references" : {},

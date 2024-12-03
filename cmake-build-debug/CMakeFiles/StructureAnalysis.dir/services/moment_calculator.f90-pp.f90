@@ -113,6 +113,7 @@ module moment_calculator
                     iteration = iteration + 1
                 end do
                 moments(i) = current_moments
+                call current_moments%clear_resultloads()
                 iteration = 1
             end do
         end function get_moments

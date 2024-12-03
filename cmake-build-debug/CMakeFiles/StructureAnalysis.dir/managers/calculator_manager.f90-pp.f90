@@ -38,8 +38,6 @@ module calculator_manager
         else if (number_of_reactions > 3) then
             !allocate(CalculatorUndetermined :: calc)
             print *, "Terdeteksi Struktur Tidak Tentu! Program kami belum mendukung untuk memecahkan tersebut!"
-        else
-            stop "Error!!!"
         end if
 
         if (allocated(calc)) then

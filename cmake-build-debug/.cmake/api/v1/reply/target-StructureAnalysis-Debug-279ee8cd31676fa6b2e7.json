@@ -62,8 +62,7 @@
 				15,
 				16,
 				17,
-				18,
-				19
+				18
 			]
 		}
 	],
@@ -114,8 +113,7 @@
 				15,
 				16,
 				17,
-				18,
-				19
+				18
 			]
 		}
 	],
@@ -173,12 +171,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "services/sheer_calculator.f90",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "services/utils.f90",
 			"sourceGroupIndex" : 0
 		},
 		{
