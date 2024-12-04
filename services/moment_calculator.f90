@@ -23,7 +23,6 @@ module moment_calculator
             procedure :: get_current_moment_of_reactions
             procedure :: get_current_sum_of_moments
             procedure :: find_current_load_of_distributed
-            procedure :: find_current_center_location_of_distributed
             procedure :: get_proper_condition
 
             procedure, public :: init, get_moments
@@ -113,37 +112,45 @@ module moment_calculator
             end do
         end function get_moments
 
-        function find_current_load_of_distributed(this, current_loc, distributed_load) result(cld)
+        !function find_current_load_of_distributed(this, current_loc, distributed_load) result(cld)
+        !    class(MomentCalculator), intent(inout) :: this
+        !    real, intent(in) :: current_loc
+        !    type(Load), intent(in) :: distributed_load
+        !    real :: cld, length, numerator, denominator, the_height
+
+        !    length = current_loc - distributed_load%get_start_location()
+        !    numerator = (distributed_load%get_end_load() - distributed_load%get_start_load()) * -1
+        !    denominator = distributed_load%get_end_location() - distributed_load%get_start_location()
+        !    the_height = (((numerator / denominator) * length) + (distributed_load%get_start_load() * -1))
+
+        !    cld = (distributed_load%get_start_load() * -1 + the_height) * length / 2
+        !    print *, current_loc, " load--> ", cld
+        !end function find_current_load_of_distributed
+
+        function find_current_load_of_distributed(this, current_loc, distributed_load) result(current_load)
             class(MomentCalculator), intent(inout) :: this
             real, intent(in) :: current_loc
             type(Load), intent(in) :: distributed_load
+            type(Load) :: current_load
             real :: cld, length, numerator, denominator, the_height
 
             length = current_loc - distributed_load%get_start_location()
             numerator = (distributed_load%get_end_load() - distributed_load%get_start_load()) * -1
             denominator = distributed_load%get_end_location() - distributed_load%get_start_location()
-            the_height = (((numerator / denominator) * length) + (distributed_load%get_start_load() * -1))
+            the_height = (((numerator / denominator) * length) + (distributed_load%get_start_load() * -1)) * -1
 
-            cld = (distributed_load%get_start_load() * -1 + the_height) * length / 2
+            call current_load%set_type(DISTRIBUTED_)
+            call current_load%set_start_load(distributed_load%get_start_load())
+            call current_load%set_end_load(the_height)
+            call current_load%set_start_location(distributed_load%get_start_location())
+            call current_load%set_end_location(distributed_load%get_start_location() + length)
         end function find_current_load_of_distributed
-
-        function find_current_center_location_of_distributed(this, current_loc, distributed_load) result(loc)
-            class(MomentCalculator), intent(inout) :: this
-            real, intent(in) :: current_loc
-            type(Load), intent(in) :: distributed_load
-            real :: loc, length, first_part, second_part
-
-            length = current_loc - distributed_load%get_start_location()
-            first_part = (distributed_load%get_start_load() + 2 * distributed_load%get_end_load()) * length
-            second_part = 3 * (distributed_load%get_start_load() + distributed_load%get_end_load())
-            loc = distributed_load%get_start_location() + (first_part / second_part)
-        end function find_current_center_location_of_distributed
 
         function get_current_moment_of_loads(this, current_loc, iteration) result(sum)
             class(MomentCalculator), intent(inout) :: this
             real, intent(in) :: current_loc
             real :: sum, distance
-            type(Load) :: current_load
+            type(Load) :: current_load, cld
             integer :: i, iteration
 
             sum = 0.0
@@ -152,12 +159,10 @@ module moment_calculator
                 if (this%get_proper_condition(iteration, current_loc, current_load%get_start_location())) then
                     !check wheteher location is between distributed load
                     if((current_load%get_type() == DISTRIBUTED_).and.(current_loc < current_load%get_end_location())) then
-                        distance = current_loc - this%find_current_center_location_of_distributed(current_loc, current_load)
-                        sum = sum + this%find_current_load_of_distributed(current_loc, current_load) * distance
-                    else
-                        distance = current_loc - current_load%get_actual_location()
-                        sum = sum + current_load%get_total_load() * distance * -1
+                        current_load = this%find_current_load_of_distributed(current_loc, current_load)
                     end if
+                    distance = current_loc - current_load%get_actual_location()
+                    sum = sum + current_load%get_total_load() * distance * -1
                 end if
             end do
         end function get_current_moment_of_loads

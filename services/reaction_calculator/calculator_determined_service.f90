@@ -52,7 +52,6 @@ module calculator_determined_service
             character(*) :: label
             real :: loc, load
 
-            print *, ""
             write(*, '(A2)', advance='NO') label
             write(*, '(A)', advance='NO') "("
             write(*, '(F6.2)', advance='NO') loc
@@ -73,7 +72,9 @@ module calculator_determined_service
             intervals = get_intervals()
 
             print *, ""
+            print *, "==========================================="
             print *, "Bidang D"
+            print *, "==========================================="
             do i = 1, intervals%get_size()
                 current_inter = intervals%get_location_lnterval(i)
                 current_sheers = sheers(i)
@@ -109,7 +110,9 @@ module calculator_determined_service
             intervals = get_intervals()
 
             print *, ""
+            print *, "==========================================="
             print *, "Bidang M"
+            print *, "==========================================="
             do i = 1, intervals%get_size()
                 current_inter = intervals%get_location_lnterval(i)
                 current_moments = moments(i)
@@ -118,10 +121,10 @@ module calculator_determined_service
                 write(*, '(A8)', advance='NO') "Interval"
                 write(*, '(F8.2)', advance='NO') current_inter%get_start()
                 write(*, '(A16)', advance='NO') " <= x <= "
-                write(*, '(F16.2)') current_inter%get_end()
+                write(*, '(F16.2)', advance='NO') current_inter%get_end()
                 print *, ""
-                write(*, '(A16)', ADVANCE='NO') "Lokasi"
-                write(*, '(A16)', ADVANCE='NO') " --> "
+                write(*, '(A16)', advance='NO') "Lokasi"
+                write(*, '(A16)', advance='NO') " --> "
                 write(*, '(A16)') "Beban"
                 do j = 1, current_moments%get_size()
                     current_moment = current_moments%get_resultload(j)
@@ -130,7 +133,7 @@ module calculator_determined_service
                     write(*, '(F16.2)') current_moment%get_load()
                 end do
             end do
-
+            print *, ""
         end subroutine print_moment
 
         !Two Support
@@ -151,8 +154,11 @@ module calculator_determined_service
             va = reactions%get_resultload(1)
             vb = reactions%get_resultload(2)
 
+            print *, ""
+            print *, "==========================================="
             call this%print_load("Va", va%get_location(), va%get_load())
             call this%print_load("Vb", vb%get_location(), vb%get_load())
+            print *, "==========================================="
             call this%print_sheer(result_%get_sheers())
             call this%print_moment(result_%get_moments())
 
@@ -258,8 +264,11 @@ module calculator_determined_service
             ra = reactions%get_resultload(1)
             ma = mreactions%get_resultload(1)
 
+            print *, ""
+            print *, "==========================================="
             call this%print_load("Va", ra%get_location(), ra%get_load())
             call this%print_load("Ma", ma%get_location(), ma%get_load())
+            print *, "==========================================="
             call this%print_sheer(result_%get_sheers())
             call this%print_moment(result_%get_moments())
 

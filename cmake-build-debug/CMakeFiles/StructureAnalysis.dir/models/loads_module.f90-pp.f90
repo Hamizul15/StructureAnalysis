@@ -20,14 +20,12 @@ module loads_module
         integer :: type
 
        contains
-            private
-            procedure :: set_type
-
             !setter
             procedure, public :: set_start_location
             procedure, public :: set_start_load
             procedure, public :: set_end_location
             procedure, public :: set_end_load
+            procedure, public :: set_type
 
            !getter
             procedure, public :: get_start_location
@@ -98,9 +96,9 @@ module loads_module
             integer :: type_
 
             type_ = get_choosen_type()
-            if(type_ == 1) allocate(Point :: new_ld)
-            if(type_ == 2) allocate(Moment :: new_ld)
-            if(type_ == 3) allocate(Distributed :: new_ld)
+            if(type_ == POINT_) allocate(Point :: new_ld)
+            if(type_ == MOMENT_) allocate(Moment :: new_ld)
+            if(type_ == DISTRIBUTED_) allocate(Distributed :: new_ld)
             call new_ld%set_type(type_)
 
             select type(stored => new_ld)
