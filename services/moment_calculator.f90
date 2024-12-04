@@ -113,21 +113,6 @@ module moment_calculator
             end do
         end function get_moments
 
-        !function find_current_load_of_distributed(this, current_loc, distributed_load) result(cld)
-        !    class(MomentCalculator), intent(inout) :: this
-        !    real, intent(in) :: current_loc
-        !    type(Load), intent(in) :: distributed_load
-        !    real :: cld, length, numerator, denominator, the_height
-
-        !    length = current_loc - distributed_load%get_start_location()
-        !    numerator = (distributed_load%get_end_load() - distributed_load%get_start_load()) * -1
-        !    denominator = distributed_load%get_end_location() - distributed_load%get_start_location()
-        !    the_height = (((numerator / denominator) * length) + (distributed_load%get_start_load() * -1))
-
-        !    cld = (distributed_load%get_start_load() * -1 + the_height) * length / 2
-        !    print *, current_loc, " load--> ", cld
-        !end function find_current_load_of_distributed
-
         function find_current_load_of_distributed(this, current_loc, distributed_load) result(current_load)
             class(MomentCalculator), intent(inout) :: this
             real, intent(in) :: current_loc

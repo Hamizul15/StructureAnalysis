@@ -259,11 +259,9 @@ module calculator_determined_service
         subroutine calculate_with_fixed_support(this)
             class(CalculatorDetermined), intent(inout) :: this
             type(Result) :: result_
-            type(Input) :: input_
             type(ResultLoadArrayList) :: reactions, mreactions
             type(ResultLoad) :: ma, ra
 
-            input_ = this%get_input()
             result_ = this%get_fixed_support_result()
             reactions = result_%get_reactions()
             mreactions = result_%get_moment_reactions()
