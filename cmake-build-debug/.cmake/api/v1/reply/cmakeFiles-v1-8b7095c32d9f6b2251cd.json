@@ -1,0 +1,235 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineFortranCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeFortranCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-Fortran.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-Fortran.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestFortranCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompilerABI.F90"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFortranCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeFortranCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/hamiz/AppData/Local/JetBrains/CLion 2024.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-Fortran-ABI.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug",
+		"source" : "D:/Programming/Fortran/StructureAnalysis"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

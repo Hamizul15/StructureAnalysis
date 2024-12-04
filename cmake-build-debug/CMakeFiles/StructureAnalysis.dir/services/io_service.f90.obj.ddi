@@ -1,0 +1,40 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\services\\\\io_service.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "io_service.mod",
+					"is-interface" : true,
+					"logical-name" : "io_service.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "load_arraylist.mod"
+				},
+				{
+					"logical-name" : "loads_module.mod"
+				},
+				{
+					"logical-name" : "location_interval_arraylist.mod"
+				},
+				{
+					"logical-name" : "result_module.mod"
+				},
+				{
+					"logical-name" : "support_hashmap.mod"
+				},
+				{
+					"logical-name" : "supports_module.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

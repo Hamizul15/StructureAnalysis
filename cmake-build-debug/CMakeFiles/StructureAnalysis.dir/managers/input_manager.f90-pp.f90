@@ -10,6 +10,7 @@ module input_manager
     use loads_module
     use load_arraylist
     use support_hashmap
+    use io_service
     implicit none
 
     type :: Input
@@ -62,6 +63,7 @@ contains
             call this%support_map%insert_support_no_key(new_support(this%length))
         end do
 
+        call write_input(this%length, this%load_array, this%support_map)
     end subroutine start
 
     subroutine dispose(this)

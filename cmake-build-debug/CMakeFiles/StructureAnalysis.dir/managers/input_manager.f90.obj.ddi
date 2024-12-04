@@ -19,6 +19,9 @@
 					"logical-name" : "input_service.mod"
 				},
 				{
+					"logical-name" : "io_service.mod"
+				},
+				{
 					"logical-name" : "load_arraylist.mod"
 				},
 				{

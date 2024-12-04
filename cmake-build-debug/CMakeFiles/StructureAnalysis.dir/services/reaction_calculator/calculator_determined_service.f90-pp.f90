@@ -11,6 +11,7 @@ module calculator_determined_service
     use sheer_calculator
     use moment_calculator
     use location_manager
+    use io_service
 
     implicit none
 
@@ -130,7 +131,7 @@ module calculator_determined_service
                 print *, ""
                 write(*, '(A16)', advance='NO') "Lokasi"
                 write(*, '(A16)', advance='NO') " --> "
-                write(*, '(A16)') "Beban"
+                write(*, '(A16)') "Momen"
                 do j = 1, current_moments%get_size()
                     current_moment = current_moments%get_resultload(j)
                     write(*, '(F16.2)', ADVANCE='NO') current_moment%get_location()
@@ -167,6 +168,7 @@ module calculator_determined_service
             call this%print_sheer(result_%get_sheers())
             call this%print_moment(result_%get_moments())
 
+            call write_output(result_)
         end subroutine calculate_with_two_support
 
         function get_two_support_result(this) result(result_)
@@ -189,7 +191,7 @@ module calculator_determined_service
 
             do i = 1, loads%get_size()
                 current_load = loads%get_load(i)
-                if(current_load%get_type() /= 2) then
+                if(current_load%get_type() /= MOMENT_) then
                     distance_to_anchor = anchor%get_location() - current_load%get_actual_location()
                     reaction = reaction + (current_load%get_total_load() * distance_to_anchor)
                 else
@@ -277,6 +279,7 @@ module calculator_determined_service
             call this%print_sheer(result_%get_sheers())
             call this%print_moment(result_%get_moments())
 
+            call write_output(result_)
         end subroutine calculate_with_fixed_support
 
         function get_fixed_support_result(this) result(result_)
@@ -302,7 +305,7 @@ module calculator_determined_service
 
             do i = 1, loads%get_size()
                 current_load = loads%get_load(i)
-                if(current_load%get_type() /= 2) then
+                if(current_load%get_type() /= MOMENT_) then
                     distance_to_anchor = (anchor%get_location() - current_load%get_actual_location()) * -1
                     ma = ma + (current_load%get_total_load() * distance_to_anchor)
                 else

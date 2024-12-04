@@ -12,10 +12,11 @@ module supports_module
     type :: Support
         private
         real :: loc
-        integer :: type
+        integer :: type_
 
     contains
         procedure :: set_location
+        procedure :: set_type
         procedure :: get_location
         procedure :: get_type
         procedure :: get_number_of_reaction
@@ -56,7 +57,7 @@ contains
         if(type_ == PIN_) allocate(Pin :: sup)
         if(type_ == ROLLER_) allocate(Roller :: sup)
         if(type_ == FIXED_) allocate(Fixed :: sup)
-        sup%type = type_
+        call sup%set_type(type_)
 
         if (type_ == FIXED_) then
             call sup%set_location(get_real_restricted("Masukkan posisi tumpuhan: ", allowed_fixed_loc))
@@ -95,6 +96,13 @@ contains
         this%loc = new_location
     end subroutine set_location
 
+    subroutine set_type(this, tipe)
+        class(Support), intent(inout) :: this
+        integer, intent(in) :: tipe
+
+        this%type_ = tipe
+    end subroutine set_type
+
     function get_location(this) result(loc)
         class(Support), intent(in) :: this
         real :: loc
@@ -117,7 +125,7 @@ contains
         class(Support), intent(in) :: this
         integer :: tipe
 
-        tipe = this%type
+        tipe = this%type_
     end function get_type
 
     integer function get_pin_number_of_reaction(this)
@@ -143,7 +151,7 @@ contains
         class(Support), intent(out) :: lhs
         class(Support), intent(in) :: rhs
         lhs%loc = rhs%loc
-        lhs%type = rhs%type
+        lhs%type_ = rhs%type_
     end subroutine assign_support
 
 end module supports_module

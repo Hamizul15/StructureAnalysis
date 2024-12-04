@@ -108,6 +108,7 @@ module moment_calculator
                     moment_of_reactions = this%get_current_moment_of_reactions(current_loc, iteration)
                     sum_of_moments = this%get_current_sum_of_moments(current_loc, iteration)
                     total_load = moments_of_loads + moment_of_reactions + sum_of_moments
+
                     call current_moments%add_resultload(new_resultload(current_loc, total_load))
                     iteration = iteration + 1
                 end do
@@ -144,13 +145,11 @@ module moment_calculator
             denominator = distributed_load%get_end_location() - distributed_load%get_start_location()
             the_height = (((numerator / denominator) * length) + (distributed_load%get_start_load() * -1)) * -1
 
-            !cld = (distributed_load%get_start_load() * -1 + the_height) * length / 2
             call current_load%set_type(DISTRIBUTED_)
             call current_load%set_start_load(distributed_load%get_start_load())
             call current_load%set_end_load(the_height)
             call current_load%set_start_location(distributed_load%get_start_location())
             call current_load%set_end_location(distributed_load%get_start_location() + length)
-            !print *, current_loc, " load--> ", cld
         end function find_current_load_of_distributed
 
         function get_current_moment_of_loads(this, current_loc, iteration) result(sum)

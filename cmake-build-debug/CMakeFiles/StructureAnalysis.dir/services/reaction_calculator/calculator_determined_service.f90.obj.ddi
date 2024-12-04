@@ -19,6 +19,9 @@
 					"logical-name" : "calculator_service.mod"
 				},
 				{
+					"logical-name" : "io_service.mod"
+				},
+				{
 					"logical-name" : "location_manager.mod"
 				},
 				{
