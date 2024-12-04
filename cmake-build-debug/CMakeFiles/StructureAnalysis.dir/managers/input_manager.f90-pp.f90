@@ -52,13 +52,13 @@ contains
         call add_location(this%length)
 
         print *, ""
-        this%number_of_loads = get_integer("- Masukkan jumlah tipe beban: ", 0)
+        this%number_of_loads = get_integer("- Masukkan jumlah beban: ", 0)
         do i = 1, this%number_of_loads
             call this%load_array%add_load(new_load(this%length))
         end do
 
         print *, ""
-        this%number_of_supports = get_integer("- Masukkan jumlah tipe support: ", 0)
+        this%number_of_supports = get_integer("- Masukkan jumlah support: ", 0)
         do i = 1, this%number_of_supports
             call this%support_map%insert_support_no_key(new_support(this%length))
         end do

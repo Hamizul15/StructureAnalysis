@@ -133,7 +133,7 @@ module io_service
 
         !momen reaksi
         if(moment_reactions%get_size() > 0) then
-            write(OUTPUT_, '(A)') "Momen: "
+            write(OUTPUT_, '(A)') "Reaksi Momen: "
             write(OUTPUT_, '(A16)', advance='no') "Lokasi"
             write(OUTPUT_, '(A8)', advance='no') "------>"
             write(OUTPUT_, '(A16)') "Besar Momen"
@@ -204,14 +204,12 @@ module io_service
 
         ! Close the file
         close(OUTPUT_)
-
     end subroutine write_output
 
     subroutine create_output_directory()
         logical :: directory_exists
         integer :: ierr
 
-        ! Check if the directory exists
         inquire(file=trim("output"), exist=directory_exists)
 
         if (.not.directory_exists) then
