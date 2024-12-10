@@ -23,9 +23,6 @@
 				},
 				{
 					"logical-name" : "input_manager.mod"
-				},
-				{
-					"logical-name" : "supports_module.mod"
 				}
 			]
 		}

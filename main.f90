@@ -3,7 +3,6 @@ program structure_analysis
     use message_module
     use calculator_manager
     use location_manager
-    use location_interval_arraylist
     implicit none
 
     type(Input) :: inp

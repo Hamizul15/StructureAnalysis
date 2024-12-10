@@ -18,10 +18,9 @@ module input_manager
         type(LoadArrayList) :: load_array
 
     contains
-        procedure :: start, dispose !, init
+        procedure :: start, dispose
         !getter
         procedure :: get_length
-        !procedure :: get_step_for_md
         procedure :: get_number_of_loads
         procedure :: get_number_of_supports
         procedure :: get_supports
@@ -30,12 +29,6 @@ module input_manager
     end type Input
 
 contains
-
-    !subroutine init(this)
-    !    class(Input), intent(inout) :: this
-    !
-    !   call this%support_map%init_support_map()
-    !end subroutine init
 
     subroutine start(this)
         class(Input), intent(inout) :: this

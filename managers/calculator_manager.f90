@@ -1,6 +1,5 @@
 ! Created by hamiz on 11/28/2024.
 module calculator_manager
-    use supports_module
     use input_manager
     use calculator_service, only : Calculator, CalculatorUndetermined, calculate_bro => calculate, init
     use calculator_determined_service, only : CalculatorDetermined, calculate_sis => calculate

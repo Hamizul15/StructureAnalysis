@@ -63,17 +63,6 @@ module loads_module
 
     type, extends(Load) :: Distributed
     contains
-        !setter
-        !procedure :: set_start_location => set_distributed_start_location
-        !procedure :: set_end_location => set_distributed_end_location
-        !procedure :: set_start_load => set_distributed_start_load
-        !procedure :: set_end_load => set_distributed_end_load
-
-        !getter
-        !procedure :: get_start_location => get_distributed_start_location
-        !procedure :: get_end_location => get_distributed_end_location
-        !procedure :: get_start_load => get_distributed_start_load
-        !procedure :: get_end_load => get_distributed_end_load
         procedure :: get_total_load => get_distributed_total_load
 
     end type Distributed
