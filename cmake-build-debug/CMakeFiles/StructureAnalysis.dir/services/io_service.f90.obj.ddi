@@ -28,7 +28,7 @@
 					"logical-name" : "result_module.mod"
 				},
 				{
-					"logical-name" : "support_hashmap.mod"
+					"logical-name" : "support_set.mod"
 				},
 				{
 					"logical-name" : "supports_module.mod"

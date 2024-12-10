@@ -1,5 +1,5 @@
 module calculator_service
-    use input_manager, only : Input, SupportHashMap, Load, LoadArrayList
+    use input_manager, only : Input
     use supports_module, only : Support
     use result_module, only : Result, ResultLoad
     implicit none

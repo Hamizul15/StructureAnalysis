@@ -9,7 +9,7 @@ module input_manager
     use supports_module
     use loads_module
     use load_arraylist
-    use support_hashmap
+    use support_set
     use io_service
     implicit none
 
@@ -19,7 +19,7 @@ module input_manager
         integer :: number_of_loads
         integer :: number_of_supports
         integer :: step_for_md
-        type(SupportHashMap) :: support_map
+        type(SupportSet) :: support_set
         type(LoadArrayList) :: load_array
 
     contains
@@ -44,6 +44,7 @@ contains
 
     subroutine start(this)
         class(Input), intent(inout) :: this
+        type(Support) :: current_sup
         integer :: i
 
         !call this%init()
@@ -58,12 +59,22 @@ contains
         end do
 
         print *, ""
+        i = 1
         this%number_of_supports = get_integer("- Masukkan jumlah support: ", 0)
-        do i = 1, this%number_of_supports
-            call this%support_map%insert_support_no_key(new_support(this%length))
+        do
+            current_sup = new_support(this%length)
+            if(this%support_set%is_location_occupied(current_sup%get_location())) then
+                print *, "Location has been occupaied"
+                print *, ""
+                cycle
+            end if
+            call this%support_set%add_support_to_set(current_sup)
+
+            i = i + 1
+            if(i > this%number_of_supports) exit
         end do
 
-        call write_input(this%length, this%load_array, this%support_map)
+        call write_input(this%length, this%load_array, this%support_set)
     end subroutine start
 
     subroutine dispose(this)
@@ -74,7 +85,7 @@ contains
         this%number_of_loads = -1
         !this%step_for_md = -1
         call this%load_array%clear_loads()
-        call this%support_map%clear_supports()
+        call this%support_set%clear_support_set()
     end subroutine dispose
 
     real function get_length(this)
@@ -111,9 +122,9 @@ contains
 
     function get_supports(this) result(sups)
         class(Input), intent(in) :: this
-        type(SupportHashMap) :: sups
+        type(SupportSet) :: sups
 
-        sups = this%support_map
+        sups = this%support_set
     end function get_supports
 
 

@@ -24,12 +24,12 @@ module calculator_manager
         implicit none
         class(CalculatorManager), intent(in) :: this
         type(Input), intent(in) :: inp
-        type(SupportHashMap) :: sup_map
+        type(SupportSet) :: sup_set
         class(Calculator), allocatable :: calc
         integer :: number_of_reactions
 
-        sup_map = inp%get_supports()
-        number_of_reactions = sup_map%sum_of_number_of_reactions()
+        sup_set = inp%get_supports()
+        number_of_reactions = sup_set%sum_of_number_of_reactions()
 
         if(number_of_reactions == 3) then !it means statically determinate
             allocate(CalculatorDetermined :: calc)

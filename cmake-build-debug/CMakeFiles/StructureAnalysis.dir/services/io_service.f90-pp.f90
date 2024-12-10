@@ -8,7 +8,7 @@ module io_service
     use loads_module
     use load_arraylist, only : Load, LoadArrayList, get_loads_size => get_size
     use supports_module
-    use support_hashmap, only: SupportHashMap, get_supports_size => get_size, get_support_location => get_location
+    use support_set, only: SupportSet, get_supports_size => get_size, get_support_location => get_location
     use result_module, only : Result, ResultLoad, ResultLoadArrayList
     use location_interval_arraylist
     implicit none
@@ -25,7 +25,7 @@ module io_service
     subroutine write_input(length, loads, supports)
         real, intent(inout) :: length
         type(LoadArrayList), intent(inout) :: loads
-        type(SupportHashMap), intent(inout) :: supports
+        type(SupportSet), intent(inout) :: supports
         character(len=100) :: filename
         type(Load) :: current_load
         type(Support) :: current_sup
@@ -80,7 +80,7 @@ module io_service
         write(INPUT_, '(A2)', advance='no') ") "
         write(INPUT_, '(A16)') "Lokasi"
         do i = 1, supports%get_size()
-            current_sup = supports%get_support_by_index(i)
+            current_sup = supports%get_support_from_set(i)
 
             write(INPUT_, '(A1)', advance='no') "("
             write(INPUT_, '(A12)', advance='no') get_type_support(current_sup%get_type())

@@ -91,6 +91,11 @@
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/support_hashmap.mod",
 			"is-private" : false
 		},
+		"support_set.mod" : 
+		{
+			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/support_set.mod",
+			"is-private" : false
+		},
 		"supports_module.mod" : 
 		{
 			"bmi" : "D:/Programming/Fortran/StructureAnalysis/cmake-build-debug/supports_module.mod",

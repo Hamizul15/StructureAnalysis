@@ -4,7 +4,7 @@
 # 1 "D:\\Programming\\Fortran\\StructureAnalysis\\cmake-build-debug//"
 # 1 "D:/Programming/Fortran/StructureAnalysis/services/reaction_calculator/calculator_service.f90"
 module calculator_service
-    use input_manager, only : Input, SupportHashMap, Load, LoadArrayList
+    use input_manager, only : Input
     use supports_module, only : Support
     use result_module, only : Result, ResultLoad
     implicit none

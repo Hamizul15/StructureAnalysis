@@ -34,12 +34,12 @@ module calculator_determined_service
         subroutine calculate_determined(this)
             class(CalculatorDetermined), intent(inout) :: this
             type(Input) :: input_
-            type(SupportHashMap) :: sup_map
+            type(SupportSet) :: sup_set
             type(Support) :: sup
 
             input_ = this%get_input()
-            sup_map = input_%get_supports()
-            sup = sup_map%get_support_by_index(1)
+            sup_set = input_%get_supports()
+            sup = sup_set%get_support_from_set(1)
 
             if (sup%get_type() == FIXED_) then
                 call this%calculate_with_fixed_support()
@@ -212,17 +212,15 @@ module calculator_determined_service
             class(CalculatorDetermined), intent(inout) :: this
             type(Support), intent(in) :: anchor
             type(Support) ::  the_other, temp
-            type(SupportHashMap) :: sup_map
-            real, dimension(:), allocatable :: keys
+            type(SupportSet) :: sup_set
             integer :: i
             type(Input) :: input_
 
             input_ = this%get_input()
-            sup_map = input_%get_supports()
-            keys = sup_map%get_keys()
+            sup_set = input_%get_supports()
 
-            do i = 1, sup_map%get_size()
-                temp = sup_map%get_support_by_key(keys(i))
+            do i = 1, sup_set%get_size()
+                temp = sup_set%get_support_from_set(i)
                 if(temp%get_location() /= anchor%get_location()) the_other = temp
             end do
 
@@ -231,7 +229,7 @@ module calculator_determined_service
         function get_anchor_support(this) result (anchor)
             class(CalculatorDetermined), intent(inout) :: this
             type(Support) :: anchor, temp
-            type(SupportHashMap) :: sup_map
+            type(SupportSet) :: sup_set
             real, dimension(:), allocatable :: keys
             integer :: i
             type(Input) :: input_
@@ -239,11 +237,10 @@ module calculator_determined_service
             call anchor%set_location(-1.0)
 
             input_ = this%get_input()
-            sup_map = input_%get_supports()
-            keys = sup_map%get_keys()
+            sup_set = input_%get_supports()
 
-            do i = 1, sup_map%get_size()
-                temp = sup_map%get_support_by_key(keys(i))
+            do i = 1, sup_set%get_size()
+                temp = sup_set%get_support_from_set(i)
                 if(temp%get_location() > anchor%get_location()) anchor = temp
             end do
         end function get_anchor_support
@@ -279,9 +276,8 @@ module calculator_determined_service
             class(CalculatorDetermined), intent(inout) :: this
             type(Result) :: result_
             type(LoadArrayList) :: loads
-            type(SupportHashMap) :: sup_map
+            type(SupportSet) :: sup_set
             type(ResultLoadArrayList) :: reactions, moment_reactions
-            type(Support), allocatable :: supports(:)
             type(Support) :: anchor
             type(SheerCalculator) :: sheer_calc
             type(MomentCalculator) :: moment_calc
@@ -291,9 +287,8 @@ module calculator_determined_service
             type(Input) :: input_
 
             input_ = this%get_input()
-            sup_map = input_%get_supports()
-            supports = sup_map%get_values()
-            anchor = supports(1)
+            sup_set = input_%get_supports()
+            anchor = sup_set%get_support_from_set(i)
             loads = input_%get_loads()
 
             do i = 1, loads%get_size()

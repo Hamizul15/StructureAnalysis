@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "CMakeFiles\\\\StructureAnalysis.dir\\\\data_structures\\\\set\\\\support_set.f90.obj",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "support_set.mod",
+					"is-interface" : true,
+					"logical-name" : "support_set.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "supports_module.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

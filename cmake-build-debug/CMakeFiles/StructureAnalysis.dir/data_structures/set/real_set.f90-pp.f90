@@ -54,31 +54,6 @@ contains
         this%arr(this%size) = lo
     end subroutine add_real_to_set
 
-    ! Remove a person (find and shift remaining elements)
-    !subroutine remove(this, person)
-    !class(LoadHashMap), intent(inout) :: this
-    !type(Load), intent(in) :: load
-    !integer :: i, found
-
-    !found = 0
-    !do i = 1, size
-    !    if (this%arr(i)% arr(i)%name == person%name .and. arr(i)%age == person%age) then
-    !        found = 1
-    !exit
-    !    end if
-    !end do
-
-    !if (found == 1) then
-    ! Shift elements after the removed person
-    !    do i = i, size-1
-    !        arr(i) = arr(i+1)
-    !    end do
-    !    size = size - 1
-    !else
-    !    print *, "Person not found"
-    !end if
-    !end subroutine remove
-
     ! Resize the array to a new size
     subroutine resize(this, new_size)
         class(RealSet), intent(inout) :: this
