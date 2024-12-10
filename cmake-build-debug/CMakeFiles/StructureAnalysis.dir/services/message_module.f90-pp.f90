@@ -46,7 +46,4 @@ module message_module
         print *, "       \/             =======             ============"
     end subroutine display_depiction_of_loads
 
-
-
-
 end module message_module

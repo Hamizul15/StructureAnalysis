@@ -17,9 +17,7 @@ program structure_analysis
         call cacl%calculate(inp)
 
         continue_option = get_character("Menghitung lagi(input Y) atau Berhenti(input sesuatu): ")
-        if((continue_option /= 'Y').and.(continue_option /= 'y')) then
-            exit
-        end if
+        if((continue_option /= 'Y').and.(continue_option /= 'y')) exit
 
         call inp%dispose()
         call dispose_location_manager()

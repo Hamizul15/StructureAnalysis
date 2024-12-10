@@ -28,14 +28,12 @@ module location_manager
 
     contains
         subroutine construct_location_manager()
-            if (.not. associated(location_manager_instance)) then
+            if (.not.associated(location_manager_instance)) then
                 allocate(location_manager_instance)
             end if
         end subroutine construct_location_manager
 
         subroutine dispose_location_manager()
-            !call location_manager_instance%intervals%clear_intervals()
-            !call location_manager_instance%locations%clear_real_set()
             deallocate(location_manager_instance)
         end subroutine  dispose_location_manager
 
