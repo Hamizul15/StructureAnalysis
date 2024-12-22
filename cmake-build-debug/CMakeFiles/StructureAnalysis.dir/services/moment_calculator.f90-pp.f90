@@ -68,8 +68,8 @@ module moment_calculator
                     moments_of_loads = this%get_current_moment_of_loads(current_loc, iteration)
                     moment_of_reactions = this%get_current_moment_of_reactions(current_loc, iteration)
                     sum_of_moments = this%get_current_sum_of_moments(current_loc, iteration)
-                    total_load = moments_of_loads + moment_of_reactions + sum_of_moments
 
+                    total_load = moments_of_loads + moment_of_reactions + sum_of_moments
                     call current_moments%add_resultload(new_resultload(current_loc, total_load))
                     iteration = iteration + 1
                 end do

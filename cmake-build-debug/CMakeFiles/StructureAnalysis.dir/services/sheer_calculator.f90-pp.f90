@@ -58,8 +58,8 @@ contains
             do current_loc = current_inter%get_start(), current_inter%get_end()
                 sum_of_loads = this%get_current_sum_of_loads(current_loc, iteration)
                 sum_of_reactions = this%get_current_sum_of_reactions(current_loc, iteration)
-                total_load = sum_of_loads + sum_of_reactions
 
+                total_load = sum_of_loads + sum_of_reactions
                 call current_sheers%add_resultload(new_resultload(current_loc, total_load))
                 iteration = iteration + 1
             end do

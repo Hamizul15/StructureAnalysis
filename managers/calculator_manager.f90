@@ -5,6 +5,8 @@ module calculator_manager
     use calculator_determined_service, only : CalculatorDetermined, calculate_sis => calculate
     implicit none
 
+    integer, parameter :: STATICALLY_DETERMINE = 3
+
     type :: CalculatorManager
 
         contains
@@ -25,11 +27,11 @@ module calculator_manager
         sup_set = inp%get_supports()
         number_of_reactions = sup_set%sum_of_number_of_reactions()
 
-        if(number_of_reactions == 3) then !it means statically determinate
+        if(number_of_reactions == STATICALLY_DETERMINE) then !it means statically determinate
             allocate(CalculatorDetermined :: calc)
-        else if (number_of_reactions < 3) then
+        else if (number_of_reactions < STATICALLY_DETERMINE) then
             print *, "Kondisi gelagar tidak stabil!"
-        else if (number_of_reactions > 3) then
+        else if (number_of_reactions > STATICALLY_DETERMINE) then
             !allocate(CalculatorUndetermined :: calc)
             print *, "Terdeteksi Struktur Tidak Tentu! Program kami belum mendukung untuk memecahkan tersebut!"
         end if
